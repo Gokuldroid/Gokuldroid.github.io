@@ -1,0 +1,13 @@
+{
+  "exclude": [
+    "node_modules",
+    ".cache"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"]
+    },
+    "jsx": "react"
+  }
+}

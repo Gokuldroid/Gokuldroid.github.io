@@ -1,0 +1,41 @@
+@import "shared/all";
+
+.posts-container {
+  margin: 8% 20%;
+
+  .post {
+    cursor: pointer;
+    padding: 30px;
+    .post-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .post-info {
+      color: #888787;
+      font-size: 0.8em;
+    }
+
+    .post-tags {
+      padding: 25px 0 0px;
+
+      span {
+        padding: 5px 15px;
+        margin-right: 10px;
+        color: $green;
+        background-color: rgb(245, 255, 245);
+        border: 1.3px $green solid;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .pagination-container {
+    float: left;
+
+    .pagination {
+      padding: 15px 15px 0 0;
+      justify-content: center;
+    }
+  }
+}

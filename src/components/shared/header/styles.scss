@@ -1,0 +1,36 @@
+@import "shared/constants";
+
+.navbar.navbar-container {
+  padding: 15px;
+  border-bottom: 1px solid $border_color;
+  background: $bg;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.05);
+
+  a {
+    color: $text_color;
+  }
+
+  .navbar-brand {
+    font-size: x-large;
+
+    span {
+      color: $green;
+    }
+  }
+
+  .navbar-nav {
+
+    li {
+      font-size: 1.0em;
+      font-weight: 100;
+      padding: 0 10px;
+
+      a {
+        &:hover {
+          color: $green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

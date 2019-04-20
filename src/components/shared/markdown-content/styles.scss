@@ -1,0 +1,45 @@
+@import "shared/constants";
+
+.markdown-continer {
+  
+  strong {
+    font-weight: bold;
+  }
+
+  table {
+    margin: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  table thead th {
+    background-color: #66d9ef59;
+    border-bottom: solid 1px #66d9ef59;
+    padding: 15px 20px;
+    text-align: left;
+  }
+
+  tbody td {
+    border-bottom: solid 1px #66d9ef59;
+    color: #333;
+    padding: 10px 30px;
+  }
+
+
+  blockquote {
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #000;
+    border-left-style: solid;
+    border-left-color: $green;
+    border-left-width: 8px;
+    font-style: italic;
+    background-color: #00000008;
+
+    p {
+      padding-bottom: 0 !important;
+      margin-bottom: 0;
+    }
+  }
+}

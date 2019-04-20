@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: Gokuldroid/gatsby-site
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: posts
+    label: Posts
+    folder: 'contents/posts'
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.path}}"
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: tags, label:  Tags, widget: list}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
