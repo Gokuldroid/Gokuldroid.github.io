@@ -45,7 +45,7 @@
     "clean": "rm -rf public && rm -rf .cache",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "build:pp": "gatsby build --prefix-paths",
-    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public"
+    "build:gh": "npm run clean && npm run build:pp && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",

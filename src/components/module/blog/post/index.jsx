@@ -8,7 +8,6 @@ export const BlogPost = props => {
   const { pageContext, data } = props;
   const { previousPagePath, nextPagePath, previousItem, nextItem } = pageContext;
   const { post } = data;
-  console.log(props);
   return (
     <>
       <Header siteTitle='Blog | Gokuldroid' />
