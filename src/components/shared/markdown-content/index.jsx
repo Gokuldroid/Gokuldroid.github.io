@@ -3,7 +3,7 @@ import './styles.scss'
 
 const MarkdownContent = (props) => {
   return (
-    <div className="markdown-continer">
+    <div className="markdown-container">
       <div dangerouslySetInnerHTML={{ __html: props.html }} />
     </div>
   )

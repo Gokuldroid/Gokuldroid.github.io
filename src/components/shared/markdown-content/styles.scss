@@ -1,6 +1,6 @@
-@import "shared/constants";
+@import "shared/all";
 
-.markdown-continer {
+.markdown-container {
   
   strong {
     font-weight: bold;
@@ -10,21 +10,24 @@
     margin: 20px;
     border-collapse: collapse;
     border-spacing: 0;
-  }
 
-  table thead th {
-    background-color: #66d9ef59;
-    border-bottom: solid 1px #66d9ef59;
-    padding: 15px 20px;
-    text-align: left;
-  }
+    thead {
+      th {
+        background-color: #66d9ef59;
+        border-bottom: solid 1px #66d9ef59;
+        padding: 15px 20px;
+        text-align: left;
+      }
+    }
 
-  tbody td {
-    border-bottom: solid 1px #66d9ef59;
-    color: #333;
-    padding: 10px 30px;
+    tbody {
+      td {
+        border-bottom: solid 1px #66d9ef59;
+        color: #333;
+        padding: 10px 30px;
+      }
+    }
   }
-
 
   blockquote {
     padding: 20px;
@@ -40,6 +43,26 @@
     p {
       padding-bottom: 0 !important;
       margin-bottom: 0;
+    }
+  }
+}
+
+@include respond-below(sm){ 
+  .markdown-container {
+    overflow-x: scroll;
+    table {
+      margin: 10px; 
+      thead {
+        th {
+          padding: 5px;
+        }
+      }
+
+      tbody {
+        td {
+          padding: 5px;
+        }
+      }
     }
   }
 }
