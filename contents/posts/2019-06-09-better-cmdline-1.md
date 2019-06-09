@@ -17,7 +17,7 @@ Windows just upgraded their terminal after many many years. MAC's native termina
 
 <br/>
 
-##### Cmd aliases for rescue
+##### Cmd aliases comes to rescue
 - - -
 Clearing cache always fixes the issue right ;-) ?.
 
@@ -90,3 +90,20 @@ alias gp='git pull'
 alias gpr='git pull --rebase'
 ```
 
+<br/>
+
+#####find and select like a pro
+
+---
+
+For this you need to install two plugins.
+
+1.[File path finder by facebook](https://github.com/facebook/PathPicker)
+
+<a href="https://asciinema.org/a/19519" target="_blank"><img src="https://asciinema.org/a/19519.png" width="597"/></a>
+
+2.[Cmdline fuzzy finder](https://github.com/junegunn/fzf)
+
+<a title="fzf - command-line fuzzy finder" href="https://www.youtube.com/watch?v=qgG5Jhi_Els">
+  <img src="https://i.imgur.com/vtG8olE.png" width="640">
+</a>
