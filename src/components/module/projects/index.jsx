@@ -7,7 +7,7 @@ import "./styles.scss"
 const Project = ({ project }) => {
   return (
     <div className="col-md-3 col-sm-12 project-container">
-      <a className="project card" href={project.html_url} target="_blank">
+      <a className="project card" href={project.html_url} target="_blank" rel="noopener noreferrer">
         <div className="card-body"> 
           <p className="card-title">{project.name}</p>
           <span className="project-language">{project.language}</span>
