@@ -9,22 +9,17 @@ title: Better cmdline
 ---
 Every programmer searches for some files more than he breathes in his life. Sometimes it is very daunting to navigate deeply nested folder just to run a single test file. Do you think 'Up arrow never works for me'?.  Do you think 'My life is better than my bash history'?. If that so, this article is for you. Sometimes I envy people who use cmd line very efficiently. In this article, I going to show you how my cmd line journey evolved over the period (still I have lots of things to master).
 
-Does native terminal really work for you?
+##### Does native terminal really work for you?
+------------
+Windows just upgraded their terminal after many many years. MAC's native terminal is good. Is it good enough for you? (https://www.slant.co/versus/1713/1715/~iterm2_vs_terminal-app). Try to find alternates that suits your need. I have used the following alternate terminals, [cmder][cmder] - windows terminal replacement. [iTerm2][ITerm2] - mac os terminal replacement.
 
-Windows just upgraded their terminal after many many years. MAC's native terminal is good. Is it good enough for you? (https://www.slant.co/versus/1713/1715/~iterm2_vs_terminal-app). Try to find alternates that suits your need. I have used the following alternate terminals, cmder (https://cmder.net/) - windows terminal replacement. iterm2 (https://www.iterm2.com/) - mac os terminal replacement.
 
-Cmd aliases
-
+##### Cmd aliases for rescue
+------------
 Clearing cache always fixes the issue right ;-) ?. 
-cd /usr/project/master/gokuldroid && git pull --rebase && rm -rf node_modules/ && rm -rf tmp/ && npm install && bower install && ember s. This magic cmd fixes all the issues for me. Over the period we add more and more cleanup methods to this command and this is difficult to remember. What if we could simply do clean_build instead.
+cd /usr/project/master/gokuldroid && git pull --rebase && rm -rf node_modules/ && rm -rf tmp/ && npm install && bower install && ember s. This magic cmd fixes all the issues for me. Over the period we add more and more cleanup methods to this command and this is difficult to remember. What if we could simply do clean_build instead.nano ~/.bash_profile or code ~/.zshrc (For vs code) or subl ~/.zshrc (For sublime users)alias clean_build="cd /usr/project/master/gokuldroid && git pull --rebase && rm -rf node_modules/ && rm -rf tmp/ && npm install && bower install && ember s"Adding alias is up to your imagination. you can add anything you want. Some really useful 
 
-nano ~/.bash_profile or code ~/.zshrc (For vs code) or subl ~/.zshrc (For sublime users)
-
-alias clean_build="cd /usr/project/master/gokuldroid && git pull --rebase && rm -rf node_modules/ && rm -rf tmp/ && npm install && bower install && ember s"
-
-Adding alias is up to your imagination. you can add anything you want. Some really useful alias.
-
-alias .=cd ..
+alias.alias .=cd ..
 alias ..=cd ../..
 alias ...=cd ../../..
 alias ga='git add'
@@ -45,3 +40,5 @@ alias glg='git log --graph --oneline --decorate --all'
 alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
 alias gp='git pull'
 alias gpr='git pull --rebase'
+[cmder]: https://cmder.net/ "cmder"
+[ITerm2]: https://www.iterm2.com/ "iterm2"
