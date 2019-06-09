@@ -41,3 +41,10 @@
     }
   }
 }
+
+@include respond-below(sm){ 
+  .bio {
+    padding-top: 60%;
+    font-size: 13px;
+  }
+}

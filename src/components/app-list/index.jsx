@@ -29,16 +29,16 @@ function App(props) {
   return (
     <div className="card app border border-success col">
       <div className="card-img-container">
-        <img class="card-img-top" src={props.info.img} alt={props.info.na}></img>
+        <img className="card-img-top" src={props.info.img} alt={props.info.na}></img>
       </div>
-      <div class="card-header">
+      <div className="card-header">
         {props.info.name}
       </div>
       <div className="card-body">
         <p className="card-text">{props.info.desc}</p>
       </div>
-      <div class="card-body card-body--links">
-        <a href={props.info.playStore} class="card-link">Open in Playstore</a>
+      <div className="card-body card-body--links">
+        <a href={props.info.playStore} className="card-link">Open in Playstore</a>
         {/* <a href={props.info.more} class="card-link">More details</a> */}
       </div>
     </div>

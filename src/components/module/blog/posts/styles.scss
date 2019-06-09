@@ -39,3 +39,10 @@
     }
   }
 }
+
+
+@include respond-below(sm){ 
+  .posts-container {
+    margin: 16% 0;
+  }
+}
