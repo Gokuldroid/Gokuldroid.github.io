@@ -3,6 +3,7 @@ import './styles.scss';
 import { graphql, Link } from "gatsby";
 import Header from "@components/shared/header";
 import MarkDownContent from '@components/shared/markdown-content';
+import GoogleAds from "@components/shared/google-ads";
 
 export const BlogPost = props => {
   const { pageContext, data } = props;
@@ -11,6 +12,7 @@ export const BlogPost = props => {
   return (
     <>
       <Header siteTitle='Blog | Gokuldroid' />
+      <GoogleAds/>
       <div className="post-container card">
         <h1 className="post-container--title">{post.frontmatter.title}</h1>
         <MarkDownContent html={post.html} />
