@@ -102,7 +102,11 @@ For this you need to install two plugins.
 
 <a href="https://asciinema.org/a/19519" target="_blank"><img src="https://asciinema.org/a/19519.png" width="597"/></a>
 
-This plugin parses file paths in any output and provides selectable list. For example if you want to view a modified file in current repository just use ```git status | fpp```.
+This plugin parses file paths in any output and provides selectable list. For example if you want to view a modified file in current repository just use 
+
+```bash  
+git status | fpp
+```
 
 2.[Cmdline fuzzy finder](https://github.com/junegunn/fzf)
 
@@ -114,4 +118,4 @@ This video explains the power of fuzzy finder.
 <br/>
 <br/>
 
-_(Note: Works at it's best if you configured default apps for the all the files)_
+_(Note: Works at it's best if you configured default apps for the all the file types)_
