@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: Gokuldroid/gatsby-site
+  repo: Gokuldroid/Gokuldroid.github.io
+  branch: sources
 
 media_folder: static/assets
 public_folder: assets

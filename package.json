@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Gokuldroid",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Gokul prabhu <gokulprabhu.droid@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.1.18",
@@ -49,9 +49,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Gokuldroid/Gokuldroid.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Gokuldroid/Gokuldroid.github.io"
   }
 }
