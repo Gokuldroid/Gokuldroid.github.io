@@ -22,8 +22,8 @@
       background-color: #575757;
 
       .card-img-top {
-        width: 200px;
-        height: 200px;
+        width: 120%;
+        height: 120%;
       }
     }
     .card-header {
@@ -42,6 +42,19 @@
     }
     a {
       color: $green;
+    }
+  }
+}
+
+@include respond-below(sm){ 
+  .app-list {
+    .app {
+      .card-img-container{
+        .card-img-top {
+          width: 60%;
+          height: 60%;
+        }
+      }
     }
   }
 }

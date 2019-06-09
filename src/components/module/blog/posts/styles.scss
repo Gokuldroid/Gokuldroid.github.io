@@ -20,12 +20,7 @@
       padding: 25px 0 0px;
 
       span {
-        padding: 5px 15px;
-        margin-right: 10px;
-        color: $green;
-        background-color: rgb(245, 255, 245);
-        border: 1.3px $green solid;
-        border-radius: 15px;
+        @extend %green-tag;
       }
     }
   }

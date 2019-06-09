@@ -27,19 +27,21 @@ const apps = [
 
 function App(props) {
   return (
-    <div className="card app border border-success col">
-      <div className="card-img-container">
-        <img className="card-img-top" src={props.info.img} alt={props.info.na}></img>
-      </div>
-      <div className="card-header">
-        {props.info.name}
-      </div>
-      <div className="card-body">
-        <p className="card-text">{props.info.desc}</p>
-      </div>
-      <div className="card-body card-body--links">
-        <a href={props.info.playStore} className="card-link">Open in Playstore</a>
-        {/* <a href={props.info.more} class="card-link">More details</a> */}
+    <div className="col-md-4 col-sm-12">
+      <div className="card app border border-success ">
+        <div className="card-img-container">
+          <img className="card-img-top" src={props.info.img} alt={props.info.na}></img>
+        </div>
+        <div className="card-header">
+          {props.info.name}
+        </div>
+        <div className="card-body">
+          <p className="card-text">{props.info.desc}</p>
+        </div>
+        <div className="card-body card-body--links">
+          <a href={props.info.playStore} className="card-link">Open in Playstore</a>
+          {/* <a href={props.info.more} class="card-link">More details</a> */}
+        </div>
       </div>
     </div>
   )

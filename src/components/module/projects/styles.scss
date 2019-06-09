@@ -1,0 +1,27 @@
+@import "shared/all";
+
+.projects-container {
+  margin: 100px 40px;
+
+  .project-container {
+    margin-bottom: 4px;
+    padding: 10px;
+
+    .project {
+      height: 100%;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+
+      .card-text {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        padding-top: 10px;
+      }
+      &-language {
+        font-size: 13px;
+        @extend %green-tag;
+      }
+    }
+  }
+}
