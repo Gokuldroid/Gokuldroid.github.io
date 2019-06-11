@@ -9,12 +9,13 @@ class FbComments extends Component {
       js = d.createElement(s); js.id = id;
       js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
       fjs.parentNode.insertBefore(js, fjs);
+      d.getElementById('fb-comments-holder').setAttribute('data-href', document.location.href);
     }(document, 'script', 'facebook-jssdk'));
   }
 
   render() {
     return (
-      <div class="fb-comments" data-href={window.location.href} data-width="100%" data-numposts="10"></div>
+      <div id="fb-comments-holder" class="fb-comments" data-href='https://gokuldroid.github.io' data-width="100%" data-numposts="10"></div>
     )
   }
 }
