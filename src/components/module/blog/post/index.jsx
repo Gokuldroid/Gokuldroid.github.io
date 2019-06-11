@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Header from "@components/shared/header";
 import MarkDownContent from '@components/shared/markdown-content';
 import GoogleAds from "@components/shared/google-ads";
+import FbComments from "@components/shared/fb-comments";
 
 export const BlogPost = props => {
   const { pageContext, data } = props;
@@ -28,6 +29,7 @@ export const BlogPost = props => {
             </Link>
           ) : null}
         </div>
+        <FbComments/>
       </div>
     </>
   );
