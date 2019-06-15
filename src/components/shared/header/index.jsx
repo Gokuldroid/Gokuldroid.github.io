@@ -19,7 +19,7 @@ const Header = () => (
   <>
     <JBootstrap/>
     <nav className="navbar navbar-expand-lg navbar-expand-md navbar-container fixed-top navbar-light">
-      <Link className="navbar-brand" to="/"> Gokul <span>| Droid</span></Link>
+      <Link className="navbar-brand" to="/"> CODE <span>|</span> FROM <span> |</span> DUDE</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-content" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
