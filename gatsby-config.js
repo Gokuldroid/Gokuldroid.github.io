@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Gokuldroid`,
-    description: `My personal site`,
+    description: `Developer blog`,
     author: `Gokul prabhu`,
+    siteUrl: `https://codefromdude.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -52,6 +53,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
