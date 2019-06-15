@@ -53,7 +53,7 @@ export default class index extends Component {
     return (
       <div className="app-list container">
         <div className="row">
-          {apps.map((app) => (<App info={app} />))}
+          {apps.map((app) => (<App info={app} key={app.name}/>))}
         </div>
       </div>
     )

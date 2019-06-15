@@ -15,7 +15,7 @@ class FbComments extends Component {
 
   render() {
     return (
-      <div id="fb-comments-holder" class="fb-comments" data-href='https://gokuldroid.github.io' data-width="100%" data-numposts="10"></div>
+      <div id="fb-comments-holder" className="fb-comments" data-href='https://gokuldroid.github.io' data-width="100%" data-numposts="10"></div>
     )
   }
 }

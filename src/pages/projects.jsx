@@ -6,7 +6,7 @@ import SEO from "@components/seo"
 
 const ProjectsPage = () => (
   <Projects>
-    <SEO title="Home" keywords={[`android`, `gokul prabhu`, `full stack developer`,]} />
+    <SEO title="Projects" keywords={[`android`, `gokul prabhu`, `full stack developer`,]} />
   </Projects>
 )
 

@@ -15,7 +15,7 @@ const Pages = () => (
 );
 
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <>
     <JBootstrap/>
     <nav className="navbar navbar-expand-lg navbar-expand-md navbar-container fixed-top navbar-light">
@@ -27,13 +27,5 @@ const Header = ({ siteTitle }) => (
     </nav>
   </>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

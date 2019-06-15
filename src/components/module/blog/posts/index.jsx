@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Header from "@components/shared/header"
 import FormattedDate from '@components/shared/formatted-date'
 import Pagination from '@components/shared/pagination';
+import SEO from "@components/seo";
 
 function BlogPostGist({ node }) {
   var link = `/posts/${node.frontmatter.path}`
@@ -28,7 +29,8 @@ const Blog = (props) => {
   const path = (pageNumber) => pageNumber === 1 ? '/blog' : `/blog/page/${pageNumber}`
 
   return (<>
-    <Header siteTitle='Blog | Gokuldroid' />
+    <Header/>
+    <SEO title="Blog"/>
     <div className="posts-container card">
       {props.data.posts.edges.map((edge) => <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />)}
       {numberOfPages > 1 ? <Pagination totalPages={numberOfPages} currentPage={humanPageNumber} nextPage={nextPagePath} previousPage={previousPagePath} path={path} /> : null}
