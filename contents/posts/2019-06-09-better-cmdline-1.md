@@ -119,3 +119,10 @@ This video explains the power of fuzzy finder.
 <br/>
 
 _(Note: Works at it's best if you configured default apps for the all the file types)_
+
+<br/>
+<br/>
+##### Oh My Zsh
+---
+
+[Zsh](https://ohmyz.sh/) also called [Z shell]((https://ohmyz.sh/)). It comes with a lot of features that native shell don't have (themes, plugins,spelling correction, approximate completion etc..). You can find installation docs [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH).

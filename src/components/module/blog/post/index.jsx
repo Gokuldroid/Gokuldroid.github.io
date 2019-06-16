@@ -1,6 +1,6 @@
 import React from "react";
 import './styles.scss';
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Header from "@components/shared/header";
 import MarkDownContent from '@components/shared/markdown-content';
 import GoogleAds from "@components/shared/google-ads";
@@ -21,12 +21,12 @@ export const BlogPost = props => {
         <MarkDownContent html={post.html} />
         <div className="post-container--links">
           {previousPagePath ? (
-            <a href={previousPagePath} target="_blank" className="post-container--links__previous">
+            <a href={previousPagePath} target="_blank" rel="noopener noreferrer" className="post-container--links__previous">
               <span>&laquo;</span> ({previousItem.node.frontmatter.title})
             </a>
           ) : null}
           {nextPagePath ? (
-            <a href={nextPagePath} target="_blank" className="post-container--links__next">
+            <a href={nextPagePath} target="_blank" rel="noopener noreferrer" className="post-container--links__next">
               ({nextItem.node.frontmatter.title}) <span>&raquo;</span>
             </a>
           ) : null}
