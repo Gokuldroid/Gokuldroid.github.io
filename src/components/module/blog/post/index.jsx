@@ -21,14 +21,14 @@ export const BlogPost = props => {
         <MarkDownContent html={post.html} />
         <div className="post-container--links">
           {previousPagePath ? (
-            <Link to={previousPagePath} className="post-container--links__previous">
+            <a href={previousPagePath} target="_blank" className="post-container--links__previous">
               <span>&laquo;</span> ({previousItem.node.frontmatter.title})
-            </Link>
+            </a>
           ) : null}
           {nextPagePath ? (
-            <Link to={pageContext.nextPagePath} className="post-container--links__next">
+            <a href={nextPagePath} target="_blank" className="post-container--links__next">
               ({nextItem.node.frontmatter.title}) <span>&raquo;</span>
-            </Link>
+            </a>
           ) : null}
         </div>
         <FbComments/>
