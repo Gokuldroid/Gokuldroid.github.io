@@ -14,9 +14,9 @@ Have you came across this meme?
 <br>
 >We could say this as **backend developer - public api - source code**.
 
-We have a rich set of collections and public api in java. We don't need to know the internals of those collections and API in our daily life. But there is a beauty in the internals of Java API's. Here are some of the things I found in the internals of Java's ArrayList code.I assume that you already about ArrayList and the basics about Java collections.
+We have a rich set of collections and public API in java. We don't need to know the internals of those collections and API in our daily life. But there is a beauty in the internals of Java API's. Here are some of the things I found in the internals of Java's ArrayList code.I assume that you already about ArrayList and the basics about Java collections.
 
-In this article, I am going to talk about [ArrayList.java](https://github.com/openjdk/jdk13/blob/1e8806fd08aef29029878a1c80d6ed39fdbfe182/src/java.base/share/classes/java/util/ArrayList.java).
+You can get the complete source code from, [ArrayList.java](https://github.com/openjdk/jdk13/blob/1e8806fd08aef29029878a1c80d6ed39fdbfe182/src/java.base/share/classes/java/util/ArrayList.java).
 
 ```java
 //Line : 189
@@ -25,7 +25,7 @@ public class ArrayList<E> extends AbstractList<E>
 {
 ```
 
-The first thing that caught my eyes is **RandomAccess** interface. It's just an **empty** interface without any methods or code. It is used just to denote the underlying collection is randomly accessible (Denotes any element of the collection can be accessed at a constant time).
+The first thing that caught my eyes is **RandomAccess** interface. It's just an **empty** interface without any methods or code. It is used just to denote the underlying collection is randomly accessible (Denotes any element of the collection can be accessed at a constant time). Java doesn't support multiple inheritance. But we we can implement multiple interfaces. This might became handy to check the collection is Randomly accessible with constant time. 
 
 ----
 
@@ -78,7 +78,7 @@ public void trimToSize() {
 }
 ```
 
-The first usage of **modCount++**. we will be seeing these line more often in this source code. There is a reason for incrementing this variable. If you know the reason already, kudos to you ;-). If you don't know this already. Search for the similar lines in the source code. There is a similarity among the methods which has this line. I will tell you why at the end.
+The first usage of **modCount++**. we will be seeing this snippet more often in this source code. There is a reason for incrementing this variable. If you know the reason already, kudos to you ;-). If you don't know this already, search for the similar lines in the source code. There is a similarity among the methods which has this line. I will tell you why at the end.
 
 ---
 
@@ -103,7 +103,8 @@ int indexOfRange(Object o, int start, int end) {
 }
 ```
 
-Why they are storing elementData in local variable? any guesses?. One things I can find is, local variable lookup is faster than class variable lookup. Might be there are some other reasons.
+Why they are storing elementData in local variable? any guesses?. One thing I can find is, local variable lookup is faster than class variable lookup. Might be there are some other reasons.
+<br/>
 <br/>
 o.equals(es[i]), es[1].equals(o). Is it equal?. Why they didn't use the later one?. Any thoughts?. 
 
@@ -127,7 +128,7 @@ private void checkForComodification(final int expectedModCount) {
 }
 ```
 
-I asked about modCount++ before right. All the methods increments modCount that mutate the ArrayList in some manner. In a multi-threaded environment, to ensure all the methods are [reentrant](https://en.wikipedia.org/wiki/Reentrancy_(computing)), we check for modCount in some places.
+I asked about **modCount++** before right. All the methods increments modCount that mutate the ArrayList in some manner. In a multi-threaded environment, to ensure all the methods are [reentrant](https://en.wikipedia.org/wiki/Reentrancy_(computing)), we check for modCount in some places.
 
 For example,
 
@@ -140,7 +141,7 @@ public int hashCode() {
 }
 ```
 
-hashCodeRange calculation is a long process, By that time some other thread might modify the content of the ArrayList. To ensure this method doesn't return invalid hasCode, at the end of long computation, we are checking for modCount is same as expectedModCount. If that's different the content is modified by another thread and the result that we computed is invalid. In such cases, this will throw **ConcurrentModificationException**.
+**hashCodeRange** calculation is a long process, By that time some other thread might modify the content of the ArrayList. To ensure this method doesn't return invalid hasCode, at the end of long computation, we are checking for **modCount is same as expectedModCount**. If that's different the content is modified by another thread and the result that we computed is invalid. In such cases, this will throw **ConcurrentModificationException**.
 
 -----
 
