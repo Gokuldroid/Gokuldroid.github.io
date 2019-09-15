@@ -12,12 +12,12 @@ title: NULL vs Empty
 <br/>
 
 
-I tried to book a ticket in [irctc](https://www.irctc.co.in). while giving CCV of my debit card **(*mandatory field)**, accidentally I gave empty value and proceeded to book a ticket. It threw an error after refreshing the whole page as the validation (or something went wrong) happened in the backend. they might have handled in frontend itself. Because of this, I lost my booking window. They might handle millions of requests per day. but they simply failed at this. 
+I tried to book a ticket in [irctc](https://www.irctc.co.in). while giving CCV of my debit card **(*mandatory field)**, accidentally I gave empty value and proceeded to book a ticket. It threw an error after refreshing the whole page as the validation happened (or something went wrong) in the backend. they might have handled in frontend itself. Because of this, I lost my booking window. They might handle millions of requests per day. but they simply failed at this. 
 
 > It should be a common-sense for a developer to handle null vs empty. To
 > err is human. but repeating history is not acceptable.
 
-I've used a good number of programming languages (Typescript, Java, Kotlin, Ruby, Javascript, Python, C++, C, PHP). There are days I assumed the user is not dumb enough to give empty values for username or password. I haven't developed a real-world software back then. Handling null and empty is always an art. Some programming languages are good at that. Some of them shout like Kotlin 'Yes! we support null safety in our language'. I am not going to give you the definition of null. Do some research and fight with your colleagues about null vs Empty. You will hear some interesting story. I will throw some snippets from the languages I've used so far. Different languages handle them slightly differently. You will get a better understanding of null vs Empty argument once you know about it.
+I've used a good number of programming languages (Typescript, Java, Kotlin, Ruby, Javascript, Python, C++, C, PHP). There are days I assumed the user is not dumb enough to give empty values for username or password. I haven't developed a real-world software back then. Handling null and empty is always an art. Some programming languages are good at that. Some of them shout like Kotlin **'Yes! we support null safety in our language'**. I am not going to give you the definition of null or empty. Do some research and fight with your colleagues about null vs Empty. You will hear some interesting story. I will throw some snippets from the languages I've used so far. Different languages handle them slightly differently. You will get a better understanding of null vs Empty argument once you know about it.
 
 Let's take java first,
 ```java
@@ -59,7 +59,7 @@ public static void main(String[] args) {
 
 <br/>
 
-Oops! Here comes the NullPointerException. Now you have some idea about null pointer exception right?.
+Oops! Here comes the NullPointerException. Now you have some idea about null problem right?.
 
 Let's move on to Empty,
 
@@ -113,7 +113,7 @@ To get a better understanding of this, take a look at this javascript truth tabl
 <img src="/assets/blog/null-vs-empty/truth-table-triple-eq.png" alt="javascript comparison table" style="width:100%">
 
 
-weird isn't it?.
+weird isn't it?. (Javascript is always weird ;-))
 
 
 Some programming languages provide safety against some of these issues.
@@ -151,7 +151,7 @@ More details about [kotlin null safety](https://kotlinlang.org/docs/reference/nu
 ##### In typescript (Javascript with types),
 ```typescript
 let name: string;  
-name = null;
+name = null; // compilation error
 ```
 
 More details about [typescript null safety](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html)
