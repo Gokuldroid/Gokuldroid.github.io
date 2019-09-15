@@ -162,10 +162,10 @@ Did you notice something?. No one provides safety against empty values. Because 
   
  - [Apache](https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html)
    
- - [Ember](http://api.emberjs.com/ember/3.10/functions/@ember/utils/isEmpty)
+ - [Ember](http://api.emberjs.com/ember/3.10/functions/@ember%2Futils/isEmpty)
    
  - [Lodash](https://lodash.com/docs/4.17.15#isEmpty)
 
-While writing code, keep asking one thing, **"Should I handle empty state?"**. Handling null and empty state everywhere is also bad. As a rule of thumb, Don't use optional values in the place of mandatory values. If we strictly need a value, throw an error early if it null.
+While writing code, keep asking one thing, **"Should I handle empty state?"**. Handling null and empty state everywhere is also bad. As a rule of thumb, Don't use optional values in the place of mandatory values. If we strictly need a value, throw an error early on, if it null. Please keep this in mind **'there might be a stupid person like me who never reads the instructions'**.
 
 **"Should a function return null or empty?"**  is a whole new argument, let's save that for another day.
