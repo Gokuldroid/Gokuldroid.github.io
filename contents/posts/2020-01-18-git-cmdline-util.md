@@ -46,7 +46,7 @@ npm install -g @lazyloop/nit
  nit checkout [-r<remote>]
  ```
 
-![demo git checkout](https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_checkout.gif)
+<img src="https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_checkout.gif" alt="demo git checkout" style="width: 100%;">
 
 <br/>
 
@@ -58,7 +58,7 @@ npm install -g @lazyloop/nit
  nit delete [-m<multiple>]
  ```
 
-![demo git delete](https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_delete.gif)
+<img src="https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_delete.gif" alt="demo git delete" style="width: 100%;">
 
 <br/>
 
@@ -70,7 +70,7 @@ npm install -g @lazyloop/nit
  nit add
  ```
 
-![demo git add](https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_add.gif)
+<img src="https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_add.gif" alt="demo git add" style="width: 100%;">
 
 <br/>
 
@@ -82,7 +82,6 @@ npm install -g @lazyloop/nit
 ```bash
  nit discard
  ```
-
-![demo git discard](https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_discard.gif)
+<img src="https://raw.githubusercontent.com/Gokuldroid/nit/master/samples/nit_discard.gif" alt="demo git discard" style="width: 100%;">
 
 <br/>
