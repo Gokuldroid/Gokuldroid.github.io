@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Header from "@components/shared/header"
 import Bio from "@components/module/index/bio"
+import GoogleAds from '@components/shared/google-ads'
 import "./styles.scss"
 
 const Layout =  (props) => (
@@ -21,6 +22,7 @@ const Layout =  (props) => (
         {props.children}
         <Header siteTitle={data.site.siteMetadata.title} />
         <Bio/>
+        <GoogleAds/>
       </>
     )}
   />

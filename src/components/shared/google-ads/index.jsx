@@ -4,7 +4,10 @@ import React, { Component } from "react"
 class GoogleAds extends Component {
 
   componentDidMount() {
-    (window.adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-8661695674070138", enable_page_level_ads: true });
+    window.adsbygoogle = window.adsbygoogle || []
+    if(window.adsbygoogle.length !== 0) {
+      window.adsbygoogle.push({ google_ad_client: "ca-pub-8661695674070138", enable_page_level_ads: true });
+    }
   }
 
   render() {
