@@ -14,7 +14,7 @@ SELECT users.id, accounts.name from users, accounts where users.account_id = 1 A
 <br/>
 
 ```sql
-SELECT users.id, accounts.name from users LEFT JOIN accounts on accounts.id = users.account_id where users.account_id = 1
+SELECT users.id, accounts.name from users INNER JOIN accounts on accounts.id = users.account_id where users.account_id = 1
 ```
 
 Both queries do the same. we are saving 3 words in the first query (this might help you to save 9 secs for every join you make).
