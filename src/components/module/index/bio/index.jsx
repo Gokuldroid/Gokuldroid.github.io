@@ -50,8 +50,6 @@ export default class index extends Component {
         <p id="name">Gokul<span>{this.state.part}</span><span className="cursor">_</span></p>
         <p className="line"></p>
         <p className="interests">Fullstack developer <span>|</span> android enthusiast <span>|</span> designer</p>
-        <p className="line"></p>
-        <p className="interests"><span className="green">Email : </span>gokulprabhu.droid@gmail.com <span className="green">| Ph no : </span>+919659172403</p>
       </div>
     )
   }

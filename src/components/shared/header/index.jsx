@@ -10,6 +10,7 @@ const Pages = () => (
       <li className="nav-item"><Link className="nav-link" to="/blog">Blog</Link></li>
       <li className="nav-item"><Link className="nav-link" to="/projects">Projects</Link></li>
       <li className="nav-item"><Link className="nav-link" to="/apps">Apps</Link></li>
+      <li className="nav-item"><Link className="nav-link" to="/contact">Get in touch</Link></li>
     </ul>
   </div>
 );

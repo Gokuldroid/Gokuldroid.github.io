@@ -1,0 +1,62 @@
+@import "shared/all";
+
+.contacts-container {
+  margin: 8% 25% 0 25%;
+  padding: 20px;
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 5% 0%;
+    border-radius: 50%;
+    border: 5px solid $green;
+  }
+
+  .icon-container {
+    padding: 5% 5% 1%;
+    border-top: 0.5px solid #42b983;
+    margin: 10px;
+
+    .contact-link {
+      display: inline;
+      .contact-icon {
+        transform: scale(3);
+    
+        &.fa-insta {
+          color: mediumorchid;
+        }
+    
+        &.fa-github {
+          color: black;
+        }
+    
+        &.fa-linkedin {
+          color: dodgerblue;
+        }
+
+        &.fa-phone {
+          color: $green;
+          transform: scale(2.5);
+        }
+      }
+    }
+  }
+}
+
+
+@include respond-below(sm){ 
+  .contacts-container {
+    margin: 25% 2% 2% 2%;
+    .icon-container {
+      padding: 8% 5% 1%;
+      .contact-link {
+        .contact-icon {
+          transform: scale(2);  
+          &.fa-phone {
+            transform: scale(1.75);  
+          }
+        }
+      }
+    }
+  }
+}
