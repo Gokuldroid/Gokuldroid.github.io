@@ -5,6 +5,7 @@ import Header from "@components/shared/header"
 import FormattedDate from '@components/shared/formatted-date'
 import Pagination from '@components/shared/pagination';
 import SEO from "@components/seo";
+import Categories from '@components/module/blog/categories';
 
 function BlogPostGist({ node }) {
   var link = `/posts/${node.frontmatter.path}`
@@ -31,9 +32,14 @@ const Blog = (props) => {
   return (<>
     <Header/>
     <SEO title="Blog"/>
-    <div className="posts-container card">
-      {props.data.posts.edges.map((edge) => <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />)}
-      {numberOfPages > 1 ? <Pagination totalPages={numberOfPages} currentPage={humanPageNumber} nextPage={nextPagePath} previousPage={previousPagePath} path={path} /> : null}
+    <div className="row blog-container">
+      <div className="col-3">
+        <Categories categories={props.data.categories.group} />
+      </div>
+      <div className="col-9 posts-container card">
+        {props.data.posts.edges.map((edge) => <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />)}
+        {numberOfPages > 1 ? <Pagination totalPages={numberOfPages} currentPage={humanPageNumber} nextPage={nextPagePath} previousPage={previousPagePath} path={path} /> : null}
+      </div>
     </div>
   </>)
 }
@@ -59,6 +65,16 @@ query($skip: Int!, $limit: Int!) {
           path
         }
       }
+    }
+  }
+
+  categories: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }
+    limit: 2000
+  ) {
+    group(field: frontmatter___categories) {
+      name: fieldValue
+      count: totalCount
     }
   }
 }`;

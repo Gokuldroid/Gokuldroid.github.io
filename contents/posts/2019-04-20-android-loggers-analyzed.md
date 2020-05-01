@@ -1,5 +1,4 @@
 ---
-categories: programming
 gist: >-
   When it comes to logging there are lot of options in android. When it comes to
   multipurpose use, not every library satisfies all. We are gonna see how I
@@ -11,6 +10,8 @@ tags:
   - Loggers
   - App development
 date: 2019-04-20T10:57:14.369Z
+categories: 
+  - android
 title: Android loggers analyzed
 ---
 

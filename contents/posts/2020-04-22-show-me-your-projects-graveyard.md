@@ -6,6 +6,8 @@ tags:
   - Learnings
 date: 2020-04-22T14:25:34.217Z
 title: Show me your projects graveyard!
+categories:
+  - programming
 ---
 Some of us might have come across very crazy ideas throughout our programming career. when I started my programming career, I didn't know open source and benefits of it back then. I didn't know the best practices and SDLC etc. I have written some shit code to get the things done. I don't even have source code for some of those projects now.I wanted to develop some of these things just to learn even if some opensource version available out there. still I am doing this. but still those projects remind me about my progress from a newbie to senior software developer at [Freshworks](https://freshworks.com/).
 

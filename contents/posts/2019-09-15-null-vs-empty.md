@@ -6,6 +6,8 @@ tags:
   - programming
 date: 2019-09-14T18:21:41.620Z
 title: NULL vs Empty
+categories:
+  - programming
 ---
 <img src="/assets/blog/null-vs-empty/null-vs-empty-cover.jpeg" alt="null vs empty" style="width:100%">
 <br/>

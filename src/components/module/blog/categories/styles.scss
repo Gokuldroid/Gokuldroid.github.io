@@ -1,0 +1,15 @@
+@import "shared/all";
+
+.categories-container {
+  padding: 20px;
+  .category--title {
+    color: $green;
+    padding-bottom: 10px;
+  }
+  .category {
+    &:hover {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

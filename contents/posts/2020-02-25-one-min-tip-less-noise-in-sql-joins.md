@@ -5,6 +5,8 @@ tags:
   - productivity
 date: 2020-02-25T17:29:40.001Z
 title: 'One minute tips : Less noise in SQL joins'
+categories:
+  - database
 ---
 Assume that we need to join two tables based on some condition. For example,
 

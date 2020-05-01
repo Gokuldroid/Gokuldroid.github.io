@@ -6,6 +6,9 @@ tags:
   - tools
 date: 2020-01-18T07:52:06.942Z
 title: A missing cmdline util for GIT - NIT
+categories:
+  - tools
+  - cmdline
 ---
 
 I have been using VS code and cmdline for git. But I always miss something. Autocompletion is not perfect in cmdline and GIT tower is bit costly. So, I created [this](https://github.com/Gokuldroid/nit) to make git cmdline experience better.

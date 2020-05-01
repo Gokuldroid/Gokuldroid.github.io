@@ -24,6 +24,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     title
                     path
                     date
+                    categories
                   }
                 }
               }
@@ -67,6 +68,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           itemToPath: itemToPath,
           itemToId: "node.id"
         });
+
+        const categories = new Set();
+        blogPosts.forEach((blogPost) => {
+          blogPost.node.frontmatter.categories.forEach(cat => categories.add(cat))
+        });
+        
       })
     );
   });

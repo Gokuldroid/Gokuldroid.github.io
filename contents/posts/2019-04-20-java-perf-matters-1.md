@@ -4,6 +4,8 @@ tags:
   - Java
   - Programming
 date: 2019-04-20T10:52:53.511Z
+categories: 
+  - java
 title: 'Java : Perf matters - 1'
 ---
 Doing microbenchmark is really hard.benchmarking code in microseconds, nanoseconds requires a lot of things to consider.**Benchmark results may vary for each computer**.Sometimes it differs in the same machine if you do it multiple times as the machine **will be at same state ever**.To keep the external noise minimum,it is advised to close all the running application so that it doesn't wait for another process to release resources.JIT compiler is playing major role optimising java code on the fly.It does some really great work but in our case, it is also a great factor to consider.For example, when you execute a function multiple times JIT optimises the code. It removes dead code (Empty methods etc, optimising bytecode, inlining functions etc). So we have to fake the JIT compiler so that it doesn't optimise our benchmarking code.In this tutorial, I am going to use JMH Gradle plugin to make tests.

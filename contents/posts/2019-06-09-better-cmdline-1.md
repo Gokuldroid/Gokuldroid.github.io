@@ -6,6 +6,9 @@ tags:
   - bash
 date: 2019-06-09T12:25:19.116Z
 title: Better cmdline
+categories: 
+  - tools
+  - cmdline
 ---
 Every programmer searches for some files more than he breathes in his life. Sometimes it is very daunting to navigate deeply nested folder just to run a single test file. Do you think 'Up arrow never works for me'?. Do you think 'My life is better than my bash history'?. If that so, this article is for you. Sometimes I envy people who use cmd line very efficiently. In this article, I going to show you how my cmd line journey evolved over the period (still I have lots of things to master).
 

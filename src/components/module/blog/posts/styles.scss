@@ -1,8 +1,11 @@
 @import "shared/all";
 
-.posts-container {
-  margin: 8% 20%;
+.blog-container {
+  padding: 8% 5%;
+  margin-right: 0 !important;
+}
 
+.posts-container {
   .post {
     cursor: pointer;
     padding: 30px;
