@@ -51,10 +51,44 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         });
 
         const categories = new Set();
+        const noOfPostsInCategory = {};
+
         blogPosts.forEach((blogPost) => {
-          blogPost.node.frontmatter.categories.forEach(cat => categories.add(cat))
+          blogPost.node.frontmatter.categories.forEach(cat => {
+            categories.add(cat)
+            noOfPostsInCategory[cat] = (noOfPostsInCategory[cat] || 0) + 1
+          });
         });
-        
+
+        console.log(noOfPostsInCategory);
+
+        const postsPerPage = 5;
+        const blogCategoryLayout = path.resolve("./src/components/module/blog/posts/category/index.jsx");
+
+        const { previousPagePath, nextPagePath, numberOfPages, humanPageNumber, category } = pageContext;
+
+
+        categories.forEach((cat, i) => {
+          const link = `/blog/category/${cat}`
+          Array.from({
+            length: Math.ceil(noOfPostsInCategory[cat] / postsPerPage),
+          }).forEach((_, i) => {
+            const path = i === 0 ? link : `${link}/page/${i + 1}`;
+            console.log(path);
+            createPage({
+              path,
+              component: blogCategoryLayout,
+              context: {
+                category: cat,
+                skip: i * postsPerPage,
+                limit: postsPerPage,
+                currentPage: i + 1,
+                humanPageNumber: currentPage,
+                numberOfPages: Math.ceil(noOfPostsInCategory[cat] / postsPerPage),
+              },
+            })
+          })
+        })
       })
     );
   });

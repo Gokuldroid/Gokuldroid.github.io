@@ -4,7 +4,7 @@ import React from "react"
 import './styles.scss'
 
 
-function PagintionLinks(props) {
+function PaginationLinks(props) {
   let low = Math.max(props.currentPage - 2, 1);
   let high = Math.min(props.currentPage + 2, props.totalPages);
   let items = [];
@@ -30,7 +30,7 @@ const Pagination = (props) => {
             </Link>
           </li> : null
         }
-        {PagintionLinks(props)}
+        {PaginationLinks(props)}
         {props.nextPage ?
           <li className="page-item" key="Next">
             <Link to={props.nextPage} className="page-link" aria-label="Next">
