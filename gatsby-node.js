@@ -1,6 +1,7 @@
 const pagination = require('gatsby-awesome-pagination');
 const path = require('path');
 const { paginate, createPagePerItem } = pagination;
+const allMarkdownQuery = require ('./build-scripts/queries/all-markdown');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -11,27 +12,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const blogPost = path.resolve("./src/components/module/blog/post/index.jsx");
     const blogIndex = path.resolve("./src/components/module/blog/posts/index.jsx");
     resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-            ) {
-              edges {
-                node {
-                  id
-                  frontmatter {
-                    title
-                    path
-                    date
-                    categories
-                  }
-                }
-              }
-            }
-          }
-        `
-      ).then(result => {
+      graphql(allMarkdownQuery).then(result => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);

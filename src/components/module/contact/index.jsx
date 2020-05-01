@@ -13,22 +13,22 @@ export default class Contact extends Component {
           <img src="/assets/contact/profile_pic.png" alt="gokul prabhu" className="profile-pic mx-auto d-block"/>
           <div className="row icon-container">
             <div className="col text-center">
-              <a href="https://www.linkedin.com/in/gokul-prabhu-536176102/" className="contact-link" target="_blank">
+              <a href="https://www.linkedin.com/in/gokul-prabhu-536176102/" className="contact-link" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="contact-icon fa-linkedin"/>
               </a>
             </div>
             <div className="col text-center">
-              <a href="https://github.com/Gokuldroid/" className="contact-link" target="_blank">
+              <a href="https://github.com/Gokuldroid/" className="contact-link" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="contact-icon fa-github"/>
               </a>
             </div>
             <div className="col text-center">
-              <a href="https://www.instagram.com/gokul_supersaiyan/" className="contact-link" target="_blank">
+              <a href="https://www.instagram.com/gokul_supersaiyan/" className="contact-link" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="contact-icon fa-insta"/>
               </a>
             </div>
             <div className="col text-center">
-              <a href="tel:+919659172403" className="contact-link" target="_blank">
+              <a href="tel:+919659172403" className="contact-link" target="_blank" rel="noopener noreferrer">
                 <FaPhone className="contact-icon fa-phone"/>
               </a>
             </div>
