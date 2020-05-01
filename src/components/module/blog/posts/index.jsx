@@ -33,10 +33,10 @@ const Blog = (props) => {
     <Header/>
     <SEO title="Blog"/>
     <div className="row blog-container">
-      <div className="col-3">
+      <div className="col-xl-3">
         <Categories categories={props.data.categories.group} />
       </div>
-      <div className="col-9 posts-container card">
+      <div className="col-xl-9 posts-container card">
         {props.data.posts.edges.map((edge) => <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />)}
         {numberOfPages > 1 ? <Pagination totalPages={numberOfPages} currentPage={humanPageNumber} nextPage={nextPagePath} previousPage={previousPagePath} path={path} /> : null}
       </div>

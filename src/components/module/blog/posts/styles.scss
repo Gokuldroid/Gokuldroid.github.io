@@ -24,6 +24,8 @@
 
       span {
         @extend %green-tag;
+        white-space: nowrap;
+        line-height: 40px;
       }
     }
   }
@@ -42,5 +44,8 @@
 @include respond-below(sm){ 
   .posts-container {
     margin: 16% 0;
+  }
+  .blog-container {
+    padding: 0 !important;
   }
 }

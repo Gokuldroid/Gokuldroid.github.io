@@ -13,3 +13,9 @@
     }
   }
 }
+
+@include respond-below(sm){ 
+  .categories-container {
+    display: none !important;
+  }
+}
