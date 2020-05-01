@@ -65,8 +65,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const postsPerPage = 5;
         const blogCategoryLayout = path.resolve("./src/components/module/blog/posts/category/index.jsx");
 
-        const { previousPagePath, nextPagePath, numberOfPages, humanPageNumber, category } = pageContext;
-
 
         categories.forEach((cat, i) => {
           const link = `/blog/category/${cat}`
@@ -74,7 +72,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             length: Math.ceil(noOfPostsInCategory[cat] / postsPerPage),
           }).forEach((_, i) => {
             const path = i === 0 ? link : `${link}/page/${i + 1}`;
-            console.log(path);
             createPage({
               path,
               component: blogCategoryLayout,
@@ -83,7 +80,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 skip: i * postsPerPage,
                 limit: postsPerPage,
                 currentPage: i + 1,
-                humanPageNumber: currentPage,
+                humanPageNumber: i + 1,
                 numberOfPages: Math.ceil(noOfPostsInCategory[cat] / postsPerPage),
               },
             })
