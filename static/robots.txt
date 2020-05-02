@@ -3,3 +3,4 @@ Disallow: /blog/category/*
 Disallow: /blog/page/*
 
 Sitemap: https://codefromdude.com/sitemap.xml
+Sitemap: https://codefromdude.com/vlc-docs/sitemap.xml
