@@ -10,6 +10,8 @@ tags:
   - Docusaurus
 date: 2020-05-03T06:10:35.547Z
 title: Evaluating documentation frameworks for personal projects.
+categories:
+  - programming, personal projects
 ---
 
 I've been trying to write a [documentation](https://codefromdude.com/vlc-docs/) page for my [project](https://play.google.com/store/apps/details?id=tuple.me.vlcremote) (An android app to control your VLC media player) for a very long time. I decided to use some static site builders to get it done quickly. 
@@ -18,14 +20,14 @@ I am already using [gatsby](https://www.gatsbyjs.org/) for my [blog](http://code
 
 In this post, I will share my opinions on documentation tools that I have considered for my project. 
 
-*My requirements are:*
-1. Appearance should align with my product theme.
-2. It should be user friendly as I am going to use it for one of my android apps (not just for developers).
-3. It should be SEO friendly.
-4. Now I don't have any complex requirements. but it should be extendable in the future.
-5. It should be hostable in GitHub pages using a new repo other than my personal page repo. I didn't want to pollute my blog with docs logic as I might add few more docs for some other projects.
-6. It shouldn't require much configuration/learning for up and running. 
-7. It should be simple.
+**My requirements are:**
+- Appearance should align with my product theme.
+- It should be user friendly as I am going to use it for one of my android apps (not just for developers).
+- It should be SEO friendly.
+- Now I don't have any complex requirements. but it should be extendable in the future.
+- It should be hostable in GitHub pages using a new repo other than my personal page repo. I didn't want to pollute my blog with docs logic as I might add few more docs for some other projects.
+- It shouldn't require much configuration/learning for up and running. 
+- It should be simple.
 
 **[Gatsby-docs-kit](https://brainhubeu.github.io/gatsby-docs-kit/):**
 
@@ -50,7 +52,9 @@ In this post, I will share my opinions on documentation tools that I have consid
   - Not SEO friendly.
   
 **[GitBook](https://www.gitbook.com/)** : (*I want to try this in future*):
+
 Some sample sites using Gitbook [Timber](https://docs.timber.io/).
+
 **Pros:**
   - SEO friendly.
   - No need to set up in our local machine. It is free for personal use.
@@ -64,6 +68,7 @@ Some sample sites using Gitbook [Timber](https://docs.timber.io/).
    - We can't host it on our own.
 
 **[Gitdocs](https://github.com/timberio/gitdocs):**
+
 I stumbled up this framework after seeing dev.to's [documentation](https://docs.dev.to/technical-overview/stack/). It is very easy to configure. I felt some limitations from the beginning itself.
 
 **Pros:**
@@ -99,11 +104,12 @@ Some sample sites using this framework [pixolution](https://docs.pixolution.org/
   - Based on python might not work very well with other frontend tools.
 
 **[Docusaurus](https://v2.docusaurus.io/):**
+
 There are two major versions of docusaurus. versions two is still in beta and it doesn't have some of the features of version one. but the road map of docusaurus 2 seemed interesting to me. So I wanted to give it a try for my blog.
 
 **Pros:**
   - It is maintained by Facebook.
-  - Easily themeable. It uses [infima](https://facebookincubator.github.io/infima) under the hood (this also still in beta).
+  - Easily themeable. It uses [infima](https://facebookincubator.github.io/infima) under the hood (Note: this also still in beta).
   - It comes with a lot of predefined configurations.
   - Lots of facebook's open-source projects use this for documentation.
   - It has lots of flexibility.
