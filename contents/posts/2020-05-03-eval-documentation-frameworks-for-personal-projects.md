@@ -82,11 +82,13 @@ I stumbled up this framework after seeing dev.to's [documentation](https://docs.
   - Not customizable.
 
 **[Daux.io](https://daux.io/)**
+
 Some sample sites using this framework [pixolution](https://docs.pixolution.org/#/) , [soisy](https://doc.soisy.it/en/Introduction.html).
 
 **Props:**
   - It has multilingual support.
   - We can build it and host it GitHub.
+
 **Cons:**
   - The default theme is not user friendly.
   - There is no much documentation for customization. but some sites using this framework has a really good look and feel.
