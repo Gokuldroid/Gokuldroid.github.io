@@ -1,0 +1,12 @@
+@import "shared/all";
+
+.share-container {
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 20px;
+  border-top: 1px solid $green;
+
+  .react-share__ShareButton {
+    padding: 0 10px !important;
+  }
+}

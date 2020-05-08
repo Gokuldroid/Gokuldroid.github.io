@@ -6,6 +6,7 @@ import MarkDownContent from '@components/shared/markdown-content';
 import GoogleAds from "@components/shared/google-ads";
 import FbComments from "@components/shared/fb-comments";
 import SEO from "@components/seo";
+import Share from "@components/module/blog/post/share";
 
 export const BlogPost = props => {
   const { pageContext, data } = props;
@@ -19,6 +20,7 @@ export const BlogPost = props => {
       <div className="post-container card">
         <h1 className="post-container--title">{post.frontmatter.title}</h1>
         <MarkDownContent html={post.html} />
+        <Share title={post.frontmatter.title}/>
         <div className="post-container--links">
           {previousPagePath ? (
             <a href={previousPagePath} target="_blank" rel="noopener noreferrer" className="post-container--links__previous">
