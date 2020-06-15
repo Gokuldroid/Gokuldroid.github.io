@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://codefromdude.com/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/eval-documentation-frameworks-for-personal-projects</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/show-me-your-projects-graveyard</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/one-min-tip-less-noice-in-sql-joins</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -12,13 +11,6 @@
 <url> <loc>https://codefromdude.com/posts/better-cmdline-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/android-loggers-analyzed</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/java-perf-matters-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/programming</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/personal projects</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/database</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/tools</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/cmdline</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/blog/category/android</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/apps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
