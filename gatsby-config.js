@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "G-L1ZGWFMW43",
+        trackingId: "UA-165941454-1",
         head: true,
       },
     },
@@ -60,7 +60,12 @@ module.exports = {
       }
     },
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/blog/category/*`, `/blog/page/*`]
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
