@@ -1,7 +1,9 @@
 ---
 path: you-tried-hard-and-failed-its-ok
 tags:
-  - personal, motivation, outliers
+  - personal
+  - motivation
+  - outliers
 date: 2020-11-20T03:41:38.083Z
 title: You tired hard and you gave your best! still you failed and it's ok!
 categories:
@@ -19,8 +21,8 @@ As a developer, I want stats or exact numbers, not just the stories. So, I decid
 
 ```java
 public double score() {
-            return getTalent();
-        }
+    return getTalent();
+}
 
 // assuming luck plays just 5 percent in your life
 public double scoreWithLuck() {
