@@ -7,7 +7,7 @@ title: You tired hard and you gave your best! still you failed and it's ok!
 categories:
   - personal
 ---
-I was reading a book called **Outliers** . that made me retrospect my life and the role of luck in my life. There are a lot of factors for one's success, even with a better personal life with great support from others one can have an edge in your professional life. There are things we can't control in your life. For example our birthplace. You and the person who works in a different country doing the same job might be earning and getting more rewards than you. It doesn't mean that you're doing less work and you're not capable. you're just in the wrong place. To be successful, one has to be in the right place at the right time. 
+I was reading a book called **Outliers** . that made me retrospect my life and the role of luck in my life. There are a lot of factors for one's success, even with a better personal life with some support from others, one can have an edge in your professional life. There are things we can't control in your life. For example, our birthplace or the time. You and the person who works in a different country doing the same job might be earning and getting more rewards than you. It doesn't mean that you're doing less work and you're not capable. you're just in the wrong place. To be successful, one has to be in the right place at the right time. 
 
 As a developer, I want stats or exact numbers, not just the stories. So, I decided to simulate the role of luck in an interview. I assumed luck just plays 5% in the interview selection and wanted to compare with the interview result that's purely dependant on talent.
 
@@ -33,7 +33,7 @@ public double scoreWithLuck() {
 
 To my surprise, even **5%** luck made a difference up to **24%** when I run the simulation ten times. To give you some idea, if a hundred people are getting interviewed for ten positions, you might be one of two persons who get rejected because of luck.
 
-But if you do the interview twice, your chance of getting rejected because of luck is **24% of 24%** (**5%**). So, try one more time and prove the **luck means nothing in your life**.
+But if you do the interview twice, your chance of getting rejected because of luck is **24% of 24%** (**5%**). So, try one more time and prove **luck means nothing in your life**.
 
 
 ```java
