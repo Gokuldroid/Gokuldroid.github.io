@@ -5,7 +5,7 @@ tags:
   - motivation
   - outliers
 date: 2020-11-20T03:41:38.083Z
-title: You tired hard and you gave your best! still you failed and it's ok!
+title: You tried hard and you gave your best! still you failed and it's ok!
 categories:
   - personal
 ---
