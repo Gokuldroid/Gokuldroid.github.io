@@ -1,3 +1,3 @@
-yd: yarn develop
-yp: yarn publish
-ys: yarn start
+nd: npm run develop
+np: npm run publish
+ns: npm run start
