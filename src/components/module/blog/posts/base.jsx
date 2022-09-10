@@ -4,7 +4,7 @@ import Header from "@components/shared/header"
 import FormattedDate from '@components/shared/formatted-date'
 import Pagination from '@components/shared/pagination';
 import SEO from "@components/seo";
-import Categories from '@components/module/blog/categories';
+import Categories from '@components/shared/categories';
 
 function BlogPostGist({ node }) {
   var link = `/posts/${node.frontmatter.path}`

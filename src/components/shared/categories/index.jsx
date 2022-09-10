@@ -3,7 +3,7 @@ import React from "react"
 import "./styles.scss"
 
 export default ({ categories }) => (
-  <div className="categories-container card mb-4">
+  <div className={`categories-container mb-4`}>
     <div  className="d-flex flex-wrap">
       <a
         className={`btn btn-outline-primary text-uppercase fw-bold d-inline`}
@@ -23,7 +23,7 @@ export default ({ categories }) => (
             key={category.name}
             role="button"
           >
-            {category.name} ({category.count})
+            {category.name} {category.count > 0 ? `(${category.count})` : ""}
           </a>
         ))}
     </div>
