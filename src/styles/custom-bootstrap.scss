@@ -13,15 +13,28 @@ $pagination-bg: #eaf5ea;
 $btn-border-width: 2px;
 
 $purple: #9b51e0;
-$green: #0b843e;
-$blue: #2779a7;
-$orange: #e0822f;
-$grey: #515557;
 $transparentPurple:rgba(155,81,224,.1);
+
+$green: #0b843e;
 $transparentGreen: rgba(11,132,62,.1);
+
+$blue: #2779a7;
 $transparentBlue: rgba(39,121,167,.1);
+
+$orange: #e0822f;
 $transparentOrange:  rgba(224,130,47,.1);
+
+$grey: #515557;
 $transparentGrey: rgba(88,93,95,.05);
+
+:root {
+  --blue: #{$blue};
+  --transparentBlue: #{$transparentBlue};
+  --green: #{$green};
+  --transparentGreen: #{$transparentGreen};
+  --purple: #{$purple};
+  --transparentPurple: #{$transparentPurple};
+}
 
 $theme-colors: (
   "primary":    $dark,

@@ -27,7 +27,7 @@
       }
     }
     .card-header {
-      background-color: $green;
+      background-color: var(--blue);
       color: white;
       border-bottom: 0;
     }
@@ -41,7 +41,7 @@
       }
     }
     a {
-      color: $green;
+      color: var(--blue);
     }
   }
 }

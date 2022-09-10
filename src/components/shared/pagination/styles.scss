@@ -2,21 +2,5 @@
 
 .pagination-container {
   .pagination {
-
-    .page-item {
-  
-      a {
-        color: $green;
-      }
-      
-      &.active {
-  
-        a {
-          background-color: $green;
-          color: white;
-          border-color: $green;
-        }
-      }
-    }
   }
 }

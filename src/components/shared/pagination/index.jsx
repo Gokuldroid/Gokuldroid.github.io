@@ -1,44 +1,57 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import './styles.scss'
-
+import "./styles.scss"
 
 function PaginationLinks(props) {
-  let low = Math.max(props.currentPage - 2, 1);
-  let high = Math.min(props.currentPage + 2, props.totalPages);
-  let items = [];
+  let low = Math.max(props.currentPage - 2, 1)
+  let high = Math.min(props.currentPage + 2, props.totalPages)
+  let items = []
   for (let itr = low; itr <= high; itr++) {
-    let pageLink = props.path(itr);
-    if (props.currentPage === itr) {
-      items.push(<li className="page-item active" key={itr}><Link to={pageLink} className="page-link" >{itr}</Link></li>)
-    } else {
-      items.push(<li className="page-item" key={itr}><Link to={pageLink} className="page-link" >{itr}</Link></li>)
-    }
+    let pageLink = props.path(itr)
+    items.push(
+      <Link
+        to={pageLink}
+        className={`btn btn-${
+          props.currentPage === itr ? "" : "outline-"
+        }primary`}
+        key={itr}
+      >
+        {itr}
+      </Link>
+    )
   }
-  return items;
+  return items
 }
 
-const Pagination = (props) => {
+const Pagination = props => {
   return (
     <div className="pagination-container">
-      <ul className="pagination d-flex">
-        {props.previousPage ?
-          <li className="page-item" key="Previous">
-            <Link to={props.previousPage} className="page-link" aria-label="Next">
+      <div className="d-flex justify-content-center m-3">
+        <div class="btn-group" role="group">
+          {props.previousPage ? (
+            <Link
+              to={props.previousPage}
+              className="btn btn-outline-primary"
+              aria-label="Next"
+              key="Previous"
+            >
               Previous
             </Link>
-          </li> : null
-        }
-        {PaginationLinks(props)}
-        {props.nextPage ?
-          <li className="page-item" key="Next">
-            <Link to={props.nextPage} className="page-link" aria-label="Next">
+          ) : null}
+          {PaginationLinks(props)}
+          {props.nextPage ? (
+            <Link
+              to={props.nextPage}
+              className="btn btn-outline-primary"
+              aria-label="Next"
+              key="Next"
+            >
               Next
             </Link>
-          </li> : null
-        }
-      </ul>
+          ) : null}
+        </div>
+      </div>
     </div>
   )
 }
@@ -48,7 +61,7 @@ Pagination.propTypes = {
   currentPage: PropTypes.number,
   nextPage: PropTypes.string,
   previousPage: PropTypes.string,
-  path: PropTypes.func
+  path: PropTypes.func,
 }
 
-export default Pagination;
+export default Pagination

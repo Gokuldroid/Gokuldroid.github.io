@@ -19,20 +19,19 @@
     }
 
     span {
-      color: $green;
+      color: var(--purple);
     }
   }
 
   .navbar-nav {
-
     li {
-      font-size: 1.0em;
+      font-size: 1em;
       font-weight: 100;
       padding: 0 10px;
 
       a {
         &:hover {
-          color: $green;
+          color: var(--purple);
           text-decoration: none;
         }
       }

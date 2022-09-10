@@ -23,7 +23,7 @@
       padding: 25px 0 0px;
 
       span {
-        @extend %green-tag;
+        @extend %tag;
         white-space: nowrap;
         line-height: 40px;
       }

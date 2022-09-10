@@ -12,7 +12,7 @@
     margin-bottom: 30px;
 
     span {
-      color: $green;
+      color: var(--blue);
     }
 
     .cursor {
@@ -37,7 +37,7 @@
     text-align: center;
 
     span {
-      color: $green;
+      color: var(--blue);
     }
   }
 }
