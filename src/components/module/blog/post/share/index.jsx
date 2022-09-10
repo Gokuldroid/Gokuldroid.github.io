@@ -21,13 +21,13 @@ class Share extends Component {
       <div className="share-container">
         <p><small>Share this article on:</small></p>
         <LinkedinShareButton url={this.state.url} title={title}> 
-          <LinkedinIcon size={50} round/>
+          <LinkedinIcon size={50} borderRadius={8}/>
         </LinkedinShareButton>
         <TwitterShareButton url={this.state.url} title={title}>
-          <TwitterIcon size={50} round/>
+          <TwitterIcon size={50} borderRadius={8}/>
         </TwitterShareButton>
         <EmailShareButton url={this.state.url} subject={title}> 
-          <EmailIcon size={50} round/>
+          <EmailIcon size={50} borderRadius={8}/>
         </EmailShareButton>
       </div>
     );
