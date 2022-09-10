@@ -14,8 +14,6 @@
 <url> <loc>https://codefromdude.com/posts/better-cmdline-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/android-loggers-analyzed</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/posts/java-perf-matters-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/apps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://codefromdude.com/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://codefromdude.com/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
