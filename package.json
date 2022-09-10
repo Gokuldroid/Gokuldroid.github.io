@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Gokul prabhu <gokulprabhu.droid@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.2.1",
     "gatsby": "^2.19.22",
     "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-image": "^2.2.41",

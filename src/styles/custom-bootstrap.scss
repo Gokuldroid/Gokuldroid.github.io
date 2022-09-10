@@ -2,9 +2,57 @@
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss"; 
+
+
 $card-border-width: 0;
-$border-radius: 10px;
+$border-radius: 6px;
 $pagination-border-width: 0;
 $pagination-bg: #eaf5ea;
+$btn-border-width: 2px;
+
+$purple: #9b51e0;
+$green: #0b843e;
+$blue: #2779a7;
+$orange: #e0822f;
+$grey: #515557;
+$transparentPurple:rgba(155,81,224,.1);
+$transparentGreen: rgba(11,132,62,.1);
+$transparentBlue: rgba(39,121,167,.1);
+$transparentOrange:  rgba(224,130,47,.1);
+$transparentGrey: rgba(88,93,95,.05);
+
+$theme-colors: (
+  "primary":    $dark,
+  "secondary":  $secondary,
+  "success":    $green,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
 
 @import "~bootstrap/scss/bootstrap.scss";
+
+.btn-outline-purple {
+  @include button-outline-variant($purple);
+}
+
+.btn-outline-green {
+  @include button-outline-variant($green);
+}
+
+.btn-outline-blue {
+  @include button-outline-variant($blue);
+}
+
+.btn-outline-orange {
+  @include button-outline-variant($orange);
+}
+
+.btn-outline-grey {
+  @include button-outline-variant($grey);
+}

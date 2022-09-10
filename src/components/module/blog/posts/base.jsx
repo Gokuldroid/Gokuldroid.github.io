@@ -30,10 +30,8 @@ const Base = (props) => {
     <Header/>
     <SEO title="Blog"/>
     <div className="row blog-container">
-      <div className="col-xl-3">
-        <Categories categories={categories} />
-      </div>
-      <div className="col-xl-9 posts-container card">
+      <Categories categories={categories}/>
+      <div className="col posts-container card">
         {posts.map((edge) => <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />)}
         {numberOfPages > 1 ? <Pagination totalPages={numberOfPages} currentPage={humanPageNumber} nextPage={nextPagePath} previousPage={previousPagePath} path={path} /> : null}
       </div>

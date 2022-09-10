@@ -7,6 +7,7 @@ tags:
 date: 2020-01-18T07:52:06.942Z
 title: A missing cmdline util for GIT - NIT
 categories:
+  - productivity
   - tools
   - cmdline
 ---

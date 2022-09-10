@@ -12,7 +12,6 @@ date: 2020-05-03T06:10:35.547Z
 title: Evaluating documentation frameworks for personal projects.
 categories:
   - programming
-  - personal projects
 ---
 
 I've been trying to write a [documentation](https://codefromdude.com/vlc-docs/) page for my [project](https://play.google.com/store/apps/details?id=tuple.me.vlcremote) (An android app to control your VLC media player) for a very long time. I decided to use some static site builders to get it done quickly. 

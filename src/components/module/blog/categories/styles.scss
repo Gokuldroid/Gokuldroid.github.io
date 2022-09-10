@@ -1,18 +1,11 @@
 @import "shared/all";
 
 .categories-container {
-  padding: 20px;
-  .category--title {
-    color: $green;
-    padding-bottom: 10px;
-  }
-  .category {
-    color: black;
-    padding: 10px 0;
-    &:hover {
-      font-weight: bold;
-      cursor: pointer;
-    }
+  padding: 20px 20px 5px 20px;
+
+  .btn {
+    margin-left: 15px;
+    margin-bottom: 15px;
   }
 }
 

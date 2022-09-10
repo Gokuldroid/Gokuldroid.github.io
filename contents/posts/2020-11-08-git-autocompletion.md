@@ -6,9 +6,7 @@ tags:
 date: 2020-11-08T12:30:34.813Z
 title: Git autocompletion
 categories:
-  - programming
   - productivity
-  - cmdline
 ---
 <img src="/assets/blog/git-autocompletion/git-autocompletion.gif" alt="git auto completion" style="width:100%">
 
