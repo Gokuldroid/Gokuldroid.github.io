@@ -144,3 +144,11 @@
  .token.entity {
    cursor: help;
  }
+
+ .markdown-container > h1,.h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  padding-top: 18px !important;
+ }
+
+ .markdown-container > ol, ul {
+  padding-top: 5px;
+ }
