@@ -14,7 +14,7 @@ export default ({ categories, currentCategory }) => (
   <div className={`categories-container mb-4`}>
     <div className="d-flex flex-wrap">
       <a
-        className={`btn ${getButtonClassName('all', currentCategory, 0)} text-uppercase fw-bold d-inline`}
+        className={`btn ${getButtonClassName('all', currentCategory, 4)} text-uppercase fw-bold d-inline`}
         href={`/blog`}
         role="button"
       >
