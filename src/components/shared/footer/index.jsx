@@ -3,7 +3,7 @@ import "./styles.scss"
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Contacts = () => (
-  <div className="contact-icon-container d-flex justify-content-start">
+  <div className="contact-icon-container d-flex justify-content-center justify-md-content-start justify-content-lg-start">
     <div className="contact-icon text-center">
       <a
         href="https://www.linkedin.com/in/gokul-prabhu-536176102/"
@@ -40,11 +40,11 @@ const Contacts = () => (
 const Footer = () => (
   <>
     <div className="footer-container container-fluid">
-      <div className="row">
-        <div className="col-10">
+      <div className="row justify-content-sm-center">
+        <div className="col-lg-10 col-12">
           <Contacts />
         </div>
-        <div className="col-2">
+        <div className="col-lg-2 col-12">
           <p className="made-by">© 2022, Made by Gokulprabhu</p>
         </div>
       </div>
