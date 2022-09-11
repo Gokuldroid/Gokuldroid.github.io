@@ -10,7 +10,7 @@ const Blog = (props) => {
   const path = (pageNumber) => pageNumber === 1 ? `/blog/category/${category}` : `/blog/category/${category}/page/${pageNumber}`
 
   return (<>
-    <Base previousPagePath={previousPagePath} nextPagePath={nextPagePath} numberOfPages={numberOfPages} humanPageNumber={humanPageNumber} path={path} categories={categories} posts={posts}/>
+    <Base previousPagePath={previousPagePath} nextPagePath={nextPagePath} numberOfPages={numberOfPages} humanPageNumber={humanPageNumber} path={path} categories={categories} posts={posts} currentCategory={category}/>
   </>)
 }
 

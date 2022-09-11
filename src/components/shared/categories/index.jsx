@@ -2,11 +2,19 @@ import { getColorForIndex } from "@components/utils/colors"
 import React from "react"
 import "./styles.scss"
 
-export default ({ categories }) => (
+const getButtonClassName = (category, currentCategory, index) => {
+  if(category.toLowerCase() === currentCategory) {
+    return `btn-${getColorForIndex(index)}`;
+  } else {
+    return `btn-outline-${getColorForIndex(index)}`
+  }
+}
+
+export default ({ categories, currentCategory }) => (
   <div className={`categories-container mb-4`}>
-    <div  className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap">
       <a
-        className={`btn btn-outline-primary text-uppercase fw-bold d-inline`}
+        className={`btn ${getButtonClassName('all', currentCategory, 0)} text-uppercase fw-bold d-inline`}
         href={`/blog`}
         role="button"
       >
@@ -16,9 +24,7 @@ export default ({ categories }) => (
         .sort((cat1, cat2) => cat1.name > cat2.name)
         .map((category, index) => (
           <a
-            className={`btn btn-outline-${getColorForIndex(
-              index
-            )} text-uppercase fw-bold d-inline`}
+            className={`btn ${getButtonClassName(category.name, currentCategory, index)} text-uppercase fw-bold d-inline`}
             href={`/blog/category/${category.name}/`}
             key={category.name}
             role="button"

@@ -69,3 +69,23 @@ $theme-colors: (
 .btn-outline-grey {
   @include button-outline-variant($grey);
 }
+
+.btn-purple {
+  @include button-variant($purple, $purple);
+}
+
+.btn-green {
+  @include button-variant($green, $green);
+}
+
+.btn-blue {
+  @include button-variant($blue, $blue);
+}
+
+.btn-orange {
+  @include button-variant($orange, $orange);
+}
+
+.btn-grey {
+  @include button-variant($grey, $grey);
+}

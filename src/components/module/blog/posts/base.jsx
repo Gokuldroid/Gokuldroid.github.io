@@ -24,13 +24,13 @@ function BlogPostGist({ node }) {
 
 
 const Base = (props) => {
-  const { previousPagePath, nextPagePath, numberOfPages, humanPageNumber, path, categories, posts } = props;
+  const { previousPagePath, nextPagePath, numberOfPages, humanPageNumber, path, categories, posts, currentCategory } = props;
 
   return (<>
     <Header/>
     <SEO title="Blog"/>
     <div className="row blog-container">
-      <Categories categories={categories}/>
+      <Categories categories={categories} currentCategory={currentCategory}/>
       <div className="col posts-container card">
         {posts.map((edge) => <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />)}
         {numberOfPages > 1 ? <Pagination totalPages={numberOfPages} currentPage={humanPageNumber} nextPage={nextPagePath} previousPage={previousPagePath} path={path} /> : null}
