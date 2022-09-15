@@ -28,11 +28,13 @@ query($category: String, $skip: Int!, $limit: Int!) {
     edges {
       node {
         excerpt
+        html
         timeToRead
         frontmatter {
           title
           date
           tags
+          render_in_place
           path
         }
       }

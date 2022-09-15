@@ -11,7 +11,7 @@ export default class index extends Component {
         <div className="row justify-content-center">
           <div className="col-5">
             <Categories
-              categories={['android', 'cmdline', 'database', 'java', 'productivity', 'tools', 'programming'].map(cat => {
+              categories={['today I learned', 'android', 'cmdline', 'database', 'java', 'productivity', 'tools', 'programming'].map(cat => {
                 return { name: cat };
               })}
             />
