@@ -68,7 +68,7 @@ git push -u origin main
 #### Setting up domain in cloudflare and github:
 
 - create CNAME file with your custom domain (should be in single line without any spaces. [reference](https://github.com/Gokuldroid/Gokuldroid.github.io/blob/master/CNAME)).
-```
+```bash
 cd <your-repository>
 echo "<your-custom-domain>" > CNAME
 git add --all
