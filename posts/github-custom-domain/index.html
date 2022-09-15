@@ -75,11 +75,11 @@
 <ul>
 <li>
 <p>create CNAME file with your custom domain (should be in single line without any spaces. <a href="https://github.com/Gokuldroid/Gokuldroid.github.io/blob/master/CNAME">reference</a>).</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cd &lt;your-repository&gt;
-echo &quot;&lt;your-custom-domain&gt;&quot; &gt; CNAME
-git add --all
-git commit -m &quot;Add CNAME file&quot;
-git push -u origin main</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>your-repository<span class="token operator">></span>
+<span class="token builtin class-name">echo</span> <span class="token string">"&lt;your-custom-domain>"</span> <span class="token operator">></span> CNAME
+<span class="token function">git</span> <span class="token function">add</span> --all
+<span class="token function">git</span> commit -m <span class="token string">"Add CNAME file"</span>
+<span class="token function">git</span> push -u origin main</code></pre></div>
 </li>
 <li>Go to github profile settings -> Code, planning, and automation -> Pages -> click on <code class="language-text">Add domain</code></li>
 <li>Type your custom domain name -> click <code class="language-text">Add domain</code>. This will take you to the following the page like this. we need this txt record and value for the next step. keep this handy.</li>
