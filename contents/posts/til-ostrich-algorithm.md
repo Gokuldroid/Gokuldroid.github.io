@@ -2,7 +2,7 @@
 path: til-ostrich-algorithm
 tags:
   - algorithm
-  - ostrich ostrich
+  - ostrich algorithm
   - programming
 date: 2022-10-02T07:58:25.000Z
 title: Ostrich algorithm
