@@ -4,6 +4,43 @@
   margin: 8% 15%;
   padding: 100px;
 
+  .table-of-contents {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--bs-purple);
+    color: white;
+
+    &__heading {
+      margin: 0px;
+      font-size: 22px;
+    }
+
+    .arrow {
+      transform: scale(0.6);
+      position: relative;
+      top: -3px;
+    }
+
+    ul {
+      list-style: square;
+      font-size: 18px;
+
+      li {
+        padding: 5px;        
+        list-style-type: circle;
+
+        p {
+          margin: 0px;
+        }
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
   &--title {
     margin-bottom: 50px;
   }
@@ -36,10 +73,9 @@
   }
 }
 
-
-@include respond-below(sm){ 
+@include respond-below(sm) {
   .post-container {
-    margin: 0; 
+    margin: 0;
     padding: 100px 25px;
     &--title {
       font-size: 20px;

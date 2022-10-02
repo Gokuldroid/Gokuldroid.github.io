@@ -13,14 +13,14 @@ categories:
 ---
 Setting up a custom domain for our github pages has lot of benefits but at the same time it requires lot of patience. This article aims to give a picture about how the entire thing works and step-by-step guide for the same. I am taking my github profile `Gokuldroid` and my custom domain `codefromdude.com` as example here.
 
-#### Reasons on why you need to setup custom domain for your github page:
+#### Reasons on why you need to setup custom domain for your github page
 >- The default domain provided by github <username.github.io> is not intuitive.
 >- We will lose all google indexing if we want to move away from github.
 >- For more personal branding.
 >- And we're devs and we want problems ;-).
 
 
-#### Prerequisites:
+#### Prerequisites
 >- Github account
 >- Cloudflare account (github doesn't support SSL termination for custom domains. we can use cloudflare to do the SSL termination for our blog for free)
 >- A repository (<your-github-username>.github.io) with two files (index.html and CNAME)
@@ -28,7 +28,9 @@ Setting up a custom domain for our github pages has lot of benefits but at the s
 >- Bit of patience.
 
 
-#### Setting up your github repository (skip this if you already have site published at `<github-user-name>.github.io`):
+#### Setting up your github repository
+
+(skip this if you already have site published at `<github-user-name>.github.io`) 
 
 - First you have to create a public repository in this format `(<github-user-name>.github.io -> gokuldroid.github.io)`
 
@@ -65,7 +67,7 @@ git push -u origin main
 
 - Fire up a browser and go to `https://<your-github-username>.github.io`. Now you have successfully setup a personal page in github.
 
-#### Setting up domain in cloudflare and github:
+#### Setting up domain in cloudflare and github
 
 - create CNAME file with your custom domain (should be in single line without any spaces. [reference](https://github.com/Gokuldroid/Gokuldroid.github.io/blob/master/CNAME)).
 ```bash

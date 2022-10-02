@@ -21,8 +21,11 @@ function GistBody({ node }) {
 
 function BlogPostGist({ node }) {
   var link = `/posts/${node.frontmatter.path}`
+
+  var handleClick = () => window.open(link, "_blank");
+
   return (
-    <div onClick={() => window.open(link, "_blank")} className="post border-bottom">
+    <div onClick={handleClick} className="post border-bottom" onKeyDown={handleClick}>
       <p className="post-title">{node.frontmatter.title}</p>
       <p className="post-info"> <FormattedDate date={node.frontmatter.date} /> &diams; {node.timeToRead} min read</p>
       <GistBody node={node}/>
