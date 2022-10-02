@@ -5,7 +5,7 @@ tags:
   - ostrich ostrich
   - programming
 date: 2022-10-02T07:58:25.000Z
-title: 
+title: Ostrich algorithm
 render_in_place: true
 categories:
   - today I learned
