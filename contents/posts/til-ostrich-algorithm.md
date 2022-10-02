@@ -6,7 +6,7 @@ tags:
   - programming
 date: 2022-10-02T07:58:25.000Z
 title: 
-render_in_place: false
+render_in_place: true
 categories:
   - today I learned
   - algorithm
