@@ -7,23 +7,7 @@ import GoogleAds from "@components/shared/google-ads";
 import FbComments from "@components/shared/fb-comments";
 import SEO from "@components/seo";
 import Share from "@components/module/blog/post/share";
-import useCollapse from 'react-collapsed'
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
-
-const TableOfContents = ({ tableOfContents }) => {
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
-  if(tableOfContents == null || tableOfContents.length < 200) {
-    return <></>;
-  } else {
-    return (
-      <div className="table-of-contents">
-        <p className="table-of-contents__heading" {...getToggleProps()}>{isExpanded ? <FaArrowUp className="arrow"/> : <FaArrowDown className="arrow"/> } Table of contents</p>
-        <div dangerouslySetInnerHTML={{ __html: tableOfContents }} {...getCollapseProps()} />
-      </div>
-    )
-  }
-}
-
+import TableOfContents from "@components/module/blog/post/table-of-contents";
 
 export const BlogPost = props => {
   const { pageContext, data } = props;

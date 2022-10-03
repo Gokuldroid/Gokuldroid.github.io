@@ -6,29 +6,6 @@
 }
 
 .posts-container {
-  .post {
-    cursor: pointer;
-    padding: 30px;
-    .post-title {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    .post-info {
-      color: #888787;
-      font-size: 0.8em;
-    }
-
-    .post-tags {
-      padding: 25px 0 0px;
-
-      span {
-        @extend %tag;
-        white-space: nowrap;
-        line-height: 40px;
-      }
-    }
-  }
 
   .pagination-container {
     float: left;
@@ -39,7 +16,6 @@
     }
   }
 }
-
 
 @include respond-below(sm){ 
   .posts-container {

@@ -6,8 +6,8 @@ export default class index extends Component {
   render() {
     return (
       <div className="bio">
-        <p id="name">CODE FROM DUDE</p>
-        <p className="interests">All about software</p>
+        <p className="name">CODE FROM DUDE</p>
+        <p className="tagline">All about software</p>
         <div className="row justify-content-center">
           <div className="col-5">
             <Categories

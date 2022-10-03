@@ -5,20 +5,14 @@
   min-height: 92vh;
   color: $bg;
   
-  #name {
+  .name {
     font-size: 5em;
     text-align: center;
     margin-bottom: 30px;
     color: var(--purple);
   }
 
-  .line {
-    border-top: 2px solid $border_color;
-    width: 35%;
-    margin-left: 33%;
-  }
-
-  .interests {
+  .tagline {
     padding: 20px;
     font-size: 1.6em;
     text-align: center;
