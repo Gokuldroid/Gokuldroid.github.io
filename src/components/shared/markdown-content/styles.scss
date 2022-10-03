@@ -1,7 +1,6 @@
 @import "shared/all";
 
 .markdown-container {
-
   ul {
     li {
       list-style: circle;
@@ -41,36 +40,58 @@
     }
   }
 
-  blockquote{
+  blockquote {
     font-size: 1.2em;
-    width:100%;
-    margin:50px auto;
+    width: 100%;
+    margin: 50px auto;
     font-style: italic;
     color: #555555;
-    padding:1.2em 30px 1.2em 50px;
+    padding: 1.2em 30px 1.2em 50px;
     border-radius: 20px;
-    line-height:1.6;
+    line-height: 1.6;
     position: relative;
-    background:#EDEDED;
+    background: #ededed;
 
     p {
       padding-bottom: 0 !important;
       margin-bottom: 0;
     }
   }
-  
-  blockquote::before{
+
+  blockquote::before {
     content: "\201C";
-    color:var(--bs-purple);
-    font-size:3em;
+    color: var(--bs-purple);
+    font-size: 3em;
     position: absolute;
     left: 10px;
-    top:-10px;
+    top: -10px;
   }
-  
-  blockquote::after{
-    content: '';
+
+  blockquote::after {
+    content: "";
   }
+}
+
+.markdown-container > h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  padding-top: 18px !important;
+  padding-bottom: 5px !important;
+  color: var(--bs-purple);
+}
+
+.markdown-container > ol,
+ul {
+  padding-top: 5px;
 }
 
 @include respond-below(sm) {

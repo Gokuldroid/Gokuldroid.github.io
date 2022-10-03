@@ -67,7 +67,13 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`
           },
           {
-            resolve: `gatsby-remark-prismjs`
+            resolve: `gatsby-remark-prismjs-copy-button`
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true
+            }
           }
         ]
       }
