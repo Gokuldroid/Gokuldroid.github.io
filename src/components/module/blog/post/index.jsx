@@ -5,7 +5,7 @@ import Header from "@components/shared/header";
 import MarkDownContent from '@components/shared/markdown-content';
 import GoogleAds from "@components/shared/google-ads";
 import FbComments from "@components/shared/fb-comments";
-import SEO from "@components/seo";
+import SEO from "@components/shared/seo";
 import Share from "@components/module/blog/post/share";
 import TableOfContents from "@components/module/blog/post/table-of-contents";
 

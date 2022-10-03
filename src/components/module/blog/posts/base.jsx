@@ -2,7 +2,7 @@ import React from "react"
 import './styles.scss'
 import Header from "@components/shared/header"
 import Pagination from '@components/shared/pagination';
-import SEO from "@components/seo";
+import SEO from "@components/shared/seo";
 import Categories from '@components/shared/categories';
 import BlogPostGist from "@components/module/blog/posts/gist";
 
