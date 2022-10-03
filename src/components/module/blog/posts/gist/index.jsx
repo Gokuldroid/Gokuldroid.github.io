@@ -18,9 +18,11 @@ function BlogPostGist({ node }) {
 
   return (
     <div
+      role="button"
       onClick={handleClick}
       className="post border-bottom"
       onKeyDown={handleClick}
+      tabIndex={0}
     >
       <p className="post-title">{node.frontmatter.title}</p>
       <p className="post-info">
