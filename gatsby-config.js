@@ -60,6 +60,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/blog/category/*`, `/blog/page/*`]
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
