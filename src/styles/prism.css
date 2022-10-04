@@ -222,12 +222,12 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 .gatsby-remark-prismjs-copy-button-container {
-  left: -14px;
-  top: 43px;
-  color: var(--bs-purple);
-  font-weight: bold;
+  left: -14px !important;
+  top: 43px !important;
+  color: var(--bs-purple) !important;
+  font-weight: bold !important;
 }
 
 .gatsby-remark-prismjs-copy-button:hover {
-  background: var(--bs-purple);
+  background: var(--bs-purple) !important;
 }

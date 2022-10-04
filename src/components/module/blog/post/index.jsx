@@ -8,11 +8,12 @@ import FbComments from "@components/shared/fb-comments";
 import SEO from "@components/shared/seo";
 import Share from "@components/module/blog/post/share";
 import TableOfContents from "@components/module/blog/post/table-of-contents";
+import ArticleSeries from "./article-series";
 
 export const BlogPost = props => {
   const { pageContext, data } = props;
   const { previousPagePath, nextPagePath, previousItem, nextItem } = pageContext;
-  const { post } = data;
+  const { post, parentPost, siblingPosts} = data;
   return (
     <>
       <SEO title={post.frontmatter.title} keywords={post.frontmatter.tags} description={post.excerpt}/>
@@ -22,6 +23,7 @@ export const BlogPost = props => {
         <h1 className="post-container--title">{post.frontmatter.title}</h1>
         <TableOfContents tableOfContents={post.tableOfContents} />
         <MarkDownContent html={post.html} />
+        {parentPost && <ArticleSeries parentPost={parentPost} siblingPosts={siblingPosts} currentPost={post}/>}
         <Share title={post.frontmatter.title}/>
         <div className="post-container--links">
           {previousPagePath ? (
@@ -44,7 +46,7 @@ export const BlogPost = props => {
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query($pageId: String!, $previousPageId: String!, $nextPageId: String!) {
+  query($pageId: String!, $previousPageId: String!, $nextPageId: String!, $parentPath: String) {
     post: markdownRemark(id: { eq: $pageId }) {
       html
       excerpt
@@ -54,9 +56,37 @@ export const pageQuery = graphql`
       )
       frontmatter {
         title
+        path
         tags
+        parentPath
       }
     }
+
+    parentPost: markdownRemark(frontmatter: { path: { eq: $parentPath, ne: null } }) {
+      frontmatter {
+        title
+        path
+        parentPath
+      }
+    }
+
+
+    siblingPosts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: ASC }
+      filter: { frontmatter: { parentPath: { eq: $parentPath, ne: null } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+
 
     previousPost: markdownRemark(id: { eq: $previousPageId }) {
       frontmatter {

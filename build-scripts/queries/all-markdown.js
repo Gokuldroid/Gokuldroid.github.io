@@ -9,6 +9,7 @@ module.exports = `
         frontmatter {
           title
           path
+          parentPath
           date
           categories
         }

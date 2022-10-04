@@ -1,5 +1,6 @@
 ---
 path: github-custom-domain
+parentPath: github-learning-series
 tags:
   - git
   - blogging

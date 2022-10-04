@@ -19,3 +19,7 @@ a {
 @include respond-below(sm){ 
   line-height: 8px;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -20,6 +20,30 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         // Get an array of posts from the query result
         const blogPosts = result.data.allMarkdownRemark.edges;
+        const categories = new Set();
+        const noOfPostsInCategory = {};
+
+        blogPosts.forEach((blogPost) => {
+          blogPost.node.frontmatter.categories.forEach(cat => {
+            categories.add(cat)
+            noOfPostsInCategory[cat] = (noOfPostsInCategory[cat] || 0) + 1
+          });
+
+          if(blogPost.node.frontmatter.parentPath) {
+            blogPost.context = {
+              parentPath: blogPost.node.frontmatter.parentPath,
+              isSeries: true
+            };
+          } else {
+            blogPost.context = {
+              parentPath: null
+            };
+          }
+        });
+
+        console.log(JSON.stringify(blogPosts));
+        console.log(JSON.stringify(noOfPostsInCategory));
+
 
         // Create the blog index pages like `/blog`, `/blog/2`, `/blog/3`, etc.
         // The first page will have 3 items and each following page will have 10
@@ -50,17 +74,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           itemToId: "node.id"
         });
 
-        const categories = new Set();
-        const noOfPostsInCategory = {};
-
-        blogPosts.forEach((blogPost) => {
-          blogPost.node.frontmatter.categories.forEach(cat => {
-            categories.add(cat)
-            noOfPostsInCategory[cat] = (noOfPostsInCategory[cat] || 0) + 1
-          });
-        });
-
-        console.log(noOfPostsInCategory);
+        
+       
 
         const postsPerPage = 5;
         const blogCategoryLayout = path.resolve("./src/components/module/blog/posts/category/index.jsx");
