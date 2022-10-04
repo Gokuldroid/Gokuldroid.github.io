@@ -12,7 +12,7 @@ function GistBody({ node }) {
 }
 
 function BlogPostGist({ node }) {
-  var link = `/posts/${node.frontmatter.path}`
+  var link = `/posts/${node.frontmatter.path}/`
 
   var handleClick = () => window.open(link, "_blank")
 

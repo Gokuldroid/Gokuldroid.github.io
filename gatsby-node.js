@@ -39,7 +39,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const itemToPath = (node) => {
           if(!node) return;
           var path = node.node.frontmatter.path;
-          return `/posts/${path}`;
+          return `/posts/${path}/`;
         }
 
         createPagePerItem({
