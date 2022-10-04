@@ -64,6 +64,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `assets/blog`,
+              ignoreFileExtensions: [],
+            },
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`
           },
           {
