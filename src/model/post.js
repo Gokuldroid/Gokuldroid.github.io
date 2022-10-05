@@ -12,7 +12,7 @@ class Post {
     }
 
     getPostLink() {
-        return `/posts/${this.parentPath}/`
+        return `/posts/${this.path}/`
     }
 
     getParentPostLink() {

@@ -11,8 +11,8 @@ const ArticleSeries = (props) => {
 
   
   return (<>
-    <div className="related-articles-container card">
-      <h4>In this series</h4>
+    <div className="related-articles-container border mt-5 p-2 border-1 rounded">
+      <p className="m-2 text-uppercase text-muted"><b>In this series</b></p>
       <ol class="list-group list-group-numbered">
         {childPosts.map((childPost) => {
           if(currentPost.path === childPost.path) {
