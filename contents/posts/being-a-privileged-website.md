@@ -18,7 +18,7 @@ you might know webkit already if you're frontend developer. incase if you don't 
 Recently, apple made [it](https://github.com/WebKit/WebKit) open source in github. by digging at it's [source](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/page/Quirks.cpp?s=08) we can find some interesting stuffs.
 
 
-For example this one, on a hindsight it tries to suppress native auto correction in google docs. but why does even a browser engine developed by apple originally having some hacks to support a feature developed by google using some hacks. surprising isn't it?. 
+For example this one, on a hindsight it tries to suppress native auto correction in google docs. but why does even a browser engine developed by apple originally having some hacks to support a feature developed by google. surprising isn't it?. 
 
 ```cpp
 static bool shouldSuppressAutocorrectionAndAutocaptializationInHiddenEditableAreasForHost(StringView host)
