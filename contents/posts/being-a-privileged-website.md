@@ -107,7 +107,7 @@ static bool isKinjaLoginAvatarElement(const Element& element)
 }
 ```
 
-Same PR description of one pity developer
+A sample PR description of a frustrated developer
 
 ```txt
  Regression(252759@main) Unable to log into pandora.com
