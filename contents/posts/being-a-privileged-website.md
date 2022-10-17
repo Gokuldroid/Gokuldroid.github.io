@@ -4,7 +4,7 @@ tags:
   - programming
   - software development
 date: 2022-10-17T09:03:29.000Z
-title: 
+title: Being a privileged website
 render_in_place: false
 categories:
   - software development
