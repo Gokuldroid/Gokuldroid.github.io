@@ -148,33 +148,33 @@
             </div>
           </div>
           
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">static bool isKinjaLoginAvatarElement(const Element&amp; element)
-{
-    // The click event handler has been found to trigger on a div or
-    // span with these class names, or the svg, or the svg&#39;s path.
-    if (element.hasClass()) {
-        auto&amp; classNames = element.classNames();
-        if (classNames.contains(&quot;js_switch-to-burner-login&quot;_s)
-            || classNames.contains(&quot;js_header-userbutton&quot;_s)
-            || classNames.contains(&quot;sc-1il3uru-3&quot;_s) || classNames.contains(&quot;cIhKfd&quot;_s)
-            || classNames.contains(&quot;iyvn34-0&quot;_s) || classNames.contains(&quot;bYIjtl&quot;_s))
-            return true;
-    }
+<div class="gatsby-highlight" data-language="cpp"><pre style="counter-reset: linenumber NaN" class="language-cpp line-numbers"><code class="language-cpp"><span class="token keyword">static</span> <span class="token keyword">bool</span> <span class="token function">isKinjaLoginAvatarElement</span><span class="token punctuation">(</span><span class="token keyword">const</span> Element<span class="token operator">&amp;</span> element<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// The click event handler has been found to trigger on a div or</span>
+    <span class="token comment">// span with these class names, or the svg, or the svg's path.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>element<span class="token punctuation">.</span><span class="token function">hasClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">auto</span><span class="token operator">&amp;</span> classNames <span class="token operator">=</span> element<span class="token punctuation">.</span><span class="token function">classNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>classNames<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"js_switch-to-burner-login"</span>_s<span class="token punctuation">)</span>
+            <span class="token operator">||</span> classNames<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"js_header-userbutton"</span>_s<span class="token punctuation">)</span>
+            <span class="token operator">||</span> classNames<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"sc-1il3uru-3"</span>_s<span class="token punctuation">)</span> <span class="token operator">||</span> classNames<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"cIhKfd"</span>_s<span class="token punctuation">)</span>
+            <span class="token operator">||</span> classNames<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"iyvn34-0"</span>_s<span class="token punctuation">)</span> <span class="token operator">||</span> classNames<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"bYIjtl"</span>_s<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    const Element* svgElement = nullptr;
-    if (is&lt;SVGSVGElement&gt;(element))
-        svgElement = &amp;element;
-    else if (is&lt;SVGPathElement&gt;(element) &amp;&amp; is&lt;SVGSVGElement&gt;(element.parentElement()))
-        svgElement = element.parentElement();
+    <span class="token keyword">const</span> Element<span class="token operator">*</span> svgElement <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>is<span class="token operator">&lt;</span>SVGSVGElement<span class="token operator">></span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        svgElement <span class="token operator">=</span> <span class="token operator">&amp;</span>element<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>is<span class="token operator">&lt;</span>SVGPathElement<span class="token operator">></span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> is<span class="token operator">&lt;</span>SVGSVGElement<span class="token operator">></span><span class="token punctuation">(</span>element<span class="token punctuation">.</span><span class="token function">parentElement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        svgElement <span class="token operator">=</span> element<span class="token punctuation">.</span><span class="token function">parentElement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    if (svgElement &amp;&amp; svgElement-&gt;hasAttributes()) {
-        auto ariaLabelAttr = svgElement-&gt;attributes().getNamedItem(&quot;aria-label&quot;_s);
-        if (ariaLabelAttr &amp;&amp; ariaLabelAttr-&gt;value() == &quot;UserFilled icon&quot;_s)
-            return true;
-    }
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>svgElement <span class="token operator">&amp;&amp;</span> svgElement<span class="token operator">-></span><span class="token function">hasAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">auto</span> ariaLabelAttr <span class="token operator">=</span> svgElement<span class="token operator">-></span><span class="token function">attributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getNamedItem</span><span class="token punctuation">(</span><span class="token string">"aria-label"</span>_s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>ariaLabelAttr <span class="token operator">&amp;&amp;</span> ariaLabelAttr<span class="token operator">-></span><span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"UserFilled icon"</span>_s<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    return false;
-}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>A sample PR description of a frustrated developer</p>
 
           <div class="gatsby-remark-prismjs-copy-button-container">
