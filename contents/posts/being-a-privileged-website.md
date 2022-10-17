@@ -77,7 +77,7 @@ bool Quirks::shouldMakeTouchEventNonCancelableForTarget(EventTarget* target) con
 
 And this one,
 
-```
+```cpp
 static bool isKinjaLoginAvatarElement(const Element& element)
 {
     // The click event handler has been found to trigger on a div or
