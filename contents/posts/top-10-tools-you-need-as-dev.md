@@ -6,7 +6,7 @@ tags:
   - Frontend developer
   - Backend developer
 date: 2023-03-11T13:07:07.000Z
-title: 
+title: Top 10 tools you need as developer
 render_in_place: false
 categories:
   - programming
