@@ -8,9 +8,20 @@ render_in_place: true
 categories:
   - today I learned
 ---
-To find all folders and it's diskusage sorted by size, you can use the following cmd
+To find all folders and it's disk usage sorted by size, you can use the following cmd
 
 ```
 du -ck | sort -n
 ```
 
+To find all files in a folder and it's size,
+
+```
+ls -l --block-size=MB
+```
+
+or
+
+```
+ls -lh
+```
