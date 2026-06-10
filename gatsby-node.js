@@ -3,8 +3,8 @@ const path = require('path');
 const { paginate, createPagePerItem } = pagination;
 const allMarkdownQuery = require ('./build-scripts/queries/all-markdown');
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
   // We return a promise immediately
   return new Promise((resolve, reject) => {

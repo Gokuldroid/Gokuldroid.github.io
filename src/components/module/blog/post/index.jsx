@@ -72,7 +72,7 @@ export const pageQuery = graphql`
 
 
     siblingPosts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: ASC }
+      sort: { frontmatter: { date: ASC } }
       filter: { frontmatter: { parentPath: { eq: $parentPath, ne: null } } }
     ) {
       edges {

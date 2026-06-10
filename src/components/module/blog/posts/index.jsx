@@ -21,7 +21,7 @@ export default Blog
 export const pageQuery = graphql`
 query($skip: Int!, $limit: Int!) {
   posts: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }
+    sort: { frontmatter: { date: DESC } }
     skip: $skip
     limit: $limit
   ) {
@@ -42,10 +42,10 @@ query($skip: Int!, $limit: Int!) {
   }
 
   categories: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }
+    sort: { frontmatter: { date: DESC } }
     limit: 2000
   ) {
-    group(field: frontmatter___categories) {
+    group(field: { frontmatter: { categories: SELECT } }) {
       name: fieldValue
       count: totalCount
     }

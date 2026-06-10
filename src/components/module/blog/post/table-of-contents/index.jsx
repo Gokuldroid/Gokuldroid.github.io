@@ -1,6 +1,6 @@
 import React from "react";
 import './styles.scss';
-import useCollapse from 'react-collapsed'
+import { useCollapse } from 'react-collapsed'
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const TableOfContents = ({ tableOfContents }) => {

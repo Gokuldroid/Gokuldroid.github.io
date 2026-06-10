@@ -6,13 +6,6 @@ module.exports = {
     siteUrl: `https://codefromdude.com`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-165941454-1",
-        head: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -45,7 +38,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: [`${__dirname}/src/styles`],
+        sassOptions: {
+          includePaths: [`${__dirname}/src/styles`],
+        },
       }
     },
     {
