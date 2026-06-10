@@ -1,38 +1,42 @@
-import React, { Component } from "react";
-import { LinkedinShareButton, LinkedinIcon, TwitterShareButton , EmailShareButton, EmailIcon, TwitterIcon }from "react-share";
-import './styles.scss';
+import React, { Component } from "react"
+import {
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  EmailShareButton,
+  EmailIcon,
+  TwitterIcon,
+} from "react-share"
 
 class Share extends Component {
-
   constructor(props) {
-    super(props);
-    this.state = {
-      url: ""
-    }
+    super(props)
+    this.state = { url: "" }
   }
 
   componentDidMount() {
-    this.setState({ url: window.location.href});
+    this.setState({ url: window.location.href })
   }
 
   render() {
-    const title = this.props.title;
+    const title = this.props.title
     return (
-      <div className="share-container">
-        <p><small>Share this article on:</small></p>
-        <LinkedinShareButton url={this.state.url} title={title}> 
-          <LinkedinIcon size={50} borderRadius={8}/>
-        </LinkedinShareButton>
-        <TwitterShareButton url={this.state.url} title={title}>
-          <TwitterIcon size={50} borderRadius={8}/>
-        </TwitterShareButton>
-        <EmailShareButton url={this.state.url} subject={title}> 
-          <EmailIcon size={50} borderRadius={8}/>
-        </EmailShareButton>
+      <div className="mt-12 border-t border-border pt-8 text-center">
+        <p className="mb-4 text-sm text-muted">Share this article</p>
+        <div className="flex items-center justify-center gap-3">
+          <LinkedinShareButton url={this.state.url} title={title}>
+            <LinkedinIcon size={44} borderRadius={12} />
+          </LinkedinShareButton>
+          <TwitterShareButton url={this.state.url} title={title}>
+            <TwitterIcon size={44} borderRadius={12} />
+          </TwitterShareButton>
+          <EmailShareButton url={this.state.url} subject={title}>
+            <EmailIcon size={44} borderRadius={12} />
+          </EmailShareButton>
+        </div>
       </div>
-    );
+    )
   }
 }
 
-
-export default Share;
+export default Share

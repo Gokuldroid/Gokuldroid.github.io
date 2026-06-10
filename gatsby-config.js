@@ -35,14 +35,7 @@ module.exports = {
         icon: `src/images/site-logo.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        sassOptions: {
-          includePaths: [`${__dirname}/src/styles`],
-        },
-      }
-    },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {

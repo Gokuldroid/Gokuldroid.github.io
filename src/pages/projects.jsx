@@ -1,5 +1,4 @@
 import React from "react"
-import "../styles/app.scss"
 
 import Projects from "@components/module/projects"
 import SEO from "@components/shared/seo"

@@ -1,5 +1,4 @@
 import React from "react"
-import "../styles/app.scss"
 
 import Index from "@components/module/index"
 import SEO from "@components/shared/seo"

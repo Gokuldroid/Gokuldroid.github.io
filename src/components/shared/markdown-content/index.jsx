@@ -1,12 +1,11 @@
 import React from "react"
-import './styles.scss'
 
-const MarkdownContent = (props) => {
+const MarkdownContent = props => {
   return (
-    <div className="markdown-container line-numbers">
+    <div className="markdown prose prose-lg line-numbers max-w-none">
       <div dangerouslySetInnerHTML={{ __html: props.html }} />
     </div>
   )
 }
 
-export default MarkdownContent;
+export default MarkdownContent

@@ -224,10 +224,10 @@ pre[class*="language-"] > code[class*="language-"] {
 .gatsby-remark-prismjs-copy-button-container {
   left: -14px !important;
   top: 43px !important;
-  color: var(--bs-purple) !important;
+  color: var(--color-accent) !important;
   font-weight: bold !important;
 }
 
 .gatsby-remark-prismjs-copy-button:hover {
-  background: var(--bs-purple) !important;
+  background: var(--color-accent) !important;
 }

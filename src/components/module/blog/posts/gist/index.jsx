@@ -1,44 +1,42 @@
 import React from "react"
-import './styles.scss'
-import FormattedDate from '@components/shared/formatted-date';
-import MarkDownContent from '@components/shared/markdown-content';
+import { Link } from "gatsby"
+import FormattedDate from "@components/shared/formatted-date"
+import MarkDownContent from "@components/shared/markdown-content"
 
 function GistBody({ node }) {
   if (node.frontmatter.render_in_place) {
     return <MarkDownContent html={node.html} />
-  } else {
-    return <div className="post-gist">{node.excerpt}</div>
   }
+  return <p className="mt-3 leading-relaxed text-muted">{node.excerpt}</p>
 }
 
 function BlogPostGist({ node }) {
-  var link = `/posts/${node.frontmatter.path}/`
-
-  var handleClick = () => window.open(link, "_blank")
+  const link = `/posts/${node.frontmatter.path}/`
 
   return (
-    <div
-      role="button"
-      onClick={handleClick}
-      className="post border-bottom"
-      onKeyDown={handleClick}
-      tabIndex={0}
-    >
-      <p className="post-title">{node.frontmatter.title}</p>
-      <p className="post-info">
-        {" "}
-        <FormattedDate date={node.frontmatter.date} /> &diams; {node.timeToRead}{" "}
-        min read
-      </p>
-      <GistBody node={node} />
-      <div className="post-tags">
-        {node.frontmatter.tags
-          ? node.frontmatter.tags.map(tag => <span key={tag}>{tag}</span>)
-          : ""}
-      </div>
-    </div>
+    <article className="group border-b border-border py-8 first:pt-0 last:border-b-0">
+      <Link to={link} className="block">
+        <h2 className="text-xl font-bold tracking-tight transition-colors group-hover:text-accent sm:text-2xl">
+          {node.frontmatter.title}
+        </h2>
+        <p className="mt-1.5 text-sm text-muted">
+          <FormattedDate date={node.frontmatter.date} />
+          <span className="mx-2">·</span>
+          {node.timeToRead} min read
+        </p>
+        <GistBody node={node} />
+      </Link>
+      {node.frontmatter.tags && node.frontmatter.tags.length > 0 && (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {node.frontmatter.tags.map(tag => (
+            <span className="tag" key={tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </article>
   )
 }
 
-
-export default BlogPostGist;
+export default BlogPostGist

@@ -1,20 +1,22 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./styles.scss"
+
+const baseBtn =
+  "inline-flex h-10 min-w-10 items-center justify-center rounded-lg border px-3.5 text-sm font-medium transition-colors"
+const inactive =
+  "border-border text-muted hover:border-accent hover:text-accent"
+const active = "border-accent bg-accent text-bg"
 
 function PaginationLinks(props) {
-  let low = Math.max(props.currentPage - 2, 1)
-  let high = Math.min(props.currentPage + 2, props.totalPages)
-  let items = []
+  const low = Math.max(props.currentPage - 2, 1)
+  const high = Math.min(props.currentPage + 2, props.totalPages)
+  const items = []
   for (let itr = low; itr <= high; itr++) {
-    let pageLink = props.path(itr)
     items.push(
       <Link
-        to={pageLink}
-        className={`btn btn-${
-          props.currentPage === itr ? "" : "outline-"
-        }primary`}
+        to={props.path(itr)}
+        className={`${baseBtn} ${props.currentPage === itr ? active : inactive}`}
         key={itr}
       >
         {itr}
@@ -24,37 +26,31 @@ function PaginationLinks(props) {
   return items
 }
 
-const Pagination = props => {
-  return (
-    <div className="pagination-container">
-      <div className="d-flex justify-content-center m-3">
-        <div class="btn-group" role="group">
-          {props.previousPage ? (
-            <Link
-              to={props.previousPage}
-              className="btn btn-outline-primary"
-              aria-label="Next"
-              key="Previous"
-            >
-              Previous
-            </Link>
-          ) : null}
-          {PaginationLinks(props)}
-          {props.nextPage ? (
-            <Link
-              to={props.nextPage}
-              className="btn btn-outline-primary"
-              aria-label="Next"
-              key="Next"
-            >
-              Next
-            </Link>
-          ) : null}
-        </div>
-      </div>
-    </div>
-  )
-}
+const Pagination = props => (
+  <nav className="mt-12 flex flex-wrap items-center justify-center gap-2">
+    {props.previousPage && (
+      <Link
+        to={props.previousPage}
+        className={`${baseBtn} ${inactive}`}
+        aria-label="Previous"
+        key="Previous"
+      >
+        ‹ Prev
+      </Link>
+    )}
+    {PaginationLinks(props)}
+    {props.nextPage && (
+      <Link
+        to={props.nextPage}
+        className={`${baseBtn} ${inactive}`}
+        aria-label="Next"
+        key="Next"
+      >
+        Next ›
+      </Link>
+    )}
+  </nav>
+)
 
 Pagination.propTypes = {
   totalPages: PropTypes.number,

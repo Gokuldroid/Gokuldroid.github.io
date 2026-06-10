@@ -1,27 +1,27 @@
 class Post {
-    constructor(node, parentNode) {
-        this.id = node.id;
-        this.title = node.frontmatter.title;
-        this.path = node.frontmatter.path;
-        this.parentPath = node.frontmatter.parentPath;
-        if (parentNode != null) {
-            this.parentPost = new Post(parentNode);
-        } else {
-            this.parentPost = null;
-        }
+  constructor(node, parentNode) {
+    this.id = node.id
+    this.title = node.frontmatter.title
+    this.path = node.frontmatter.path
+    this.parentPath = node.frontmatter.parentPath
+    if (parentNode != null) {
+      this.parentPost = new Post(parentNode)
+    } else {
+      this.parentPost = null
     }
+  }
 
-    getPostLink() {
-        return `/posts/${this.path}/`
-    }
+  getPostLink() {
+    return `/posts/${this.path}/`
+  }
 
-    getParentPostLink() {
-        return this.parentPost.getPostLink();
-    }
+  getParentPostLink() {
+    return this.parentPost.getPostLink()
+  }
 
-    hasParentPost() {
-        return this.parentPost != null;
-    }
+  hasParentPost() {
+    return this.parentPost != null
+  }
 }
 
-export default Post;
+export default Post

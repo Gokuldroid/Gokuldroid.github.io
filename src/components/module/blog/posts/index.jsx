@@ -1,5 +1,4 @@
 import React from "react"
-import './styles.scss'
 import { graphql } from "gatsby"
 import Base from '@components/module/blog/posts/base';
 

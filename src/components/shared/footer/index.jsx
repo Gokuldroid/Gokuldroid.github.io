@@ -1,55 +1,40 @@
 import React from "react"
-import "./styles.scss"
-import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
 
-const Contacts = () => (
-  <div className="contact-icon-container d-flex justify-content-center justify-md-content-start justify-content-lg-start">
-    <div className="contact-icon text-center">
-      <a
-        href="https://www.linkedin.com/in/gokul-prabhu-536176102/"
-        className="contact-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin className="contact-icon fa-linkedin" />
-      </a>
-    </div>
-    <div className="contact-icon text-center">
-      <a
-        href="https://github.com/Gokuldroid/"
-        className="contact-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub className="contact-icon fa-github" />
-      </a>
-    </div>
-    <div className="contact-icon text-center">
-      <a
-        href="https://www.instagram.com/gokul_supersaiyan/"
-        className="contact-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaInstagram className="contact-icon fa-insta" />
-      </a>
-    </div>
-  </div>
-);
+const links = [
+  {
+    href: "https://www.linkedin.com/in/gokul-prabhu-536176102/",
+    label: "LinkedIn",
+    Icon: FaLinkedin,
+  },
+  { href: "https://github.com/Gokuldroid/", label: "GitHub", Icon: FaGithub },
+  {
+    href: "https://www.instagram.com/gokul_supersaiyan/",
+    label: "Instagram",
+    Icon: FaInstagram,
+  },
+]
 
 const Footer = () => (
-  <>
-    <div className="footer-container container-fluid">
-      <div className="row justify-content-sm-center">
-        <div className="col-lg-10 col-12">
-          <Contacts />
-        </div>
-        <div className="col-lg-2 col-12">
-          <p className="made-by">© 2022, Made by Gokulprabhu</p>
-        </div>
+  <footer className="border-t border-border">
+    <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-8 sm:flex-row sm:justify-between">
+      <div className="flex items-center gap-5">
+        {links.map(({ href, label, Icon }) => (
+          <a
+            key={label}
+            href={href}
+            aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted transition-colors hover:text-accent"
+          >
+            <Icon size={20} />
+          </a>
+        ))}
       </div>
+      <p className="text-sm text-muted">© 2022, Made by Gokulprabhu</p>
     </div>
-  </>
+  </footer>
 )
 
 export default Footer
