@@ -17,6 +17,14 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            link={[
+              {
+                rel: `alternate`,
+                type: `application/rss+xml`,
+                title: `${data.site.siteMetadata.title} RSS Feed`,
+                href: `/rss.xml`,
+              },
+            ]}
             meta={[
               {
                 name: `description`,
