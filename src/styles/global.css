@@ -7,53 +7,55 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ------------------------------------------------------------------ *
- * Design tokens — purple brand, light + dark
+ * Design tokens — logo-derived palette, light + dark
  * ------------------------------------------------------------------ */
+/* Palette derived from the site logo (a red/green/blue "CD" monogram).
+   Green is the primary brand accent; blue and red round out the tag palette.
+   Logo source colors: green #00a040, blue #0080f0, red #f03020. */
 :root {
-  --bg: #f5f5f5;
+  --bg: #ffffff; /* pure white */
   --surface: #ffffff;
-  --surface-2: #fafafa;
-  --text: #1a1a1a;
-  --muted: #6b7280;
-  --accent: #9b51e0;
-  --accent-strong: #8a3fd0;
-  --accent-soft: rgba(155, 81, 224, 0.1);
-  --border: rgba(0, 0, 0, 0.08);
+  --surface-2: #f3f7f4; /* faint green-grey for insets (TOC, code wrap) */
+  --text: #0f1a14; /* near-black, ~15:1 on white */
+  --muted: #5a6b61; /* green-grey, ~5.7:1 — readable */
+  --accent: #07842f; /* readable logo-green for links/headings (~4.5:1 AA) */
+  --accent-strong: #057a32; /* deeper green for inline code / hover (~5.5:1) */
+  --accent-soft: rgba(10, 143, 60, 0.1);
+  --border: rgba(15, 26, 20, 0.1);
 
-  /* multi-color category palette */
-  --tag-purple: #9b51e0;
-  --tag-purple-soft: rgba(155, 81, 224, 0.1);
-  --tag-orange: #d9772b;
-  --tag-orange-soft: rgba(224, 130, 47, 0.1);
-  --tag-green: #0b843e;
-  --tag-green-soft: rgba(11, 132, 62, 0.1);
-  --tag-blue: #2779a7;
-  --tag-blue-soft: rgba(39, 121, 167, 0.1);
-  --tag-grey: #515557;
-  --tag-grey-soft: rgba(88, 93, 95, 0.08);
+  /* Elevation — subtle, matching the site's nav bar shadow */
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  /* Category palette — the three logo colors, tuned for white-bg contrast */
+  --tag-green: #0a8f3c;
+  --tag-green-soft: rgba(10, 143, 60, 0.1);
+  --tag-blue: #0a73d6;
+  --tag-blue-soft: rgba(10, 115, 214, 0.1);
+  --tag-red: #d62f1f;
+  --tag-red-soft: rgba(214, 47, 31, 0.1);
 }
 
 .dark {
-  --bg: #131313;
-  --surface: #1c1c1c;
-  --surface-2: #232323;
-  --text: #e8e8e8;
-  --muted: #9ca3af;
-  --accent: #b794f6;
-  --accent-strong: #c4a9f8;
-  --accent-soft: rgba(183, 148, 246, 0.15);
-  --border: rgba(255, 255, 255, 0.1);
+  --bg: #080a09; /* near-black */
+  --surface: #101512;
+  --surface-2: #181d19;
+  --text: #eef3ef; /* high-contrast off-white */
+  --muted: #97a69d;
+  --accent: #2fd16e; /* logo-green brightened for near-black bg */
+  --accent-strong: #5be08f;
+  --accent-soft: rgba(47, 209, 110, 0.15);
+  --border: rgba(255, 255, 255, 0.08);
 
-  --tag-purple: #b794f6;
-  --tag-purple-soft: rgba(183, 148, 246, 0.15);
-  --tag-orange: #f0a868;
-  --tag-orange-soft: rgba(240, 168, 104, 0.15);
-  --tag-green: #4ade80;
-  --tag-green-soft: rgba(74, 222, 128, 0.15);
-  --tag-blue: #5e9fd4;
-  --tag-blue-soft: rgba(94, 159, 212, 0.15);
-  --tag-grey: #9ca3af;
-  --tag-grey-soft: rgba(156, 163, 175, 0.12);
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+  --tag-green: #2fd16e;
+  --tag-green-soft: rgba(47, 209, 110, 0.15);
+  --tag-blue: #4aa3f5;
+  --tag-blue-soft: rgba(74, 163, 245, 0.15);
+  --tag-red: #ff6a55;
+  --tag-red-soft: rgba(255, 106, 85, 0.15);
 }
 
 /* Expose tokens as Tailwind utilities (bg-bg, text-accent, border-border, …) */
@@ -78,10 +80,22 @@
 @layer base {
   html {
     scroll-padding-top: 90px;
+    /* Backstop: never allow accidental horizontal scrolling of the page.
+       Individual scroll regions (code blocks, tables) still scroll internally. */
+    overflow-x: hidden;
   }
 
   body {
     background-color: var(--bg);
+    /* Faint brand-colored aura anchored top-center, fixed so it doesn't
+       scroll away. Keeps large empty areas (hero, margins) from feeling flat. */
+    background-image: radial-gradient(
+      80rem 40rem at 50% -8rem,
+      var(--accent-soft),
+      transparent 70%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -96,6 +110,14 @@
 
   ::selection {
     background: var(--accent-soft);
+    color: var(--accent-strong);
+  }
+
+  /* Consistent, on-brand keyboard focus ring */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
@@ -123,14 +145,6 @@
     transform: translateY(-1px);
   }
 
-  .chip-purple { color: var(--tag-purple); background: var(--tag-purple-soft); border-color: var(--tag-purple-soft); }
-  .chip-purple:hover { border-color: var(--tag-purple); }
-  .chip-purple.is-active { color: var(--bg); background: var(--tag-purple); border-color: var(--tag-purple); }
-
-  .chip-orange { color: var(--tag-orange); background: var(--tag-orange-soft); border-color: var(--tag-orange-soft); }
-  .chip-orange:hover { border-color: var(--tag-orange); }
-  .chip-orange.is-active { color: var(--bg); background: var(--tag-orange); border-color: var(--tag-orange); }
-
   .chip-green { color: var(--tag-green); background: var(--tag-green-soft); border-color: var(--tag-green-soft); }
   .chip-green:hover { border-color: var(--tag-green); }
   .chip-green.is-active { color: var(--bg); background: var(--tag-green); border-color: var(--tag-green); }
@@ -139,9 +153,9 @@
   .chip-blue:hover { border-color: var(--tag-blue); }
   .chip-blue.is-active { color: var(--bg); background: var(--tag-blue); border-color: var(--tag-blue); }
 
-  .chip-grey { color: var(--tag-grey); background: var(--tag-grey-soft); border-color: var(--tag-grey-soft); }
-  .chip-grey:hover { border-color: var(--tag-grey); }
-  .chip-grey.is-active { color: var(--bg); background: var(--tag-grey); border-color: var(--tag-grey); }
+  .chip-red { color: var(--tag-red); background: var(--tag-red-soft); border-color: var(--tag-red-soft); }
+  .chip-red:hover { border-color: var(--tag-red); }
+  .chip-red.is-active { color: var(--bg); background: var(--tag-red); border-color: var(--tag-red); }
 
   /* Inline post tags (subtle accent pills) ------------------------- */
   .tag {
@@ -157,11 +171,27 @@
     line-height: 1.4;
   }
 
-  /* Surface card --------------------------------------------------- */
+  /* Static surface card — non-interactive content panels ----------- */
+  .card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  /* Interactive card — lifts on hover, for clickable items --------- */
   .card-surface {
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: 1rem;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .card-surface:hover {
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
   }
 }
 
@@ -196,6 +226,12 @@
   padding: 0.15em 0.4em;
   border-radius: 0.35em;
   font-weight: 500;
+  /* Inline code must wrap on narrow screens — Prism sets `white-space: pre`
+     on any `code[class*=language-]`, which otherwise forces the whole page
+     wider than the viewport on mobile. Only fenced code (in <pre>) scrolls. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .markdown :where(pre) {
   padding: 0;
@@ -217,12 +253,24 @@
   text-decoration: none;
   border-bottom: 1px solid var(--accent-soft);
   transition: border-color 0.15s ease;
+  /* long bare URLs shouldn't blow out the line on mobile */
+  overflow-wrap: anywhere;
 }
 .markdown a:hover {
   border-bottom-color: var(--accent);
 }
 .markdown img {
   border-radius: 0.75rem;
+  height: auto;
+}
+
+/* Wide tables scroll within their own track instead of widening the page */
+.markdown :where(table) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ------------------------------------------------------------------ *

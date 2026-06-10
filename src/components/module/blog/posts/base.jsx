@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "@components/shared/header"
+import Footer from "@components/shared/footer"
 import Pagination from "@components/shared/pagination"
 import SEO from "@components/shared/seo"
 import Categories from "@components/shared/categories"
@@ -41,6 +42,7 @@ const Base = props => {
           />
         )}
       </main>
+      <Footer />
     </>
   )
 }

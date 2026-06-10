@@ -5,7 +5,7 @@ const Categories = ({ categories, currentCategory }) => (
   <div className="mb-8 flex flex-wrap gap-2.5">
     <a
       className={getChipClass(0, currentCategory === "all")}
-      href="/blog"
+      href="/"
       role="button"
     >
       all

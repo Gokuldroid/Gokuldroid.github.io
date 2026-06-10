@@ -45,11 +45,11 @@ exports.createPages = ({ graphql, actions }) => {
         console.log(JSON.stringify(noOfPostsInCategory));
 
 
-        // Create the blog index pages like `/blog`, `/blog/2`, `/blog/3`, etc.
-        // The first page will have 3 items and each following page will have 10
+        // Create the blog index pages: `/` (home), `/page/2`, `/page/3`, etc.
+        // The first page will have 5 items and each following page will have 10
         // blog posts and a link to the next and previous pages.
 
-        const pathPrefix = ({ pageNumber }) => pageNumber === 0 ? '/blog' : '/blog/page'
+        const pathPrefix = ({ pageNumber }) => pageNumber === 0 ? '/' : '/page'
 
         paginate({
           createPage,

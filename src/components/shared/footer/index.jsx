@@ -3,7 +3,7 @@ import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
 
 const links = [
   {
-    href: "https://www.linkedin.com/in/gokul-prabhu-536176102/",
+    href: "https://www.linkedin.com/in/gokul-prabhu-supersaiyan/",
     label: "LinkedIn",
     Icon: FaLinkedin,
   },

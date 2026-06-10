@@ -1,4 +1,4 @@
-const COLORS = ["purple", "orange", "green", "blue", "grey"]
+const COLORS = ["green", "blue", "red"]
 
 export function getColor(text) {
   let asciiVal = 0

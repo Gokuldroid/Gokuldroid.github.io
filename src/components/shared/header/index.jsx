@@ -5,8 +5,9 @@ import ThemeToggle from "@components/shared/theme-toggle"
 import Logo from "../../../images/site-logo.png"
 
 const navLinks = [
-  { to: "/blog", label: "Blog" },
+  { to: "/", label: "Blog" },
   { to: "/projects", label: "Projects" },
+  { to: "/about", label: "About" },
 ]
 
 const NavItems = ({ onClick }) =>

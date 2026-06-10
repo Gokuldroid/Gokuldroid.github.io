@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/blog/category/*`, `/blog/page/*`]
+        exclude: [`/blog/category/*`, `/page/*`]
       }
     },
     {
@@ -73,7 +73,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: true
+              showLineNumbers: false
             }
           }
         ]

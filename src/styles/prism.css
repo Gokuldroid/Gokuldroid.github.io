@@ -215,19 +215,79 @@ pre[class*="language-"] > code[class*="language-"] {
   white-space: pre;
 }
 
+/*********************************************************
+* Code block container
+*/
 .gatsby-highlight {
-  padding: 30px;
-  background-color: #1e1e1e;
-  border-radius: 10px;
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 0;
+  background-color: #0d120f;
+  border: 1px solid rgba(47, 209, 110, 0.16);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
+.gatsby-highlight pre[class*="language-"] {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  overflow: auto;
+}
+
+/* Subtle scrollbar instead of the bright default */
+.gatsby-highlight pre[class*="language-"]::-webkit-scrollbar {
+  height: 8px;
+}
+.gatsby-highlight pre[class*="language-"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gatsby-highlight pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+.gatsby-highlight pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+.gatsby-highlight pre[class*="language-"] {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+/*********************************************************
+* Copy button — proper pill, top-right
+*/
 .gatsby-remark-prismjs-copy-button-container {
-  left: -14px !important;
-  top: 43px !important;
-  color: var(--color-accent) !important;
-  font-weight: bold !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: auto !important;
+  right: 0 !important;
+  margin: 0 !important;
+  padding: 8px 8px 0 0;
+  z-index: 2;
 }
-
+.gatsby-remark-prismjs-copy-button {
+  font-family: var(--font-sans);
+  font-size: 12px !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 10px !important;
+  border-radius: 7px !important;
+  color: #c9d4cd !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease !important;
+}
 .gatsby-remark-prismjs-copy-button:hover {
+  color: #0d120f !important;
   background: var(--color-accent) !important;
+  border-color: var(--color-accent);
+}
+.gatsby-remark-prismjs-copy-button.copied {
+  color: var(--color-accent) !important;
+  background: rgba(47, 209, 110, 0.15) !important;
+  border-color: rgba(47, 209, 110, 0.3);
 }

@@ -7,7 +7,7 @@ const Blog = (props) => {
   const { previousPagePath, nextPagePath, numberOfPages, humanPageNumber } = pageContext;
   const categories = props.data.categories.group;
   const posts = props.data.posts.edges;
-  const path = (pageNumber) => pageNumber === 1 ? '/blog' : `/blog/page/${pageNumber}`
+  const path = (pageNumber) => pageNumber === 1 ? '/' : `/page/${pageNumber}`
 
   return (<>
     <Base previousPagePath={previousPagePath} nextPagePath={nextPagePath} numberOfPages={numberOfPages} humanPageNumber={humanPageNumber} path={path} categories={categories} posts={posts} currentCategory={'all'}/>
