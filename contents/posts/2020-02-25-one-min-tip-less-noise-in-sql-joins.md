@@ -1,7 +1,7 @@
 ---
 path: one-min-tip-less-noice-in-sql-joins
 tags:
-  - MySql
+  - mysql
   - productivity
 date: 2020-02-25T17:29:40.001Z
 title: 'One minute tips : Less noise in SQL joins'

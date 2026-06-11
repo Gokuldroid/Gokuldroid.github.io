@@ -1,10 +1,10 @@
 ---
 path: top-10-tools-you-need-as-dev
 tags:
-  - Programming
-  - Software development
-  - Frontend developer
-  - Backend developer
+  - programming
+  - software development
+  - frontend developer
+  - backend developer
 date: 2023-03-11T13:07:07.000Z
 title: Top 10 tools you need as developer
 render_in_place: false

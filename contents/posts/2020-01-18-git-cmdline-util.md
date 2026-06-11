@@ -1,7 +1,7 @@
 ---
 path: git-cmdline-util
 tags:
-  - GIT
+  - git
   - cmdline
   - tools
 date: 2020-01-18T07:52:06.942Z

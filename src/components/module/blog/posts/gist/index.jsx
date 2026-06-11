@@ -28,10 +28,14 @@ function BlogPostGist({ node }) {
       </Link>
       {node.frontmatter.tags && node.frontmatter.tags.length > 0 && (
         <div className="mt-5 flex flex-wrap gap-2">
-          {node.frontmatter.tags.map(tag => (
-            <span className="tag" key={tag}>
+          {node.frontmatter.tags.map((tag) => (
+            <Link
+              className="tag transition-colors hover:brightness-110"
+              to={`/blog/tag/${tag.trim().toLowerCase()}/`}
+              key={tag}
+            >
               {tag}
-            </span>
+            </Link>
           ))}
         </div>
       )}

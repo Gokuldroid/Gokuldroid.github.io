@@ -1,9 +1,9 @@
 ---
 path: show-me-your-projects-graveyard
 tags:
-  - Personal projects
-  - Side projects
-  - Learnings
+  - personal projects
+  - side projects
+  - learnings
 date: 2020-04-22T14:25:34.217Z
 title: Show me your projects graveyard!
 categories:

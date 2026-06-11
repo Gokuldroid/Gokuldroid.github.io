@@ -1,7 +1,7 @@
 ---
 path: null-vs-empty
 tags:
-  - 'NULL'
+  - 'null'
   - empty
   - programming
 date: 2019-09-14T18:21:41.620Z

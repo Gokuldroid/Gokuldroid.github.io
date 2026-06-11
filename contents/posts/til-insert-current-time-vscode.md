@@ -7,7 +7,7 @@ date: 2022-09-15T22:16:11.000Z
 title: Insert current time in vs code using snippet
 render_in_place: true
 categories:
-  - today I learned
+  - today i learned
 ---
 Cmd + shift + p -> configure user snippets -> new global snippets -> paste the following snippet -> save -> and type `currenttime`
 

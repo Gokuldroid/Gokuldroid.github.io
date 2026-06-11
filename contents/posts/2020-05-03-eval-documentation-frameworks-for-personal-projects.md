@@ -1,13 +1,13 @@
 ---
 path: eval-documentation-frameworks-for-personal-projects
 tags:
-  - Documentation
-  - GitBook
-  - MkDocs
-  - Docsify
-  - Gitdocs
-  - Daux
-  - Docusaurus
+  - documentation
+  - gitbook
+  - mkdocs
+  - docsify
+  - gitdocs
+  - daux
+  - docusaurus
 date: 2020-05-03T06:10:35.547Z
 title: Evaluating documentation frameworks for personal projects.
 categories:

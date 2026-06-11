@@ -1,8 +1,8 @@
 ---
 path: java-perf-matters-1
 tags:
-  - Java
-  - Programming
+  - java
+  - programming
 date: 2019-04-20T10:52:53.511Z
 categories: 
   - java

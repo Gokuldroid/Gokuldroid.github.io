@@ -6,9 +6,9 @@ gist: >-
 layout: post
 path: android-loggers-analyzed
 tags:
-  - Android
-  - Loggers
-  - App development
+  - android
+  - loggers
+  - app development
 date: 2019-04-20T10:57:14.369Z
 categories: 
   - android

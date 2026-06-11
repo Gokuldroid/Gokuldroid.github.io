@@ -12,6 +12,7 @@ module.exports = `
           parentPath
           date
           categories
+          tags
         }
       }
     }

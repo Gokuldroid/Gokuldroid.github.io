@@ -36,6 +36,7 @@
     "@tailwindcss/typography": "^0.5.20",
     "gatsby-plugin-postcss": "^6.16.0",
     "gh-pages": "^6.3.0",
+    "portless": "^0.13.0",
     "postcss": "^8.5.15",
     "prettier": "^3.8.4",
     "tailwindcss": "^4.3.0"
@@ -46,7 +47,12 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "predevelop": "npm run dev:stop --silent",
     "develop": "gatsby develop",
+    "develop:proxy": "gatsby develop -H 127.0.0.1",
+    "predevelop:portless": "npm run dev:stop --silent",
+    "develop:portless": "portless",
+    "dev:stop": "portless prune > /dev/null 2>&1 || true; pkill -f \"$PWD/node_modules/.bin/gatsby develop\" 2>/dev/null; true",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

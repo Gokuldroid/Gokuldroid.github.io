@@ -6,7 +6,6 @@ tags:
   - blogging
   - cloudflare
   - github custom domain
-  - how to setup github custom domain?
 date: 2022-09-11T12:30:34.813Z
 title: Setting up github custom domain
 categories:
