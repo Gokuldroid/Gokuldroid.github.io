@@ -1326,6 +1326,24 @@
 .markdown a:hover {
   border-bottom-color: var(--accent);
 }
+.markdown a.anchor {
+  border-bottom: 0;
+  color: var(--muted);
+}
+.markdown .anchor.before {
+  align-items: center;
+  display: flex;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.markdown a.anchor svg {
+  fill: currentColor;
+}
+.markdown a.anchor:hover,
+.markdown a.anchor:focus-visible {
+  border-bottom: 0;
+  color: var(--accent);
+}
 .markdown img {
   border-radius: 0.5rem;
   height: auto;
