@@ -68,5 +68,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Local agent instructions
+# Local working files
 /AGENTS.md
+/BACKLOG.md
