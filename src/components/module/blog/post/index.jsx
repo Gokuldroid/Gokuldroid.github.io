@@ -8,6 +8,7 @@ import Share from "@components/module/blog/post/share"
 import TableOfContents from "@components/module/blog/post/table-of-contents"
 import ArticleSeries from "./article-series"
 import RelatedPosts from "./related-posts"
+import { slugify } from "@src/utils/slug"
 
 const buildJsonLd = (post, siteMeta) => {
   const url = `${siteMeta.siteUrl}/posts/${post.frontmatter.path}/`
@@ -66,7 +67,7 @@ export const BlogPost = (props) => {
             {post.frontmatter.tags.map((tag) => (
               <Link
                 className="tag transition-colors hover:brightness-110"
-                to={`/blog/tag/${tag.trim().toLowerCase()}/`}
+                to={`/blog/tag/${slugify(tag)}/`}
                 key={tag}
               >
                 {tag}

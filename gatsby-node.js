@@ -2,6 +2,7 @@ const pagination = require("gatsby-awesome-pagination")
 const path = require("path")
 const { paginate, createPagePerItem } = pagination
 const allMarkdownQuery = require("./build-scripts/queries/all-markdown")
+const { slugify } = require("./src/utils/slug")
 
 // Normalize a tag/category for case-insensitive grouping & matching.
 const normalize = (s) => (s || "").trim().toLowerCase()
@@ -36,8 +37,8 @@ exports.createPages = ({ graphql, actions }) => {
         const categories = new Set()
         const noOfPostsInCategory = {}
 
-        // Group posts by normalized tag. Keeps a display label (first-seen
-        // original casing) and the post ids for each tag.
+        // Group posts by normalized tag. Keep the display label separate from
+        // the URL so multi-word tags have stable, readable paths.
         const tagGroups = {}
 
         blogPosts.forEach((blogPost) => {
@@ -45,12 +46,15 @@ exports.createPages = ({ graphql, actions }) => {
             categories.add(cat)
             noOfPostsInCategory[cat] = (noOfPostsInCategory[cat] || 0) + 1
           })
-
           ;(blogPost.node.frontmatter.tags || []).forEach((tag) => {
             const key = normalize(tag)
             if (!key) return
             if (!tagGroups[key]) {
-              tagGroups[key] = { display: tag.trim(), ids: [] }
+              tagGroups[key] = {
+                display: tag.trim(),
+                slug: slugify(tag),
+                ids: [],
+              }
             }
             tagGroups[key].ids.push(blogPost.node.id)
           })
@@ -70,6 +74,9 @@ exports.createPages = ({ graphql, actions }) => {
         // Compute related posts for each post by keyword (tag + category)
         // overlap. Falls back to nothing if no overlap exists.
         const keywordCache = blogPosts.map((p) => keywordsOf(p.node))
+        const postsByPath = new Map(
+          blogPosts.map((post) => [post.node.frontmatter.path, post.node])
+        )
         blogPosts.forEach((blogPost, i) => {
           const mine = keywordCache[i]
           const scored = []
@@ -86,11 +93,24 @@ exports.createPages = ({ graphql, actions }) => {
           // Highest overlap first; blogPosts is already sorted date DESC so a
           // stable sort keeps newer posts ahead on ties.
           scored.sort((a, b) => b.score - a.score)
-          blogPost.context.relatedPosts = scored.slice(0, 3).map((s) => ({
-            title: s.node.frontmatter.title,
-            path: s.node.frontmatter.path,
-            date: s.node.frontmatter.date,
-          }))
+
+          const related = []
+          const seen = new Set([blogPost.node.frontmatter.path])
+          const addRelated = (node) => {
+            if (!node || seen.has(node.frontmatter.path)) return
+            seen.add(node.frontmatter.path)
+            related.push({
+              title: node.frontmatter.title,
+              path: node.frontmatter.path,
+              date: node.frontmatter.date,
+            })
+          }
+
+          ;(blogPost.node.frontmatter.related || []).forEach((relatedPath) => {
+            addRelated(postsByPath.get(relatedPath))
+          })
+          scored.forEach(({ node }) => addRelated(node))
+          blogPost.context.relatedPosts = related.slice(0, 3)
         })
 
         // Create the blog index pages: `/` (home), `/page/2`, `/page/3`, etc.
@@ -157,25 +177,37 @@ exports.createPages = ({ graphql, actions }) => {
         )
 
         Object.keys(tagGroups).forEach((key) => {
-          const { display, ids } = tagGroups[key]
+          const { display, slug, ids } = tagGroups[key]
           const numberOfPages = Math.ceil(ids.length / postsPerPage)
-          const link = `/blog/tag/${key}`
-          Array.from({ length: numberOfPages }).forEach((_, i) => {
-            const pagePath = i === 0 ? link : `${link}/page/${i + 1}`
-            createPage({
-              path: pagePath,
-              component: blogTagLayout,
-              context: {
-                tag: display,
-                ids,
-                skip: i * postsPerPage,
-                limit: postsPerPage,
-                currentPage: i + 1,
-                humanPageNumber: i + 1,
-                numberOfPages,
-              },
+          const createTagPages = (tagSlug) => {
+            const link = `/blog/tag/${tagSlug}`
+            const pathForPage = (index) =>
+              index === 0 ? link : `${link}/page/${index + 1}`
+            Array.from({ length: numberOfPages }).forEach((_, i) => {
+              const pagePath = pathForPage(i)
+              createPage({
+                path: pagePath,
+                component: blogTagLayout,
+                context: {
+                  tag: display,
+                  tagSlug,
+                  ids,
+                  skip: i * postsPerPage,
+                  limit: postsPerPage,
+                  currentPage: i + 1,
+                  humanPageNumber: i + 1,
+                  numberOfPages,
+                  previousPagePath: i > 0 ? pathForPage(i - 1) : null,
+                  nextPagePath:
+                    i < numberOfPages - 1 ? pathForPage(i + 1) : null,
+                },
+              })
             })
-          })
+          }
+
+          createTagPages(slug)
+          // Preserve URLs emitted by the previous implementation.
+          if (key !== slug) createTagPages(key)
         })
       })
     )

@@ -10,14 +10,14 @@ const TagPage = (props) => {
     numberOfPages,
     humanPageNumber,
     tag,
+    tagSlug,
   } = pageContext
   const categories = props.data.categories.group
   const posts = props.data.posts.edges
-  const tagKey = tag.trim().toLowerCase()
   const path = (pageNumber) =>
     pageNumber === 1
-      ? `/blog/tag/${tagKey}`
-      : `/blog/tag/${tagKey}/page/${pageNumber}`
+      ? `/blog/tag/${tagSlug}`
+      : `/blog/tag/${tagSlug}/page/${pageNumber}`
 
   return (
     <Base

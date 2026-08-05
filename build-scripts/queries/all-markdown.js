@@ -13,9 +13,10 @@ module.exports = `
           date
           categories
           tags
+          related
         }
       }
     }
   }
 }
-`;
+`

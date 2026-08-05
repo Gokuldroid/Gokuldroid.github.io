@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import FormattedDate from "@components/shared/formatted-date"
 import MarkDownContent from "@components/shared/markdown-content"
+import { slugify } from "@src/utils/slug"
 
 function GistBody({ node }) {
   if (node.frontmatter.render_in_place) {
@@ -31,7 +32,7 @@ function BlogPostGist({ node }) {
           {node.frontmatter.tags.map((tag) => (
             <Link
               className="tag transition-colors hover:brightness-110"
-              to={`/blog/tag/${tag.trim().toLowerCase()}/`}
+              to={`/blog/tag/${slugify(tag)}/`}
               key={tag}
             >
               {tag}
