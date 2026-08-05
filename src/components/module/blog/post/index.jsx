@@ -9,6 +9,8 @@ import TableOfContents from "@components/module/blog/post/table-of-contents"
 import ArticleSeries from "./article-series"
 import RelatedPosts from "./related-posts"
 import { slugify } from "@src/utils/slug"
+import Footer from "@components/shared/footer"
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi"
 
 const buildJsonLd = (post, siteMeta) => {
   const url = `${siteMeta.siteUrl}/posts/${post.frontmatter.path}/`
@@ -47,78 +49,90 @@ export const BlogPost = (props) => {
         jsonLd={buildJsonLd(post, siteMetadata)}
       />
       <Header />
-      <article className="mx-auto max-w-3xl px-5 pb-24 pt-28">
-        <h1 className="mb-3 text-3xl font-bold leading-tight tracking-tight text-accent sm:text-4xl">
-          {post.frontmatter.title}
-        </h1>
-        <p className="mb-8 text-sm text-muted">
-          <FormattedDate date={post.frontmatter.date} />
-          {post.timeToRead && (
-            <>
-              <span className="mx-2">·</span>
-              {post.timeToRead} min read
-            </>
-          )}
-        </p>
-        <TableOfContents tableOfContents={post.tableOfContents} />
-        <MarkDownContent html={post.html} />
-        {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-          <div className="mt-8 flex flex-wrap gap-2">
-            {post.frontmatter.tags.map((tag) => (
-              <Link
-                className="tag transition-colors hover:brightness-110"
-                to={`/blog/tag/${slugify(tag)}/`}
-                key={tag}
-              >
-                {tag}
-              </Link>
-            ))}
+      <article className="article-page">
+        <header className="article-header">
+          <div className="article-header-inner">
+            <p className="article-meta">
+              <span className="text-accent">Essay</span>
+              <span aria-hidden="true">/</span>
+              <FormattedDate date={post.frontmatter.date} />
+              {post.timeToRead && (
+                <>
+                  <span aria-hidden="true">/</span>
+                  {post.timeToRead} min read
+                </>
+              )}
+            </p>
+            <h1>{post.frontmatter.title}</h1>
+            {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+              <div className="article-tags">
+                {post.frontmatter.tags.map((tag) => (
+                  <Link
+                    className="tag"
+                    to={`/blog/tag/${slugify(tag)}/`}
+                    key={tag}
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
-        )}
-        {parentPost && (
-          <ArticleSeries
-            parentPost={parentPost}
-            siblingPosts={siblingPosts}
-            currentPost={post}
-          />
-        )}
-        <RelatedPosts posts={relatedPosts} />
-        <Share title={post.frontmatter.title} />
-        {(previousPagePath || nextPagePath) && (
-          <nav className="mt-12 flex items-stretch justify-between gap-4 border-t border-border pt-8">
-            {previousPagePath ? (
-              <a
-                href={previousPagePath}
-                className="group flex-1 rounded-xl border border-border p-4 transition-colors hover:border-accent"
-              >
-                <span className="block text-xs uppercase tracking-wide text-muted">
-                  ‹ Previous
-                </span>
-                <span className="mt-1 block font-medium transition-colors group-hover:text-accent">
-                  {previousItem.node.frontmatter.title}
-                </span>
-              </a>
-            ) : (
-              <span className="flex-1" />
+        </header>
+        <div className="article-layout">
+          <div className="article-main">
+            <TableOfContents tableOfContents={post.tableOfContents} mobile />
+            <MarkDownContent html={post.html} />
+            {parentPost && (
+              <ArticleSeries
+                parentPost={parentPost}
+                siblingPosts={siblingPosts}
+                currentPost={post}
+              />
             )}
-            {nextPagePath ? (
-              <a
-                href={nextPagePath}
-                className="group flex-1 rounded-xl border border-border p-4 text-right transition-colors hover:border-accent"
-              >
-                <span className="block text-xs uppercase tracking-wide text-muted">
-                  Next ›
-                </span>
-                <span className="mt-1 block font-medium transition-colors group-hover:text-accent">
-                  {nextItem.node.frontmatter.title}
-                </span>
-              </a>
-            ) : (
-              <span className="flex-1" />
-            )}
-          </nav>
-        )}
+            <Share title={post.frontmatter.title} />
+          </div>
+          <aside className="article-rail">
+            <TableOfContents tableOfContents={post.tableOfContents} />
+          </aside>
+        </div>
+        <footer className="article-afterword">
+          <RelatedPosts posts={relatedPosts} />
+          {(previousPagePath || nextPagePath) && (
+            <nav className="article-pagination" aria-label="More articles">
+              {previousPagePath ? (
+                <Link
+                  to={previousPagePath}
+                  className="article-pagination-link is-previous group"
+                >
+                  <span className="article-pagination-label">
+                    <FiArrowLeft aria-hidden="true" />
+                    Previous article
+                  </span>
+                  <strong>{previousItem.node.frontmatter.title}</strong>
+                </Link>
+              ) : (
+                <span className="article-pagination-spacer" />
+              )}
+              {nextPagePath ? (
+                <Link
+                  to={nextPagePath}
+                  className="article-pagination-link is-next group"
+                >
+                  <span className="article-pagination-label">
+                    Next article
+                    <FiArrowRight aria-hidden="true" />
+                  </span>
+                  <strong>{nextItem.node.frontmatter.title}</strong>
+                </Link>
+              ) : (
+                <span className="article-pagination-spacer" />
+              )}
+            </nav>
+          )}
+        </footer>
       </article>
+      <Footer />
     </>
   )
 }

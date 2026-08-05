@@ -16,24 +16,44 @@ const Base = (props) => {
     categories,
     posts,
     currentCategory,
-    heading = "Blog",
+    heading = "Recent writing",
+    eyebrow = "Code from Dude",
     seoTitle = "Blog",
   } = props
+
+  const pageLabel = String(humanPageNumber || 1).padStart(2, "0")
+  const totalLabel = String(numberOfPages || 1).padStart(2, "0")
 
   return (
     <>
       <Header />
       <SEO title={seoTitle} />
-      <main className="mx-auto max-w-3xl px-5 pb-24 pt-28">
-        <h1 className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
-          {heading}
-        </h1>
+      <main className="mx-auto max-w-5xl px-5 pb-24 pt-14">
+        <header className="index-masthead">
+          <div>
+            <p className="index-kicker">{eyebrow}</p>
+            <h1>{heading}</h1>
+          </div>
+          <div
+            className="index-folio"
+            aria-label={`Page ${pageLabel} of ${totalLabel}`}
+          >
+            <span>Page</span>
+            <strong>
+              {pageLabel} / {totalLabel}
+            </strong>
+          </div>
+        </header>
         <Categories categories={categories} currentCategory={currentCategory} />
-        <div>
-          {posts.map((edge) => (
-            <BlogPostGist node={edge.node} key={edge.node.frontmatter.path} />
+        <section className="post-feed" aria-label="Articles">
+          {posts.map((edge, index) => (
+            <BlogPostGist
+              node={edge.node}
+              position={index + 1}
+              key={edge.node.frontmatter.path}
+            />
           ))}
-        </div>
+        </section>
         {numberOfPages > 1 && (
           <Pagination
             totalPages={numberOfPages}

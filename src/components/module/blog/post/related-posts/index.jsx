@@ -1,35 +1,36 @@
 import React from "react"
 import { Link } from "gatsby"
 import FormattedDate from "@components/shared/formatted-date"
+import { FiArrowUpRight } from "react-icons/fi"
 
 const RelatedPosts = ({ posts }) => {
   if (!posts || posts.length === 0) return null
 
   return (
-    <div className="mt-12 border-t border-border pt-8">
-      <p className="mb-4 text-xs font-bold uppercase tracking-wide text-muted">
-        Related posts
-      </p>
-      <ul className="flex flex-col gap-3">
-        {posts.map((post) => (
-          <li key={post.path}>
-            <Link
-              to={`/posts/${post.path}/`}
-              className="group block rounded-xl border border-border p-4 transition-colors hover:border-accent"
-            >
-              <span className="block font-medium transition-colors group-hover:text-accent">
-                {post.title}
-              </span>
+    <section className="related-reading" aria-labelledby="related-heading">
+      <header className="section-heading">
+        <p>Keep exploring</p>
+        <h2 id="related-heading">Continue reading</h2>
+      </header>
+      <ol className="related-grid">
+        {posts.map((post, index) => (
+          <li key={post.path} className="related-item">
+            <span className="related-number" aria-hidden="true">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <Link to={`/posts/${post.path}/`} className="group related-link">
+              <span>{post.title}</span>
+              <FiArrowUpRight aria-hidden="true" />
               {post.date && (
-                <span className="mt-1 block text-sm text-muted">
+                <small>
                   <FormattedDate date={post.date} />
-                </span>
+                </small>
               )}
             </Link>
           </li>
         ))}
-      </ul>
-    </div>
+      </ol>
+    </section>
   )
 }
 

@@ -3,43 +3,59 @@ import { Link } from "gatsby"
 import FormattedDate from "@components/shared/formatted-date"
 import MarkDownContent from "@components/shared/markdown-content"
 import { slugify } from "@src/utils/slug"
+import { FiArrowUpRight } from "react-icons/fi"
 
 function GistBody({ node }) {
   if (node.frontmatter.render_in_place) {
     return <MarkDownContent html={node.html} />
   }
-  return <p className="mt-3 leading-relaxed text-muted">{node.excerpt}</p>
+  return <p className="post-row-deck">{node.excerpt}</p>
 }
 
-function BlogPostGist({ node }) {
-  const link = `/posts/${node.frontmatter.path}/`
+const PostTags = ({ tags }) => {
+  if (!tags || tags.length === 0) return null
 
   return (
-    <article className="group border-b border-border py-8 first:pt-0 last:border-b-0">
-      <Link to={link} className="block">
-        <h2 className="text-xl font-bold tracking-tight transition-colors group-hover:text-accent sm:text-2xl">
-          {node.frontmatter.title}
-        </h2>
-        <p className="mt-1.5 text-sm text-muted">
-          <FormattedDate date={node.frontmatter.date} />
-          <span className="mx-2">·</span>
-          {node.timeToRead} min read
-        </p>
-        <GistBody node={node} />
+    <div className="post-tags">
+      {tags.map((tag) => (
+        <Link className="tag" to={`/blog/tag/${slugify(tag)}/`} key={tag}>
+          {tag}
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+function BlogPostGist({ node, position }) {
+  const link = `/posts/${node.frontmatter.path}/`
+  const meta = (
+    <>
+      <FormattedDate date={node.frontmatter.date} />
+      <span aria-hidden="true">/</span>
+      {node.timeToRead} min
+    </>
+  )
+
+  return (
+    <article className="post-row group">
+      <span className="post-row-number" aria-hidden="true">
+        {String(position).padStart(2, "0")}
+      </span>
+      <div className="post-row-main">
+        <p className="post-row-meta">{meta}</p>
+        <Link to={link} className="post-row-link">
+          <h2>{node.frontmatter.title}</h2>
+          <GistBody node={node} />
+        </Link>
+        <PostTags tags={node.frontmatter.tags} />
+      </div>
+      <Link
+        to={link}
+        className="post-row-arrow"
+        aria-label={`Read ${node.frontmatter.title}`}
+      >
+        <FiArrowUpRight aria-hidden="true" />
       </Link>
-      {node.frontmatter.tags && node.frontmatter.tags.length > 0 && (
-        <div className="mt-5 flex flex-wrap gap-2">
-          {node.frontmatter.tags.map((tag) => (
-            <Link
-              className="tag transition-colors hover:brightness-110"
-              to={`/blog/tag/${slugify(tag)}/`}
-              key={tag}
-            >
-              {tag}
-            </Link>
-          ))}
-        </div>
-      )}
     </article>
   )
 }

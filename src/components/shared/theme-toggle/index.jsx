@@ -27,7 +27,7 @@ const ThemeToggle = () => {
       onClick={toggle}
       aria-label="Toggle dark mode"
       title="Toggle theme"
-      className="grid h-9 w-9 place-items-center rounded-full border border-border text-muted transition-colors hover:text-accent hover:border-accent"
+      className="grid h-9 w-9 place-items-center rounded-lg bg-surface-2 text-muted transition-colors hover:text-text"
     >
       {/* Avoid an icon mismatch before we've read the real theme */}
       {mounted && isDark ? <FaSun size={15} /> : <FaMoon size={15} />}

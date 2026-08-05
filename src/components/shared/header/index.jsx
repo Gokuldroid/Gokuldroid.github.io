@@ -16,7 +16,8 @@ const NavItems = ({ onClick }) =>
       key={to}
       to={to}
       onClick={onClick}
-      className="text-sm font-medium text-muted transition-colors hover:text-accent"
+      activeClassName="!text-text"
+      className="text-xs font-semibold uppercase text-muted transition-colors hover:text-text"
     >
       {label}
     </Link>
@@ -27,13 +28,17 @@ const Header = () => {
   const close = () => setOpen(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-surface/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5">
-        <Link to="/" onClick={close} className="flex items-center gap-2 font-semibold tracking-wide">
-          <img src={Logo} alt="" className="h-8 w-8" />
-          <span>
-            CODE <span className="text-accent">|</span> FROM{" "}
-            <span className="text-accent">|</span> DUDE
+    <header className="sticky inset-x-0 top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3.5">
+        <Link
+          to="/"
+          onClick={close}
+          className="flex items-center gap-2.5 font-semibold"
+        >
+          <img src={Logo} alt="" className="h-7 w-7" />
+          <span className="text-sm">
+            CODE <span className="text-accent">/</span> FROM{" "}
+            <span className="text-accent">/</span> DUDE
           </span>
         </Link>
 
@@ -51,7 +56,7 @@ const Header = () => {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="grid h-9 w-9 place-items-center rounded-full border border-border text-muted transition-colors hover:text-accent hover:border-accent"
+            className="grid h-9 w-9 place-items-center rounded-lg bg-surface-2 text-muted transition-colors hover:text-text"
           >
             {open ? <FaTimes size={15} /> : <FaBars size={15} />}
           </button>
@@ -60,13 +65,13 @@ const Header = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="flex flex-col gap-1 border-t border-border bg-surface px-5 py-3 md:hidden">
+        <div className="flex flex-col border-t border-border bg-bg px-5 py-3 md:hidden">
           {navLinks.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
               onClick={close}
-              className="rounded-lg px-2 py-2.5 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-accent"
+              className="border-b border-border px-1 py-3 text-sm font-medium text-muted transition-colors last:border-0 hover:text-accent"
             >
               {label}
             </Link>

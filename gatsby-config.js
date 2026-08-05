@@ -19,7 +19,7 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/contents/posts`,
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -29,8 +29,8 @@ module.exports = {
         name: `codefromdude.com`,
         short_name: `codefromdude.com`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fafbfc`,
+        theme_color: `#2458d3`,
         display: `standalone`,
         icon: `src/images/site-logo.png`, // This path is relative to the root of the site.
       },
@@ -42,16 +42,16 @@ module.exports = {
         alias: {
           "@src": "src",
           "@components": "src/components",
-          "@layouts": "src/layouts"
+          "@layouts": "src/layouts",
         },
-        extensions: []
-      }
+        extensions: [],
+      },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/blog/category/*`, `/page/*`]
-      }
+        exclude: [`/blog/category/*`, `/page/*`],
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
@@ -71,7 +71,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
@@ -118,20 +118,20 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-autolink-headers`
+            resolve: `gatsby-remark-autolink-headers`,
           },
           {
-            resolve: `gatsby-remark-prismjs-copy-button`
+            resolve: `gatsby-remark-prismjs-copy-button`,
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: false
-            }
-          }
-        ]
-      }
-    }
+              showLineNumbers: false,
+            },
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

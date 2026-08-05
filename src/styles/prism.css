@@ -222,9 +222,9 @@ pre[class*="language-"] > code[class*="language-"] {
   position: relative;
   margin: 1.75rem 0;
   padding: 0;
-  background-color: #0d120f;
-  border: 1px solid rgba(47, 209, 110, 0.16);
-  border-radius: 12px;
+  background-color: #141821;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -271,23 +271,25 @@ pre[class*="language-"] > code[class*="language-"] {
   font-family: var(--font-sans);
   font-size: 12px !important;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   padding: 5px 10px !important;
-  border-radius: 7px !important;
-  color: #c9d4cd !important;
+  border-radius: 6px !important;
+  color: #cbd3df !important;
   background: rgba(255, 255, 255, 0.07) !important;
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(4px);
-  transition: background-color 0.15s ease, color 0.15s ease,
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
     border-color 0.15s ease !important;
 }
 .gatsby-remark-prismjs-copy-button:hover {
-  color: #0d120f !important;
+  color: var(--on-accent) !important;
   background: var(--color-accent) !important;
   border-color: var(--color-accent);
 }
 .gatsby-remark-prismjs-copy-button.copied {
   color: var(--color-accent) !important;
-  background: rgba(47, 209, 110, 0.15) !important;
-  border-color: rgba(47, 209, 110, 0.3);
+  background: var(--accent-soft) !important;
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
 }

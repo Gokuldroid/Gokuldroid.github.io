@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { FiArrowUpRight } from "react-icons/fi"
 
 const apps = [
   {
@@ -26,34 +27,32 @@ const apps = [
   },
 ]
 
-const App = ({ info }) => (
-  <div className="card-surface flex flex-col overflow-hidden sm:flex-row">
-    <div className="flex shrink-0 items-center justify-center bg-accent-soft p-6 sm:w-44">
-      <img className="h-24 w-24 object-contain" src={info.img} alt={info.name} />
+const App = ({ info, index }) => (
+  <article className="app-project">
+    <span className="app-number" aria-hidden="true">
+      {String(index + 1).padStart(2, "0")}
+    </span>
+    <div className="app-art">
+      <img className="app-icon" src={info.img} alt={info.name} />
     </div>
-    <div className="flex flex-1 flex-col p-5">
-      <p className="font-semibold text-accent">{info.name}</p>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-        {info.desc}
-      </p>
-      <a
-        href={info.playStore}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-4 self-start text-sm font-medium text-accent transition-colors hover:text-accent-strong"
-      >
-        Open in Play Store →
+    <div className="app-copy">
+      <p className="section-label">Android application</p>
+      <h3>{info.name}</h3>
+      <p>{info.desc}</p>
+      <a href={info.playStore} target="_blank" rel="noopener noreferrer">
+        Open in Play Store
+        <FiArrowUpRight aria-hidden="true" />
       </a>
     </div>
-  </div>
+  </article>
 )
 
 export default class AppList extends Component {
   render() {
     return (
-      <div className="flex flex-col gap-4">
-        {apps.map(app => (
-          <App info={app} key={app.name} />
+      <div className="app-list">
+        {apps.map((app, index) => (
+          <App info={app} index={index} key={app.name} />
         ))}
       </div>
     )

@@ -3,69 +3,119 @@ import PropTypes from "prop-types"
 import Header from "@components/shared/header"
 import Footer from "@components/shared/footer"
 import AppList from "@components/module/projects/app-list"
+import { FiArrowUpRight, FiGithub, FiStar } from "react-icons/fi"
 
-const Project = ({ project }) => (
+const Project = ({ project, index }) => (
   <a
-    className="card-surface group flex h-full flex-col p-5 transition-colors hover:border-accent"
+    className="repository-row group"
     href={project.html_url}
     target="_blank"
     rel="noopener noreferrer"
   >
-    <p className="font-semibold transition-colors group-hover:text-accent">
-      {project.name}
-    </p>
-    {project.language && (
-      <span className="tag mt-2 self-start">{project.language}</span>
-    )}
-    <p className="mt-3 text-sm leading-relaxed text-muted">
-      {project.description}
-    </p>
+    <span className="repository-number" aria-hidden="true">
+      {String(index + 1).padStart(2, "0")}
+    </span>
+    <div className="repository-copy">
+      <h3>
+        {project.name}
+        <FiArrowUpRight aria-hidden="true" />
+      </h3>
+      <p>{project.description || "Open-source project on GitHub."}</p>
+    </div>
+    <div className="repository-meta">
+      {project.language && <span>{project.language}</span>}
+      {project.stargazers_count > 0 && (
+        <span>
+          <FiStar aria-hidden="true" />
+          {project.stargazers_count}
+        </span>
+      )}
+    </div>
   </a>
 )
 
 class Projects extends Component {
   constructor(props) {
     super(props)
-    this.state = { projects: [] }
+    this.state = { projects: [], status: "loading" }
   }
 
   filterProjects(projects) {
-    return projects.filter(project => !project.archived && !project.fork)
+    return projects
+      .filter((project) => !project.archived && !project.fork)
+      .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
   }
 
   componentDidMount() {
     fetch("https://api.github.com/users/gokuldroid/repos")
-      .then(res => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`GitHub returned ${res.status}`)
+        return res.json()
+      })
       .then(this.filterProjects)
-      .then(data => this.setState({ projects: data }))
-      .catch(console.log)
+      .then((data) => this.setState({ projects: data, status: "ready" }))
+      .catch(() => this.setState({ status: "error" }))
   }
 
   render() {
     return (
-      <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
-        <section className="mb-16">
-          <h2 className="mb-6 text-2xl font-bold tracking-tight">
-            Android apps
-          </h2>
+      <main className="page-frame projects-page">
+        <header className="projects-masthead">
+          <p className="page-kicker">Projects / Selected work</p>
+          <h1>Products and tools built around practical problems.</h1>
+          <p>
+            Android applications, developer utilities, and open-source
+            experiments built from the problem outward.
+          </p>
+        </header>
+
+        <section className="projects-section" aria-labelledby="apps-heading">
+          <header className="section-heading">
+            <p>Shipped products</p>
+            <h2 id="apps-heading">Android apps</h2>
+          </header>
           <AppList />
         </section>
-        <section>
-          <h2 className="mb-6 text-2xl font-bold tracking-tight">
-            GitHub projects
-          </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {this.state.projects.map(project => (
-              <Project project={project} key={project.id} />
-            ))}
-          </div>
+
+        <section className="projects-section" aria-labelledby="github-heading">
+          <header className="section-heading projects-heading">
+            <div>
+              <p>Open source</p>
+              <h2 id="github-heading">GitHub projects</h2>
+            </div>
+            <a
+              href="https://github.com/Gokuldroid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiGithub aria-hidden="true" />
+              View profile
+              <FiArrowUpRight aria-hidden="true" />
+            </a>
+          </header>
+          {this.state.status === "loading" && (
+            <p className="repository-status">Loading repositories...</p>
+          )}
+          {this.state.status === "error" && (
+            <p className="repository-status">
+              Repositories are unavailable right now. View them directly on
+              GitHub.
+            </p>
+          )}
+          {this.state.status === "ready" && (
+            <div className="repository-list">
+              {this.state.projects.map((project, index) => (
+                <Project project={project} index={index} key={project.id} />
+              ))}
+            </div>
+          )}
         </section>
       </main>
     )
   }
 }
 
-const Layout = props => (
+const Layout = (props) => (
   <>
     {props.children}
     <Header />

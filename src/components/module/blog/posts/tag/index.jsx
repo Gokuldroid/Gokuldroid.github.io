@@ -29,7 +29,8 @@ const TagPage = (props) => {
       categories={categories}
       posts={posts}
       currentCategory={"all"}
-      heading={`#${tag}`}
+      heading={tag}
+      eyebrow="Topic"
       seoTitle={`Tag: ${tag}`}
     />
   )

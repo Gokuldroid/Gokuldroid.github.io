@@ -17,8 +17,14 @@ const links = [
 
 const Footer = () => (
   <footer className="border-t border-border">
-    <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-8 sm:flex-row sm:justify-between">
-      <div className="flex items-center gap-5">
+    <div className="mx-auto grid max-w-5xl gap-8 px-5 py-10 sm:grid-cols-[1fr_auto] sm:items-end">
+      <div>
+        <p className="text-sm font-bold uppercase">Code from Dude</p>
+        <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
+          Engineering, systems, and the decisions behind durable work.
+        </p>
+      </div>
+      <div className="flex items-center gap-5 sm:justify-end">
         {links.map(({ href, label, Icon }) => (
           <a
             key={label}
@@ -26,13 +32,15 @@ const Footer = () => (
             aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted transition-colors hover:text-accent"
+            className="text-muted transition-colors hover:text-text"
           >
             <Icon size={20} />
           </a>
         ))}
       </div>
-      <p className="text-sm text-muted">© 2022, Made by Gokulprabhu</p>
+      <p className="text-xs text-muted sm:col-span-2">
+        © {new Date().getFullYear()}, Gokul Prabhu
+      </p>
     </div>
   </footer>
 )

@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import {
   LinkedinShareButton,
-  LinkedinIcon,
   TwitterShareButton,
   EmailShareButton,
-  EmailIcon,
-  TwitterIcon,
 } from "react-share"
+import { FaEnvelope, FaLinkedinIn } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 
 class Share extends Component {
   constructor(props) {
@@ -21,17 +20,32 @@ class Share extends Component {
   render() {
     const title = this.props.title
     return (
-      <div className="mt-12 border-t border-border pt-8 text-center">
-        <p className="mb-4 text-sm text-muted">Share this article</p>
-        <div className="flex items-center justify-center gap-3">
-          <LinkedinShareButton url={this.state.url} title={title}>
-            <LinkedinIcon size={44} borderRadius={12} />
+      <div className="article-share">
+        <p>Share this article</p>
+        <div>
+          <LinkedinShareButton
+            className="share-button"
+            url={this.state.url}
+            title={title}
+            aria-label="Share on LinkedIn"
+          >
+            <FaLinkedinIn size={17} />
           </LinkedinShareButton>
-          <TwitterShareButton url={this.state.url} title={title}>
-            <TwitterIcon size={44} borderRadius={12} />
+          <TwitterShareButton
+            className="share-button"
+            url={this.state.url}
+            title={title}
+            aria-label="Share on X"
+          >
+            <FaXTwitter size={16} />
           </TwitterShareButton>
-          <EmailShareButton url={this.state.url} subject={title}>
-            <EmailIcon size={44} borderRadius={12} />
+          <EmailShareButton
+            className="share-button"
+            url={this.state.url}
+            subject={title}
+            aria-label="Share by email"
+          >
+            <FaEnvelope size={17} />
           </EmailShareButton>
         </div>
       </div>
