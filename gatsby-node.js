@@ -1,4 +1,5 @@
 const pagination = require("gatsby-awesome-pagination")
+const fs = require("fs")
 const path = require("path")
 const { paginate, createPagePerItem } = pagination
 const allMarkdownQuery = require("./build-scripts/queries/all-markdown")
@@ -212,4 +213,12 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
+}
+
+exports.onPostBuild = async ({ reporter }) => {
+  const sitemapIndex = path.join(__dirname, "public", "sitemap-index.xml")
+  const sitemapAlias = path.join(__dirname, "public", "sitemap.xml")
+
+  await fs.promises.copyFile(sitemapIndex, sitemapAlias)
+  reporter.info("Created sitemap.xml from sitemap-index.xml")
 }

@@ -44,6 +44,9 @@
     "gatsby"
   ],
   "license": "MIT",
+  "engines": {
+    "node": ">=22 <23"
+  },
   "scripts": {
     "build": "gatsby build",
     "predevelop": "npm run dev:stop --silent",
