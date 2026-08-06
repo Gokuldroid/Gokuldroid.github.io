@@ -31,6 +31,8 @@ Organizations run on plans, and plans are made of dates. A plan cannot contain "
 
 This means any number you emit gets *promoted* as it travels up: guess → planning input → commitment. Each hop is done by someone acting reasonably in their own frame. Your manager needs to give their manager something concrete. Their manager needs to sequence three teams. Nobody is lying; everybody is compressing. The promotion is a property of the system, not of any person in it — which is why you can't fix it by hoping people remember your caveats. You have to fix it at the source: control what you emit.
 
+Sometimes the distortion starts before the estimate leaves your mouth. If confident point estimates are accepted while honest ranges are challenged, people learn to remove their own caveats and supply the answer the room rewards. That upstream incentive is [The Certainty Premium](/posts/the-certainty-premium/): certainty is valued because it is actionable, even when it is less likely to be true.
+
 ## The asymmetry, and what it costs
 
 Here is the asymmetry that catches engineers: **you remember saying "roughly"; everyone else remembers the number.** Caveats are spoken; numbers are written down. When week three arrives and you're not done, the org does not consult its memory of your tone of voice. It consults the plan. And the plan says you missed.

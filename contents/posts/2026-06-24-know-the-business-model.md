@@ -15,13 +15,13 @@ related:
   - "be-on-the-critical-path"
 ---
 
-> Engineers who know how the company makes money win technical arguments; engineers who don't argue aesthetics while decisions get made without them.
+> Engineers who understand how the company makes money win technical arguments. Those who don't understand it debate aesthetics while others make the important decisions.
 
 ## The illiteracy and its cost
 
 Ask a strong engineer to describe their system and you'll get exquisite detail: consistency guarantees, failure modes, the exact reason the cache invalidation works the way it does. Ask the same engineer what their company's gross margin depends on, which customers subsidize which products, or how their own service maps to a revenue or cost line, and you'll usually get silence. This is the norm, not the exception — and it's expensive.
 
-It's expensive because technical arguments are not ultimately settled in technical terms. They are settled in business terms by people whose job is to allocate money. The engineer who can say "this refactor cuts our COGS per request 20%, which matters because this product competes on price" beats the engineer arguing that the current design is inelegant — *even when elegance is right*. The elegant-design engineer isn't wrong; they're speaking a language the decision-maker doesn't decide in. The business-literate engineer converted the same proposal into the decision-maker's native currency and won by default.
+It's expensive because technical arguments are not ultimately settled in technical terms. They are settled in business terms by people whose job is to allocate money. The engineer who can say "this refactor cuts our cost of goods sold (COGS) per request by 20%, which matters because this product competes on price" beats the engineer arguing that the current design is inelegant — *even when elegance is right*. The elegant-design engineer isn't wrong; they're speaking a language the decision-maker doesn't decide in. The business-literate engineer converted the same proposal into the decision-maker's native currency and won by default.
 
 ## Mechanics: why this works
 
@@ -37,6 +37,8 @@ It's expensive because technical arguments are not ultimately settled in technic
 - **Your team's cost and value position.** What does your service cost to run — compute, storage, headcount? What revenue path does it sit on? Are you a cost center that must shrink, or a margin driver that must scale?
 - **The current strategic anxieties.** Read the shareholder letters, listen to earnings calls, pay attention to all-hands Q&A. What leadership *repeats* is what they fear or want. Repetition is the signal; a topic that shows up in three consecutive all-hands is the topic your next proposal should touch.
 - **The unit economics of your domain.** Cost per request, cost per transaction, customer LTV, cost to serve a free-tier user — whatever applies. Unit economics are where engineering decisions and business outcomes touch directly.
+
+*Further reading: [Profit Centers vs Cost Centers at Tech Companies](https://newsletter.pragmaticengineer.com/p/profit-centers-cost-centers) from The Pragmatic Engineer.*
 
 ## Practices
 

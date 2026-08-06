@@ -20,6 +20,8 @@ Good decisions do not require certainty. They require a disciplined way to expos
 
 These principles form a practical toolkit for reasoning when the evidence is incomplete and the consequences are real.
 
+The organizational obstacle is that uncertainty may be accurate without being convenient. [The Certainty Premium](/posts/the-certainty-premium/) explains why a confident answer can be rewarded over a calibrated one: certainty gives the plan something actionable while leaving uncertainty visible gives the decision-maker more work.
+
 ## Change Direction on a Dime
 
 > It's better to do the right thing with new information than to stay the course because you had a plan.

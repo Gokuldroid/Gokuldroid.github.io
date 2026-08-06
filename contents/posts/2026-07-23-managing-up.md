@@ -43,7 +43,7 @@ Once you see it this way, the sycophancy objection dissolves. A sycophant transm
 
 ## Concrete cases
 
-**The silent slip.** You realize mid-sprint a migration will take three extra weeks. You grind quietly, hoping to close the gap. Your manager reports "on track" upward; the slip surfaces at the deadline. Counter-move: report the moment your confidence drops, with a revised estimate and a mitigation option. You'll be surprised how boring early bad news is.
+**The silent slip.** You realize mid-sprint a migration will take three extra weeks. You grind quietly, hoping to close the gap. Your manager reports "on track" upward; the slip surfaces at the deadline. [The certainty premium](/posts/the-certainty-premium/) makes silence tempting: maintaining confidence is rewarded now, while the cost arrives later. Counter-move: report the moment your confidence drops, with a revised estimate and a mitigation option. You'll be surprised how boring early bad news is.
 
 **The invisible quarter.** You spent three months on reliability work — no launches, but pages dropped 70%. At calibration, your manager says "did infra work." Counter-move: send a monthly impact summary with numbers ("pages: 40/wk to 12/wk") written so it can be pasted into a promo doc. If you don't write the sentence, it doesn't exist in the room.
 
