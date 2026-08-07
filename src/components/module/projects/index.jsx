@@ -3,7 +3,89 @@ import PropTypes from "prop-types"
 import Header from "@components/shared/header"
 import Footer from "@components/shared/footer"
 import AppList from "@components/module/projects/app-list"
-import { FiArrowUpRight, FiGithub, FiStar } from "react-icons/fi"
+import {
+  FiArrowUpRight,
+  FiGithub,
+  FiStar,
+  FiTerminal,
+} from "react-icons/fi"
+
+const FeaturedCommando = () => (
+  <section
+    className="projects-section commando-project"
+    aria-labelledby="commando-heading"
+  >
+    <header className="section-heading">
+      <p>Featured developer tool</p>
+      <h2 id="commando-heading">Commando</h2>
+    </header>
+
+    <div className="commando-feature">
+      <div className="commando-intro">
+        <div className="commando-copy">
+          <p className="commando-label">
+            <FiTerminal aria-hidden="true" />
+            Context-aware command launcher
+          </p>
+          <h3>Find the right command without leaving your terminal.</h3>
+          <p>
+            Commando brings project commands, cheats, bookmarks, and shell
+            history into one context-aware fuzzy TUI.
+          </p>
+        </div>
+
+        <div className="commando-details">
+          <ul aria-label="Commando technologies">
+            <li>Go</li>
+            <li>Zsh / Bash / Fish</li>
+            <li>Open source</li>
+          </ul>
+          <div className="commando-actions">
+            <a
+              className="commando-primary-link"
+              href="https://codefromdude.com/commando/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Commando
+              <FiArrowUpRight aria-hidden="true" />
+            </a>
+            <a
+              href="https://github.com/Gokuldroid/commando"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiGithub aria-hidden="true" />
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a
+        className="commando-demo"
+        href="https://codefromdude.com/commando/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View the Commando website"
+      >
+        <span className="commando-demo-bar">
+          <span>
+            <FiTerminal aria-hidden="true" />
+            commando
+          </span>
+          <span>Live product tour</span>
+        </span>
+        <img
+          src="/assets/projects/commando-tour.gif"
+          alt="Commando finding and running commands in an interactive terminal"
+          width="1440"
+          height="912"
+        />
+      </a>
+    </div>
+  </section>
+)
 
 const Project = ({ project, index }) => (
   <a
@@ -68,6 +150,8 @@ class Projects extends Component {
             experiments built from the problem outward.
           </p>
         </header>
+
+        <FeaturedCommando />
 
         <section className="projects-section" aria-labelledby="apps-heading">
           <header className="section-heading">

@@ -1033,6 +1033,127 @@
 .projects-section {
   margin-top: 5rem;
 }
+.commando-feature {
+  padding: 2.5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+}
+.commando-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
+  gap: 4rem;
+  align-items: end;
+}
+.commando-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.commando-label svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.commando-copy h3 {
+  max-width: 42rem;
+  margin-top: 0.9rem;
+  font-size: 2.15rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.commando-copy > p:last-child {
+  max-width: 42rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+.commando-details ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+}
+.commando-details li::before {
+  content: "/";
+  margin-right: 0.35rem;
+  color: var(--accent);
+}
+.commando-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+  margin-top: 1.5rem;
+}
+.commando-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+.commando-actions a:hover {
+  color: var(--accent);
+}
+.commando-actions .commando-primary-link {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.25rem;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.commando-actions .commando-primary-link:hover {
+  background: var(--accent-strong);
+  color: var(--on-accent);
+}
+.commando-demo {
+  display: block;
+  margin-top: 2.75rem;
+  overflow: hidden;
+  border: 1px solid #303946;
+  border-radius: 0.5rem;
+  background: #0c1016;
+  box-shadow: 0 20px 45px rgba(8, 12, 18, 0.18);
+}
+.commando-demo-bar {
+  display: flex;
+  min-height: 2.6rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #303946;
+  background: #151b23;
+  color: #9eabba;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+}
+.commando-demo-bar > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #f0f4f8;
+  font-weight: 700;
+}
+.commando-demo-bar svg {
+  color: #72d4ad;
+}
+.commando-demo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 30 / 19;
+  object-fit: contain;
+  background: #0c1016;
+}
 .app-project {
   display: grid;
   grid-template-columns: 2.5rem 12rem minmax(0, 1fr);
@@ -1206,6 +1327,27 @@
   .experience,
   .projects-section {
     margin-top: 4rem;
+  }
+  .commando-feature {
+    padding: 2rem 0 3rem;
+  }
+  .commando-intro {
+    display: block;
+  }
+  .commando-copy h3 {
+    font-size: 1.75rem;
+  }
+  .commando-details {
+    margin-top: 1.75rem;
+  }
+  .commando-demo {
+    margin-top: 2rem;
+  }
+  .commando-demo-bar {
+    padding-inline: 0.75rem;
+  }
+  .commando-demo-bar > span:last-child {
+    text-align: right;
   }
   .experience-entry {
     display: block;

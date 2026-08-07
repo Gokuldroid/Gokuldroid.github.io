@@ -7,7 +7,14 @@ const ProjectsPage = () => (
   <Projects>
     <SEO
       title="Projects"
-      keywords={[`android`, `gokul prabhu`, `full stack developer`]}
+      keywords={[
+        `commando`,
+        `terminal command launcher`,
+        `developer tools`,
+        `android`,
+        `gokul prabhu`,
+        `full stack developer`,
+      ]}
     />
   </Projects>
 )
