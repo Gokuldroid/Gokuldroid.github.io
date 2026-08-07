@@ -17,14 +17,6 @@ const apps = [
     playStore: "https://play.google.com/store/apps/details?id=tuple.me.dtools",
     more: "",
   },
-  {
-    name: "SASS tutorial",
-    img: "/assets/apps/sass.png",
-    desc: "A tutorial app for SASS.Provides detailed lessons on the most popular css preprocessor.",
-    playStore:
-      "https://play.google.com/store/apps/details?id=me.tuple.sassreference",
-    more: "",
-  },
 ]
 
 const App = ({ info, index }) => (
