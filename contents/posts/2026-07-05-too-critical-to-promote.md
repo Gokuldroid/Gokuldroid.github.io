@@ -12,7 +12,6 @@ categories:
 related:
   - "the-hero-loop"
   - "glue-work"
-  - "how-organizations-really-decide"
 ---
 
 > Irreplaceability looks like job security. It is actually the cage that keeps you exactly where you are.

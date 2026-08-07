@@ -12,7 +12,6 @@ categories:
 related:
   - "be-the-moth"
   - "the-meeting-before-the-meeting"
-  - "how-organizations-really-decide"
 ---
 
 > In any meeting beyond a few people, you are not answering the person who asked — you are addressing the record and the deciders.
@@ -43,7 +42,7 @@ Why does this work the way it does?
 
 **Treat hostile questions as gifts of airtime.** A bad-faith question hands you the floor with everyone watching. Use the sequence: stay calm, concede the valid kernel, park the rest. "Fair concern on X — that's handled by Y. Happy to go deep on the edge cases offline." The offline move is the key: it denies the heckler the stage without denying the question. You've conceded the grievance without conceding the decision, and you've committed nothing except a follow-up. The room sees generosity and command; the heckler gets no second act.
 
-**Know who the real decider is before you walk in.** This is [The Meeting Before the Meeting](/posts/the-meeting-before-the-meeting/) applied to Q&A: find out whose opinion actually moves the outcome, and during your answer, watch *their* reaction — not the questioner's. If the decider looks satisfied, stop talking. Engineers routinely keep arguing past the point where the person who mattered was already convinced (see also [The HiPPO Effect](/posts/how-organizations-really-decide/#the-hippo-effect)).
+**Know who the real decider is before you walk in.** This is [The Meeting Before the Meeting](/posts/the-meeting-before-the-meeting/) applied to Q&A: find out whose opinion actually moves the outcome, and during your answer, watch *their* reaction — not the questioner's. If the decider looks satisfied, stop talking. Engineers routinely keep arguing past the point where the person who mattered was already convinced.
 
 **The same physics governs written channels.** A reply-all is read by the CC line, not the sender. Before you fire back at the engineer who publicly questioned your design, note who else is on the thread. Your rebuttal to one person is your self-portrait to thirty.
 

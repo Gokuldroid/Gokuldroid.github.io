@@ -11,10 +11,6 @@ title: "The Friction That Builds Us"
 render_in_place: false
 categories:
   - "thinking"
-related:
-  - "mental-models"
-  - "thinking-under-uncertainty"
-  - "how-organizations-really-decide"
 ---
 
 Mick Jagger gave the New York Times an interview and said something that's been sitting with me. Asked what fame and wealth do to a person, he said you "become disassociated. From other people." His explanation for the mechanism was simple: people in show business spend their time with other people in show business. Year over year, you lose contact with real life — not through any single decision, but through the compounding effect of who's in the room with you. And then he added the part that actually stuck: the damage isn't temporary. It's not a phase you snap out of when the tour ends. His state of mind was permanently changed.

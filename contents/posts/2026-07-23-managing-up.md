@@ -10,9 +10,7 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "how-organizations-really-decide"
   - "be-the-moth"
-  - "keeping-judgment-in-the-ai-loop"
 ---
 
 > Your manager is your API to the organization — they can only transmit what you supply, in a format they can parse.

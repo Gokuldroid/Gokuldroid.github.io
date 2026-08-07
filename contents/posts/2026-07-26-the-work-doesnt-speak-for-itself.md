@@ -11,8 +11,6 @@ categories:
   - "thinking"
 related:
   - "cookie-licking"
-  - "keeping-judgment-in-the-ai-loop"
-  - "making-ideas-find-their-audience"
 ---
 
 > Performance systems don't evaluate your work. They evaluate the written, remembered, retellable record of your work — and someone has to build that record.
@@ -43,9 +41,9 @@ The system isn't corrupt. It's lossy. Treating a lossy channel as if it were los
 
 ## Practices
 
-**Keep a brag document.** Julia Evans' framing: a running log of accomplishments, updated weekly, each entry dated with what you did and what impact it had ("cut p99 latency 40%, unblocked the mobile launch"). Fifteen minutes every Friday. It is the source material for reviews, promo docs, and your manager's calibration notes — you're doing the sampling for the evaluator, with correct data. Related: [Write Things Down](/posts/keeping-judgment-in-the-ai-loop/#write-things-down).
+**Keep a brag document.** Julia Evans' framing: a running log of accomplishments, updated weekly, each entry dated with what you did and what impact it had ("cut p99 latency 40%, unblocked the mobile launch"). Fifteen minutes every Friday. It is the source material for reviews, promo docs, and your manager's calibration notes — you're doing the sampling for the evaluator, with correct data.
 
-**Narrate work in public channels.** Demo Fridays, "shipped X, here's what it unlocks" posts, design-doc announcements. The test that separates narration from bragging: bragging is about *you* ("I crushed this"); narration is about *the work and what others can now do* ("The batch API is live — you can now backfill without paging oncall"). Narration is a service: you're making information available that people need and can't get otherwise. What's obvious to you is genuinely news to them ([Obvious to you. Amazing to others.](/posts/making-ideas-find-their-audience/#obvious-to-you-amazing-to-others)).
+**Narrate work in public channels.** Demo Fridays, "shipped X, here's what it unlocks" posts, design-doc announcements. The test that separates narration from bragging: bragging is about *you* ("I crushed this"); narration is about *the work and what others can now do* ("The batch API is live — you can now backfill without paging oncall"). Narration is a service: you're making information available that people need and can't get otherwise. Work that feels routine to you may be genuine news to everyone else.
 
 **Make wins quotable.** Write the one-sentence version with a number in it, so your manager can forward it verbatim to their manager. Managers advocate with the material you hand them. Fuzzy work requires them to compose the pitch themselves; most won't. A quotable sentence travels up two levels unchanged.
 

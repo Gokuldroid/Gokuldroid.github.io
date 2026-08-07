@@ -11,8 +11,6 @@ categories:
   - "thinking"
 related:
   - "estimates-are-heard-as-commitments"
-  - "thinking-under-uncertainty"
-  - "how-organizations-really-decide"
 ---
 
 > An uncertain answer can be more accurate and still lose to a confident one, because certainty solves the room's immediate problem while uncertainty leaves the problem in the room.
@@ -70,7 +68,7 @@ The room helps. "Five weeks?" someone asks. "Why so long?" The engineer now has 
 
 Sometimes the room keeps asking different people until it gets the answer it wants. The first engineer says six weeks. A second says four. A third, with less context but more confidence, says two. The shortest answer becomes evidence that the longer estimates were cautious rather than informed. The organization has not estimated the work; it has run an auction where the lowest bid wins and someone else pays the overrun.
 
-People notice which answers receive relief, approval, and ownership. Over time they become skilled at supplying those answers. This is [locally rational behavior](/posts/how-organizations-really-decide/#rational-inside-irrational-outside): bad information can be the predictable output of good adaptation to the incentives in the room.
+People notice which answers receive relief, approval, and ownership. Over time they become skilled at supplying those answers. Bad information can be the predictable output of good adaptation to the incentives in the room.
 
 ## The reward is now; the correction is later
 

@@ -10,8 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "thinking-under-uncertainty"
-  - "how-organizations-really-decide"
   - "never-surprise-anyone-publicly"
 ---
 

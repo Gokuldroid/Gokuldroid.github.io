@@ -11,7 +11,6 @@ categories:
   - "thinking"
 related:
   - "mentor-vs-sponsor"
-  - "how-organizations-really-decide"
   - "be-on-the-critical-path"
 ---
 

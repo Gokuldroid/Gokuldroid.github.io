@@ -11,7 +11,6 @@ categories:
   - "thinking"
 related:
   - "be-the-moth"
-  - "software-laws-that-survive-contact-with-reality"
   - "mentor-vs-sponsor"
 ---
 

@@ -10,7 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "how-organizations-really-decide"
   - "the-first-follower"
   - "cookie-licking"
 ---

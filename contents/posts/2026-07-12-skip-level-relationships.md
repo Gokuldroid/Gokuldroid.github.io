@@ -12,7 +12,6 @@ categories:
 related:
   - "managing-up"
   - "mentor-vs-sponsor"
-  - "software-laws-that-survive-contact-with-reality"
 ---
 
 > Your manager's manager knowing your work firsthand is insurance against the single point of failure that is your manager.

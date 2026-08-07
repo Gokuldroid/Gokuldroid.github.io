@@ -11,7 +11,6 @@ categories:
   - "thinking"
 related:
   - "the-meeting-before-the-meeting"
-  - "how-organizations-really-decide"
   - "the-favor-bank"
 ---
 

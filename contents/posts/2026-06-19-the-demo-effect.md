@@ -10,8 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "software-laws-that-survive-contact-with-reality"
-  - "keeping-judgment-in-the-ai-loop"
   - "cookie-licking"
 ---
 

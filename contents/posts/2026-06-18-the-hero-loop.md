@@ -11,8 +11,6 @@ categories:
   - "thinking"
 related:
   - "be-the-moth"
-  - "how-organizations-really-decide"
-  - "software-laws-that-survive-contact-with-reality"
 ---
 
 > Organizations reward the engineer who fights the fire, not the engineer whose design meant there was no fire — so they get more fires.
@@ -23,7 +21,7 @@ Two engineers. The first stays up until 4am restoring the payment service after 
 
 The second engineer spent three weeks last quarter adding backpressure and load-shedding to the same class of service. Because of that work, the traffic spike that would have caused a sev-1 instead caused a graph to wiggle. Nobody noticed. There is no all-hands shout-out for "the outage that didn't happen," because a prevented incident has no witnesses. You cannot show leadership the counterfactual.
 
-This is not because leaders are stupid. It's a legibility problem. An incident is a *legible event*: it has a timestamp, a ticket, a war room, a named resolver, and a measurable recovery. Reliability is a *non-event*: it's the absence of tickets, which looks identical to "nothing is happening here." Organizations run on legible signals (see [why legibility beats reality](/posts/be-the-moth/#why-credit-flows-to-the-title)), so the save gets recorded and the prevention evaporates. Meanwhile every heroic 2am recovery slightly raises the org's tolerance for fragility — "we always pull through" — which is [Normalization of deviance](/posts/how-organizations-really-decide/#normalization-of-deviance) wearing a cape.
+This is not because leaders are stupid. It's a legibility problem. An incident is a *legible event*: it has a timestamp, a ticket, a war room, a named resolver, and a measurable recovery. Reliability is a *non-event*: it's the absence of tickets, which looks identical to "nothing is happening here." Organizations run on legible signals (see [why legibility beats reality](/posts/be-the-moth/#why-credit-flows-to-the-title)), so the save gets recorded and the prevention evaporates. Meanwhile every heroic 2am recovery slightly raises the org's tolerance for fragility — "we always pull through" — normalizing deviance over time.
 
 ## The loop
 

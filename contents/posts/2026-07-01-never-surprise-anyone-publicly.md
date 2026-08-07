@@ -10,7 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "how-organizations-really-decide"
   - "easy-to-work-with-beats-brilliant"
   - "managing-up"
 ---
@@ -27,7 +26,7 @@ A surprised person in a public setting does not process content. They defend the
 
 The mechanics are worth understanding precisely, because they explain why "but I was polite and accurate" doesn't save you. When you name someone's bug or missed commitment in a channel or meeting, they are no longer in a conversation with you. They are performing for the audience — their manager, their peers, the people who will form opinions about their competence in the next ninety seconds. Their brain allocates everything to that performance and almost nothing to evaluating your claim.
 
-This produces a predictable and expensive failure: **they harden positions they would have conceded privately.** In a DM, "yeah, that regression is probably our change, let me look" costs nothing. In a public meeting, the same admission feels like a public loss, so instead you get deflection, counter-attack, or a wall of caveats. You've now created a dispute where a fix would have sufficed. (This is the same dynamic as [Concede the Grievance, Keep the Decision](/posts/how-organizations-really-decide/#concede-the-grievance-keep-the-decision) territory: people can absorb almost any substance if their standing is protected, and almost none if it isn't.)
+This produces a predictable and expensive failure: **they harden positions they would have conceded privately.** In a DM, "yeah, that regression is probably our change, let me look" costs nothing. In a public meeting, the same admission feels like a public loss, so instead you get deflection, counter-attack, or a wall of caveats. You've now created a dispute where a fix would have sufficed. People can absorb almost any substance if their standing is protected, and almost none if it isn't.
 
 Note who created that dynamic. Not them — you, by choosing the venue.
 

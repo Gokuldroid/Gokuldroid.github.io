@@ -12,7 +12,6 @@ categories:
 related:
   - "political-capital"
   - "glue-work"
-  - "how-organizations-really-decide"
 ---
 
 > Every yes is an implicit no to something else — usually to the work you're actually measured on.

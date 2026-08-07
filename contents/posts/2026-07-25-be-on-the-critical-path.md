@@ -10,8 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "product-strategy-and-second-order-effects"
-  - "making-ideas-find-their-audience"
   - "the-internal-transfer-market"
 ---
 

@@ -12,7 +12,6 @@ categories:
 related:
   - "cookie-licking"
   - "the-favor-bank"
-  - "how-organizations-really-decide"
 ---
 
 > Credit multiplies when you give it and shrinks when you hoard it — attribution generosity is the cheapest compounding asset in an org.
@@ -29,7 +28,7 @@ The caveat "for a secure contributor" matters. This works when your own work exi
 
 ## Mechanics
 
-**It's a zero-cost deposit in the favor bank.** Public credit is one of the few favors you can do that costs nothing and can't be declined. Priya now owes you nothing formally — and remembers it anyway. This is [The Favor Bank](/posts/the-favor-bank/) and [Reciprocity — Go Positive, Go First](/posts/how-organizations-really-decide/#reciprocity--go-positive-go-first) in their purest form: you moved first, at zero cost, and the ledger opened in your favor.
+**It's a zero-cost deposit in the favor bank.** Public credit is one of the few favors you can do that costs nothing and can't be declined. Priya now owes you nothing formally — and remembers it anyway. This is [The Favor Bank](/posts/the-favor-bank/) in its purest form: you moved first, at zero cost, and the ledger opened in your favor.
 
 **People fight to work with credit-givers.** Word travels fast about who shares wins and who absorbs them. Engineers maneuver to join the projects of known credit-givers and quietly avoid credit-takers. The downstream effects compound: your projects staff faster with better people, your peer feedback glows, your "would work with again" scores climb — the exact signals promo committees and skip-levels weight most. This is a load-bearing case of [Easy to Work With Beats Brilliant](/posts/easy-to-work-with-beats-brilliant/).
 

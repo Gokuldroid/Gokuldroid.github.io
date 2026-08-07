@@ -10,8 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "keeping-judgment-in-the-ai-loop"
-  - "product-strategy-and-second-order-effects"
   - "be-the-moth"
 ---
 
@@ -80,7 +78,7 @@ There's a personal corollary worth being paranoid about: **ideas are cookies too
 
 The defense is cheap and should be habitual:
 
-- **Write it down before you socialize it.** A short doc, an email to yourself and one other person, a ticket — anything timestamped with your name on it. Provenance is established by artifacts, not memory. ([Write Things Down](/posts/keeping-judgment-in-the-ai-loop/#write-things-down))
+- **Write it down before you socialize it.** A short doc, an email to yourself and one other person, a ticket — anything timestamped with your name on it. Provenance is established by artifacts, not memory.
 - **Socialize in traceable channels.** Float the idea in an email thread or a commented doc rather than only in conversation. The medium is the receipt.
 - **Name it and present it yourself.** Ask for five minutes in the team meeting rather than feeding it upward in a 1:1. The person who presents an idea to the room owns it in the room's memory.
 - **Don't swing to secrecy.** Hoarding an idea until it's "ready" is its own failure — ideas need early collision with feedback. The move is not *share less*, it's *document first, then share widely*. A documented idea being spread by a senior is amplification; an undocumented one is appropriation.

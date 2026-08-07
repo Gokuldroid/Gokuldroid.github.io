@@ -12,7 +12,6 @@ categories:
 related:
   - "managing-up"
   - "political-capital"
-  - "software-laws-that-survive-contact-with-reality"
 ---
 
 > When you break something, the only race that matters is between your report and someone else's discovery — and the winner gets to narrate.

@@ -10,7 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "how-organizations-really-decide"
   - "reputation-forms-early-updates-slowly"
   - "shadow-org-chart"
 ---
@@ -31,7 +30,7 @@ Nobody administers this bank. There are no statements, no interest rates, no bra
 
 **Asymmetric pricing is the arbitrage.** The engine of the whole system is that the cost to the giver and the value to the receiver are wildly different. Your ten minutes answering a question in your area of expertise may save the asker two days of flailing. You paid ten minutes; they received two days. The deposit is nearly free for you and enormously valuable to them — and the receiver's ledger records the value received, not your cost. Expertise is what makes deposits cheap. The deeper your expertise, the closer to free your deposits get. This is one of the quiet compounding returns on being technically strong.
 
-**Timing changes the meaning entirely.** Help offered *before* you need anything reads as generosity, and generosity compounds. The identical help offered when you obviously need something back reads as a transaction — and transactions earn nothing, because the other party mentally settles the account on the spot. Go first, when the ledger is empty and you want nothing (see [Reciprocity — Go Positive, Go First](/posts/how-organizations-really-decide/#reciprocity--go-positive-go-first)). The favor given at the moment of need is not a deposit; it's a purchase.
+**Timing changes the meaning entirely.** Help offered *before* you need anything reads as generosity, and generosity compounds. The identical help offered when you obviously need something back reads as a transaction — and transactions earn nothing, because the other party mentally settles the account on the spot. Go first, when the ledger is empty and you want nothing. The favor given at the moment of need is not a deposit; it's a purchase.
 
 **The bank is the shadow org chart.** If you've wondered how some people seem to route around process, get exceptions granted, and pull cross-team support out of thin air — that *is* the favor bank. Influence is not charisma or title. It is accumulated deposits, distributed across enough accounts that any given problem is one phone call from someone who owes you.
 

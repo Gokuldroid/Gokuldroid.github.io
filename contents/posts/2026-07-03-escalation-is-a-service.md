@@ -10,8 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "how-organizations-really-decide"
-  - "momentum-is-a-system"
   - "cookie-licking"
 ---
 

@@ -10,9 +10,7 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "how-organizations-really-decide"
   - "airtime"
-  - "momentum-is-a-system"
 ---
 
 > Opportunity does not flow to the best person in the org chart. It flows to whoever is standing nearby when it appears.

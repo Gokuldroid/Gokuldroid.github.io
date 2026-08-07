@@ -10,7 +10,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "momentum-is-a-system"
   - "the-hero-loop"
   - "translate-infra-to-business"
 ---

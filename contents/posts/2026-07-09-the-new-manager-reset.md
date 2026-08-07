@@ -11,7 +11,6 @@ categories:
   - "thinking"
 related:
   - "reputation-forms-early-updates-slowly"
-  - "keeping-judgment-in-the-ai-loop"
   - "the-work-doesnt-speak-for-itself"
 ---
 
@@ -46,7 +45,7 @@ Treat the transition as a project you run, with a before phase and an after phas
 **Before the old manager leaves:**
 
 - Get the narrative into writing. Ask them directly to document your standing and trajectory — in a handoff note, or better, in the official review record where it's durable and discoverable. Most managers will do this if asked; almost none do it unprompted.
-- Extract verbal commitments into email. "Just to confirm my understanding before your transition: we'd discussed that I'm on track for senior in the next cycle, pending X and Y." A reply of "yes, that's right" converts a worthless verbal promise into an artifact the new manager can't easily dismiss ([Write Things Down](/posts/keeping-judgment-in-the-ai-loop/#write-things-down)).
+- Extract verbal commitments into email. "Just to confirm my understanding before your transition: we'd discussed that I'm on track for senior in the next cycle, pending X and Y." A reply of "yes, that's right" converts a worthless verbal promise into an artifact the new manager can't easily dismiss.
 
 **After the new manager arrives:**
 

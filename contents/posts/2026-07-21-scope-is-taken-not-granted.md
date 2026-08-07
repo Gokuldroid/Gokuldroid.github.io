@@ -12,7 +12,6 @@ categories:
 related:
   - "cookie-licking"
   - "glue-work"
-  - "momentum-is-a-system"
 ---
 
 > Promotion systems reward people already operating at the next level — and next-level work is almost never handed down, so waiting to be given it is waiting forever.

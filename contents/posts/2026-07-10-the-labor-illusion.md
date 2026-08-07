@@ -12,7 +12,6 @@ categories:
 related:
   - "estimates-are-heard-as-commitments"
   - "the-work-doesnt-speak-for-itself"
-  - "making-ideas-find-their-audience"
 ---
 
 > People price work by the effort they can see, not the effort it took — so effortless-looking delivery gets systematically undervalued.
@@ -55,7 +54,7 @@ The goal is not to manufacture effort. It's to make real, already-spent effort *
 
 ## The deeper frame
 
-Making it look easy is the job. Making the difficulty legible is the career. These are separate deliverables, and shipping only the first is a common failure pattern among strong engineers who assume [the work speaks for itself](/posts/the-work-doesnt-speak-for-itself/) — it doesn't, and what's [obvious to you is amazing to others](/posts/making-ideas-find-their-audience/#obvious-to-you-amazing-to-others) only if they ever find out it happened. You don't have to choose between elegance and credit. You have to ship both: the simple-looking solution, and the one paragraph that shows the iceberg under it.
+Making it look easy is the job. Making the difficulty legible is the career. These are separate deliverables, and shipping only the first is a common failure pattern among strong engineers who assume [the work speaks for itself](/posts/the-work-doesnt-speak-for-itself/) — it doesn't. Hidden work only becomes legible when people find out it happened. You don't have to choose between elegance and credit. You have to ship both: the simple-looking solution, and the one paragraph that shows the iceberg under it.
 
 ## Diagnostic test
 

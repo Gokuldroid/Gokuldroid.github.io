@@ -11,7 +11,6 @@ categories:
   - "thinking"
 related:
   - "political-capital"
-  - "thinking-under-uncertainty"
   - "managing-up"
 ---
 
@@ -49,7 +48,7 @@ The cruelest part: your reliability as an estimator is a tracked reputation stat
 
 **Distinguish estimate from commitment, out loud.** These are different speech acts and you should name them: "As an estimate, two to four weeks. If you need a commitment for the roadmap, give me a day to check the API and I'll commit to a date I can defend." Most managers will happily take a delayed-but-real commitment over an instant fake one — they're the ones who have to relay it.
 
-**When you commit, pad for the unknowns you know exist.** Interruptions, code-review latency, an oncall page, one integration surprise, one meeting-heavy week: individually invisible, in aggregate near-certain. Your gut estimate is the time-to-code in a vacuum; nobody works in a vacuum. Padding for statistically guaranteed friction is not sandbagging — it's the same [Margin of Safety](/posts/thinking-under-uncertainty/#margin-of-safety) you'd demand in a load calculation. Under-promise/over-deliver is error-bar management, not politics.
+**When you commit, pad for the unknowns you know exist.** Interruptions, code-review latency, an oncall page, one integration surprise, one meeting-heavy week: individually invisible, in aggregate near-certain. Your gut estimate is the time-to-code in a vacuum; nobody works in a vacuum. Padding for statistically guaranteed friction is not sandbagging — it's the same margin of safety you'd demand in a load calculation. Under-promise/over-deliver is error-bar management, not politics.
 
 **Re-estimate out loud the moment information arrives.** The same final date has two completely different meanings depending on when it's communicated. "Heads up — the API doesn't do batch, we're now looking at July 8 instead of June 24" on day three is a professional update. The identical date discovered on June 23 is a slip. Early re-estimates *build* credibility; deadline-day discoveries destroy it. This is the no-surprises rule from [Managing Up](/posts/managing-up/) applied to schedules.
 

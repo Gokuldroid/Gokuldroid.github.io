@@ -8,7 +8,6 @@ render_in_place: false
 categories:
   - "thinking"
 related:
-  - "keeping-judgment-in-the-ai-loop"
   - "the-meeting-before-the-meeting"
   - "be-the-moth"
 ---
