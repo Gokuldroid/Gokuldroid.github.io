@@ -165,6 +165,10 @@ pre[class*="language-"] {
   cursor: unset;
 }
 
+.gatsby-highlight .token.table {
+  display: inline;
+}
+
 .token.namespace {
   color: #4ec9b0;
 }
