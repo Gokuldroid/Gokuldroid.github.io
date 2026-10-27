@@ -61,17 +61,6 @@ const experience = [
     ],
   },
   {
-    company: "Tuple.me",
-    period: "Apr 2017 – Jan 2021 · Self-employed",
-    roles: [
-      {
-        title: "Developer / Designer",
-        description:
-          "Built end-to-end products from scratch — Android apps published on the Play Store — to learn about customers, requirements, and UX/UI.",
-      },
-    ],
-  },
-  {
     company: "Zoho Corporation",
     period: "Nov 2015 – May 2018",
     roles: [

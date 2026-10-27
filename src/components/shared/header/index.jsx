@@ -6,7 +6,6 @@ import Logo from "../../../images/site-logo.png"
 
 const navLinks = [
   { to: "/", label: "Blog" },
-  { to: "/projects", label: "Projects" },
   { to: "/about", label: "About" },
 ]
 
